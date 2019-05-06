@@ -59,7 +59,7 @@ function iniciarPrograma()
         }
     }
     var listaTareas = document.querySelector('ul');
-    var incrementoAvance=1/6;
+    var incrementoAvance=1/listaTareas.childElementCount;
     var porcentajeTarea;
     listaTareas.addEventListener('click', function (ev) {
         if (ev.target.classList.contains('checked')) {
