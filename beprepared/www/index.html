@@ -4,6 +4,7 @@
 
 <head>
     <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
     <title>Be Prepared</title>
 
 <body>
@@ -11,14 +12,23 @@
     </head>
 
     <body>
-        <ul id="myUL">
-            <li id="1">Ir al gimnasio</li>
-            <li id="2">Lavarse los dientes</li>
-            <li id="3">Tomar fotografias</li>
-            <li id="4">Comprar el mercado</li>
-            <li id="5">Leer un libro</li>
-            <li id="6">Organizar la oficina</li>
-        </ul>
+        <section id="menu" class="ocultar">
+            <div id="menuAbierto">
+                <img class="ImgMenu" id="menuAzulAbierto" src="img/menuAzulAbierto.png" alt="Menu" >
+                <h1 id="MenuTitle">Menú</h1>
+            </div>            
+        </section>
+        <section id="listaPrueba">
+            <img class="ImgMenu" id="menuAzul" src="img/menuAzul.png" alt="Menu" >
+            <ul id="listaPrueba" class="animated fadeInLeft">
+                <li id="1">Ir al gimnasio</li>
+                <li id="2">Lavarse los dientes</li>
+                <li id="3">Tomar fotografias</li>
+                <li id="4">Comprar el mercado</li>
+                <li id="5">Leer un libro</li>
+                <li id="6">Organizar la oficina</li>
+            </ul>
+        </section>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
     </body>

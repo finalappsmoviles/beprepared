@@ -1,26 +1,11 @@
-/*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
+var menuAzulAbierto, menuAzul,menu, listaPrueba;
 var app = {
     // Application Constructor
     initialize: function() {
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
         iniciarPrograma();
+        inicializarVariables();
+        asignarEventos();
     },
 
     // deviceready Event Handler
@@ -87,8 +72,38 @@ function iniciarPrograma()
                 localStorage.setItem('tareasCompletadas', arrayCheck);
             }
         }
-           
-        
     },false);
+}
+function inicializarVariables(){
+    menuAzul=document.getElementById("menuAzul");
+    menuAzulAbierto=document.getElementById("menuAzulAbierto");
+    menu=document.getElementById("menu");
+    listaPrueba=document.getElementById("listaPrueba");
+}
+function asignarEventos()
+{
+    mostrarMenu();
+    
+}
+function mostrarMenu()
+{
+    menuAzul.addEventListener("click",function(){
+        menu.className="animated fadeInLeft"; 
+        listaPrueba.className="ocultar";       
+    });
+    menuAzulAbierto.addEventListener("click",function(){
+        menu.className="animated fadeOut"; 
+        menuAzul.className="ocultar";
+        listaPrueba.className="animated fadeInLeft";        
+        setTimeout(function(){ 
+            menu.className="ocultar"; 
+            menuAzul.style.width = "40px";
+            menuAzul.style.height = "40px";
+            menuAzul.style.padding = "5px";
+            menuAzul.className="animated rotateInDownLeft";
+            menuAzulAbierto.src="img/menuAzul.png";            
+        }, 600);
+        
+    });
 }
 app.initialize();

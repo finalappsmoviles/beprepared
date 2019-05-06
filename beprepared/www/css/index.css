@@ -86,4 +86,33 @@ ul li.checked::before {
     height: 15px;
     width: 7px;
 } 
-
+#menu
+{
+    width: 270px;
+    height: 690px;
+    background-color:#264B72; 
+}
+.ImgMenu
+{
+    margin:5px;
+    height: 30px;
+    width:30px;
+}
+#menuAbierto
+{
+    height: 40px;
+    width:270px;
+    background-color: white;
+    border: 1px solid #264B72;
+}
+.ocultar
+{
+    display:none;
+}
+#MenuTitle
+{
+    color: #264B72;
+    display:inline;
+    padding-left: 20%;
+    font-size:24px;       
+}
