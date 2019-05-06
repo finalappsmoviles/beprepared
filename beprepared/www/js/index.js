@@ -45,7 +45,7 @@ var app = {
 };
 function iniciarPrograma()
 {    
-    var array=["0"];
+    var arrayCheck=["0"];
     if (localStorage.getItem('tareasCompletadas') !== null) {
         var chequeados=localStorage.getItem('tareasCompletadas');
         for(var i=1, len=chequeados.length; i<len; i++) {
@@ -53,38 +53,38 @@ function iniciarPrograma()
             {
                 var value = chequeados[i];
                 document.getElementById(value).classList.add('checked');
-                array.push(value);
-                localStorage.setItem('tareasCompletadas', array);
+                arrayCheck.push(value);
+                localStorage.setItem('tareasCompletadas', arrayCheck);
             }            
         }
     }
-    var list = document.querySelector('ul');
-    var incremento=1/6;
+    var listaTareas = document.querySelector('ul');
+    var incrementoAvance=1/6;
     var porcentajeTarea;
-    list.addEventListener('click', function (ev) {
+    listaTareas.addEventListener('click', function (ev) {
         if (ev.target.classList.contains('checked')) {
             ev.target.classList.remove('checked');
-            porcentajeTarea -= incremento;
+            porcentajeTarea -= incrementoAvance;
             localStorage.setItem('porcentajeTarea', porcentajeTarea); 
-            array = array.filter(function(item) { 
+            arrayCheck = arrayCheck.filter(function(item) { 
                 return item !== ev.target.id
             })
-            localStorage.setItem('tareasCompletadas', array);
+            localStorage.setItem('tareasCompletadas', arrayCheck);
         }
         else
         {
             ev.target.classList.add('checked');
             if (typeof porcentajeTarea !== 'undefined') {                        
-                porcentajeTarea += incremento;
+                porcentajeTarea += incrementoAvance;
                 localStorage.setItem('porcentajeTarea', porcentajeTarea);  
-                array.push(ev.target.id);
-                localStorage.setItem('tareasCompletadas', array);
+                arrayCheck.push(ev.target.id);
+                localStorage.setItem('tareasCompletadas', arrayCheck);
             }
             else{                        
-                porcentajeTarea = incremento; 
+                porcentajeTarea = incrementoAvance; 
                 localStorage.setItem('porcentajeTarea', porcentajeTarea);              
-                array.push(ev.target.id);
-                localStorage.setItem('tareasCompletadas', array);
+                arrayCheck.push(ev.target.id);
+                localStorage.setItem('tareasCompletadas', arrayCheck);
             }
         }
            
