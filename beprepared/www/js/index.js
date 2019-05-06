@@ -20,13 +20,14 @@ var app = {
     // Application Constructor
     initialize: function() {
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
+        iniciarPrograma();
     },
 
     // deviceready Event Handler
     //
     // Bind any cordova events here. Common events are:
     // 'pause', 'resume', etc.
-    onDeviceReady: function() {
+    onDeviceReady: function() {       
         this.receivedEvent('deviceready');
     },
 
@@ -42,5 +43,52 @@ var app = {
         console.log('Received Event: ' + id);
     }
 };
-
+function iniciarPrograma()
+{    
+    var array=["0"];
+    if (localStorage.getItem('tareasCompletadas') !== null) {
+        var chequeados=localStorage.getItem('tareasCompletadas');
+        for(var i=1, len=chequeados.length; i<len; i++) {
+            if(i%2==0)
+            {
+                var value = chequeados[i];
+                document.getElementById(value).classList.add('checked');
+                array.push(value);
+                localStorage.setItem('tareasCompletadas', array);
+            }            
+        }
+    }
+    var list = document.querySelector('ul');
+    var incremento=1/6;
+    var porcentajeTarea;
+    list.addEventListener('click', function (ev) {
+        if (ev.target.classList.contains('checked')) {
+            ev.target.classList.remove('checked');
+            porcentajeTarea -= incremento;
+            localStorage.setItem('porcentajeTarea', porcentajeTarea); 
+            array = array.filter(function(item) { 
+                return item !== ev.target.id
+            })
+            localStorage.setItem('tareasCompletadas', array);
+        }
+        else
+        {
+            ev.target.classList.add('checked');
+            if (typeof porcentajeTarea !== 'undefined') {                        
+                porcentajeTarea += incremento;
+                localStorage.setItem('porcentajeTarea', porcentajeTarea);  
+                array.push(ev.target.id);
+                localStorage.setItem('tareasCompletadas', array);
+            }
+            else{                        
+                porcentajeTarea = incremento; 
+                localStorage.setItem('porcentajeTarea', porcentajeTarea);              
+                array.push(ev.target.id);
+                localStorage.setItem('tareasCompletadas', array);
+            }
+        }
+           
+        
+    },false);
+}
 app.initialize();
