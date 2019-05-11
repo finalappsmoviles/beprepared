@@ -46,3 +46,33 @@ section
 {
     display:none;
 }
+.Seccarga
+{
+    background-color: white;
+    
+}
+.loader {
+    border: 9px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 9px solid #b0b969;
+    width: 100px;
+    height: 100px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;    
+    margin-top:20px;
+    margin-left:130px;
+  }
+  #logoCarga{    
+    padding-top:225px;
+    padding-left:100px;
+  }
+  /* Safari */
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }

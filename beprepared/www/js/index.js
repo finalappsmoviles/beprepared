@@ -1,9 +1,8 @@
-
 var app = {
     // Application Constructor
     initialize: function() {
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
-        
+        iniciarPrograma();    
     },
 
     // deviceready Event Handler
@@ -26,7 +25,10 @@ var app = {
         console.log('Received Event: ' + id);
     }
 };
-
+function iniciarPrograma()
+{
+    
+}
 
 
 app.initialize();
