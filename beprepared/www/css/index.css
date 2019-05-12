@@ -70,13 +70,92 @@ section
     padding-top:225px;
     padding-left:100px;
   }
-  /* Safari */
   @-webkit-keyframes spin {
     0% { -webkit-transform: rotate(0deg); }
     100% { -webkit-transform: rotate(360deg); }
-  }
-  
+  }  
   @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
   }
+  .SecPruebas
+{
+    background-color: white;
+}
+#infoUsuario
+{    
+    height: 143px;
+    width: 360px;    
+    background-color: #1166af;
+    padding-left:20px;
+    padding-right:20px;
+}
+#headInfoUsuario
+{
+    padding-top:20px;
+    margin-bottom:5px;
+    height: 49px;    
+    color:white;    
+    font-size: 13pt;
+    font-family: 'Roboto', sans-serif;
+}
+#opcionesPruebas
+{
+    float: right;
+}
+#volverPruebas
+{
+    float: left;
+    padding-top:2px;
+}
+#menuPruebas
+{
+    padding-left:5.6px; 
+    padding-right:5.6px;
+    display:inline-block;     
+}
+#bodyInfoUsuario
+{
+    float: left;
+    height: 94px;
+    padding-left:20px;
+    padding-right: 20px;     
+    color:white;  
+}
+#nivelPruebas
+{
+    margin-top:-6px;
+    padding-left:20px;
+}
+#saludPruebas
+{
+    float:right;
+    padding-right:170px;
+    margin-top: -80px;
+}
+#experienciaPruebas
+{
+    float:right;
+    padding-right:170px;
+    margin-top: -55px;
+}
+#barraSaludPruebas
+{
+    float:right;
+    margin-top: -80px;
+}
+#barraExpPruebas
+{
+    float:right;
+    margin-top: -50px;
+}
+#pExpPruebas
+{
+    float:right;
+    margin-top: -38px;
+}
+#pSaludPruebas
+{
+    float:right;
+    margin-top: -68px;
+}
