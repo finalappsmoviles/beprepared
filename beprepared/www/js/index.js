@@ -45,10 +45,10 @@ var app = {
 };
 function iniciarPrograma()
 {    
-    // setTimeout(function(){
-    //     document.getElementById("Seccarga").className= "Seccarga ocultar";
-    //     document.getElementById("Secbienvenidos").className="Secbienvenidos animated fadeInUpBig";
-    // }, 2000);
+    setTimeout(function(){
+        document.getElementById("Seccarga").className= "Seccarga ocultar";
+        document.getElementById("Secbienvenidos").className="Secbienvenidos animated fadeInUpBig";
+    }, 2000);
     
     var checkList = document.getElementsByTagName("LI");
     var i;
