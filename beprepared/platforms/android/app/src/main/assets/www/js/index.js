@@ -45,17 +45,31 @@ var app = {
 };
 function iniciarPrograma()
 {    
-    // setTimeout(function(){
-    //     document.getElementById("Seccarga").className= "Seccarga ocultar";
-    //     document.getElementById("Secbienvenidos").className="Secbienvenidos animated fadeInUpBig";
-    // }, 2000);
     
+    
+    var listaTareas = document.querySelector('ul');
+    var incrementoAvance=1/listaTareas.childElementCount;
+    var porcentajeTarea;    
     var checkList = document.getElementsByTagName("LI");
     var i;
     var borradosPruebas,borradosDesafios,borradosEspecialidades;
+    setTimeout(function(){
+        document.getElementById("Seccarga").className= "Seccarga ocultar";
+        document.getElementById("SecPruebas").className="SecPruebas animated fadeInUpBig";
+    }, 2000);
+    if(localStorage.getItem('porcentajeTarea') === null)
+    {
+        porcentajeTarea = incrementoAvance-incrementoAvance;
+        localStorage.setItem('porcentajeTarea', porcentajeTarea);
+    }
+    else{
+        porcentajeTarea = parseFloat(localStorage.getItem('porcentajeTarea'),10); 
+
+    }
+    
     for (i = 0; i < checkList.length; i++) {
         var span = document.createElement("IMG");
-        span.setAttribute("src", "img/todas/borrar.png");  
+        span.setAttribute("src", "img/Todas/borrar.png");  
         span.className = "close";
         checkList[i].appendChild(span);        
     } 
@@ -80,34 +94,38 @@ function iniciarPrograma()
             }            
         }
     }
-    var listaTareas = document.querySelector('ul');
-    var incrementoAvance=1/listaTareas.childElementCount;
-    var porcentajeTarea;
     listaTareas.addEventListener('click', function (ev) {
         if (ev.target.classList.contains('checked')) {
             ev.target.classList.remove('checked');
-            porcentajeTarea -= incrementoAvance;
-            localStorage.setItem('porcentajeTarea', porcentajeTarea); 
-            arrayCheck = arrayCheck.filter(function(item) { 
-                return item !== ev.target.id
-            })
-            localStorage.setItem('pruebasCompletas', arrayCheck);
+            if (localStorage.getItem('porcentajeTarea') !== null) {
+                porcentajeTarea=parseFloat(localStorage.getItem('porcentajeTarea'),10);
+                porcentajeTarea =porcentajeTarea- incrementoAvance;
+                
+                localStorage.setItem('porcentajeTarea', porcentajeTarea); 
+                arrayCheck = arrayCheck.filter(function(item) { 
+                    return item !== ev.target.id
+                })
+                localStorage.setItem('pruebasCompletas', arrayCheck);
+            }
+            else{
+                porcentajeTarea =porcentajeTarea- incrementoAvance;
+                localStorage.setItem('porcentajeTarea', porcentajeTarea); 
+                arrayCheck = arrayCheck.filter(function(item) { 
+                    return item !== ev.target.id
+                })
+                localStorage.setItem('pruebasCompletas', arrayCheck);
+            }
         }
         else
         {
+            
             ev.target.classList.add('checked');
-            if (typeof porcentajeTarea !== 'undefined') {                        
-                porcentajeTarea += incrementoAvance;
-                localStorage.setItem('porcentajeTarea', porcentajeTarea);  
-                arrayCheck.push(ev.target.id);
-                localStorage.setItem('pruebasCompletas', arrayCheck);
-            }
-            else{                        
-                porcentajeTarea = incrementoAvance; 
-                localStorage.setItem('porcentajeTarea', porcentajeTarea);              
-                arrayCheck.push(ev.target.id);
-                localStorage.setItem('pruebasCompletas', arrayCheck);
-            }
+                                  
+            porcentajeTarea =porcentajeTarea+ incrementoAvance;
+            localStorage.setItem('porcentajeTarea', porcentajeTarea);  
+            arrayCheck.push(ev.target.id);
+            localStorage.setItem('pruebasCompletas', arrayCheck);
+                       
         }  
         
     },false);
