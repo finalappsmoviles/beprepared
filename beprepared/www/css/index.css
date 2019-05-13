@@ -159,3 +159,55 @@ section
     float:right;
     margin-top: -68px;
 }
+#footer
+{
+    height: 59px;
+    width: 360px;    
+    background-color: #1166af;
+    padding-left:20px;
+    padding-right:20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    color:white;
+}
+#pruebasFooter
+{
+    float: left;
+    padding-left:8px;
+}
+#txtPruebas
+{
+    padding-top:15px;
+
+}
+#espFooter
+{
+    float: right;
+    margin-top:-55px;
+    margin-right: 25px;
+}
+#txtEsp
+{
+    float: right;    
+    margin-top:-28px;
+}
+#desFooter
+{   
+    float: left; 
+    margin-left:10px;
+}
+#txtDes
+{    
+    padding-top:30px;
+}
+#footer2
+{
+    margin-left:125px;
+    height: 39px;
+    margin-top:-58px;
+}
+.checklist
+{
+    height: 488px;
+    width: 360px;
+}
