@@ -21,87 +21,249 @@
 }
 
 body {
+    width: 360px;
+    height: 690px;
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
-    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
-    background-color:#E4E4E4;
-    background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
-    font-family: system-ui, -apple-system, -apple-system-font, 'Segoe UI', 'Roboto', sans-serif;
+    -webkit-user-select: none;  
+    
+    font-family: 'Roboto', sans-serif;
     font-size:12px;
-    height:100vh;
     margin:0px;
     padding:0px;
     /* Padding to avoid the "unsafe" areas behind notches in the screen */
     padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-right, 0px);
-    text-transform:uppercase;
-    width:100%;
+    
 }
-
-/* Portrait layout (default) */
-.app {
-    background:url(../img/logo.png) no-repeat center top; /* 170px x 200px */
-    position:absolute;             /* position in the center of the screen */
-    left:50%;
-    top:50%;
-    height:50px;                   /* text area height */
-    width:225px;                   /* text area width */
-    text-align:center;
-    padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
-    margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
-                                   /* offset horizontal: half of text area width */
+* {
+    box-sizing: border-box;
 }
-
-/* Landscape layout (with min-width) */
-@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
-    .app {
-        background-position:left center;
-        padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
-        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
-                                      /* offset horizontal: half of image width and text area width */
-    }
+section
+{
+    width: 360px;
+    height: 690px;
 }
-
-h1 {
-    font-size:24px;
-    font-weight:normal;
-    margin:0px;
-    overflow:visible;
-    padding:0px;
-    text-align:center;
-}
-
-.event {
-    border-radius:4px;
-    -webkit-border-radius:4px;
-    color:#FFFFFF;
-    font-size:12px;
-    margin:0px 30px;
-    padding:2px 0px;
-}
-
-.event.listening {
-    background-color:#333333;
-    display:block;
-}
-
-.event.received {
-    background-color:#4B946A;
+.ocultar
+{
     display:none;
 }
+.Seccarga
+{
+    background-color: white;
+    
+}
+.Secbienvenidos
+{
+    background-color: #b0b969;
+}
+.loader {
+    border: 9px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 9px solid #b0b969;
+    width: 100px;
+    height: 100px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;    
+    margin-top:20px;
+    margin-left:130px;
+  }
+  #logoCarga{    
+    padding-top:225px;
+    padding-left:100px;
+  }
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  .SecPruebas
+{
+    background-color: white;
+}
+#infoUsuario
+{    
+    height: 143px;
+    width: 360px;    
+    background-color: #1166af;
+    padding-left:20px;
+    padding-right:20px;
+}
+#headInfoUsuario
+{
+    padding-top:20px;
+    margin-bottom:5px;
+    height: 49px;    
+    color:white;    
+    font-size: 13pt;
+}
+#opcionesPruebas
+{
+    float: right;
+}
+#volverPruebas
+{
+    float: left;
+    padding-top:2px;
+}
+#menuPruebas
+{
+    padding-left:5.6px; 
+    padding-right:5.6px;
+    display:inline-block;     
+}
+#bodyInfoUsuario
+{
+    float: left;
+    height: 94px;
+    padding-left:20px;
+    padding-right: 20px;     
+    color:white;  
+}
+#nivelPruebas
+{
+    margin-top:-6px;
+    padding-left:20px;
+}
+#saludPruebas
+{
+    float:right;
+    padding-right:170px;
+    margin-top: -80px;
+}
+#experienciaPruebas
+{
+    float:right;
+    padding-right:170px;
+    margin-top: -55px;
+}
+#barraSaludPruebas
+{
+    float:right;
+    margin-top: -80px;
+}
+#barraExpPruebas
+{
+    float:right;
+    margin-top: -50px;
+}
+#pExpPruebas
+{
+    float:right;
+    margin-top: -38px;
+}
+#pSaludPruebas
+{
+    float:right;
+    margin-top: -68px;
+}
+#footer
+{
+    height: 59px;
+    width: 360px;    
+    background-color: #1166af;
+    padding-left:20px;
+    padding-right:20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    color:white;
+}
+#pruebasFooter
+{
+    float: left;
+    padding-left:8px;
+}
+#txtPruebas
+{
+    padding-top:15px;
 
-@keyframes fade {
-    from { opacity: 1.0; }
-    50% { opacity: 0.4; }
-    to { opacity: 1.0; }
 }
- 
-@-webkit-keyframes fade {
-    from { opacity: 1.0; }
-    50% { opacity: 0.4; }
-    to { opacity: 1.0; }
+#espFooter
+{
+    float: right;
+    margin-top:-53px;
+    margin-right: 25px;
 }
- 
-.blink {
-    animation:fade 3000ms infinite;
-    -webkit-animation:fade 3000ms infinite;
+#txtEsp
+{
+    float: right;    
+    margin-top:-26px;
+}
+#desFooter
+{   
+    float: left; 
+    margin-left:10px;
+}
+#txtDes
+{    
+    padding-top:32px;
+    padding-left:-40px;
+}
+#footer2
+{
+    margin-left:125px;
+    height: 39px;
+    margin-top:-58px;
+}
+.checklist
+{
+    height: 488px;
+    width: 360px;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+ul li {
+    cursor: pointer;
+    position: relative;
+    padding-left:30px;
+    list-style-type: none;    
+    font-size: 11px;
+    transition: 0.2s;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: #2d2e2d;
+    border-color: #b4cfd6;
+    border-style: solid;
+    border-width: 0px 0 1px 0;
+    height: 40px;
+    padding-right:40px;
+    padding-top:10px;
+}
+
+ul li.checked {
+    color: #b4cfd6;
+    text-decoration: line-through;
+}
+ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #264B72;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 10px;
+    width: 5px;
+} 
+.close{
+    float: right;
+    width:15px;
+    height: 20px;
+    margin-right: -10px;
+    margin-top:-10px;
+}
+#tituloPrueba
+{
+    font-size: 20px;
+    color:#f6b419;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    padding-left:20px;
 }
