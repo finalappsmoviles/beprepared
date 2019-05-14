@@ -18,7 +18,7 @@
  */
 var app = {
     // Application Constructor
-    initialize: function() {
+    initialize: function () {
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
         iniciarPrograma();
     },
@@ -27,12 +27,12 @@ var app = {
     //
     // Bind any cordova events here. Common events are:
     // 'pause', 'resume', etc.
-    onDeviceReady: function() {       
+    onDeviceReady: function () {
         this.receivedEvent('deviceready');
     },
 
     // Update DOM on a Received Event
-    receivedEvent: function(id) {
+    receivedEvent: function (id) {
         var parentElement = document.getElementById(id);
         var listeningElement = parentElement.querySelector('.listening');
         var receivedElement = parentElement.querySelector('.received');
@@ -43,91 +43,104 @@ var app = {
         console.log('Received Event: ' + id);
     }
 };
-function iniciarPrograma()
-{    
-    
-    
+function iniciarPrograma() {
     var listaTareas = document.querySelector('ul');
-    var incrementoAvance=1/listaTareas.childElementCount;
-    var porcentajeTarea;    
+    var incrementoAvance = 1 / listaTareas.childElementCount;
+    var porcentajeTarea;
     var checkList = document.getElementsByTagName("LI");
     var i;
-    var borradosPruebas,borradosDesafios,borradosEspecialidades;
-    setTimeout(function(){
-        document.getElementById("Seccarga").className= "Seccarga ocultar";
-        document.getElementById("SecPruebas").className="SecPruebas animated fadeInUpBig";
-    }, 2000);
-    if(localStorage.getItem('porcentajeTarea') === null)
+    var borradosPruebas=["0"], borradosDesafios, borradosEspecialidades;
+    if(localStorage.getItem('borradosPruebas')!==null)
     {
-        porcentajeTarea = incrementoAvance-incrementoAvance;
-        localStorage.setItem('porcentajeTarea', porcentajeTarea);
+        var borradosPruebasL=JSON.stringify(localStorage.getItem('borradosPruebas'));
+        borradosPruebas=borradosPruebasL.split(",").join("\"");
+
+        alert(borradosPruebas);
+        for(i=0;i<borradosPruebas.length;i++)
+        {   
+            if(borradosPruebas[i]!=="0"&&borradosPruebas[i]!=="\""&&borradosPruebas[i]!=="")
+            {
+                alert(borradosPruebas[i]);
+                document.getElementById(borradosPruebas[i]).style.display = "none";
+            }    
+        }
     }
     else{
-        porcentajeTarea = parseFloat(localStorage.getItem('porcentajeTarea'),10); 
-
+        localStorage.setItem('borradosPruebas', borradosPruebas);
     }
     
-    for (i = 0; i < checkList.length; i++) {
-        var span = document.createElement("IMG");
-        span.setAttribute("src", "img/Todas/borrar.png");  
-        span.className = "close";
-        checkList[i].appendChild(span);        
-    } 
-    var close = document.getElementsByClassName("close");
-    for (i = 0; i < close.length; i++) {
-        close[i].onclick = function() {
-            var div = this.parentElement;
-            div.style.display = "none";
-        }    
+    setTimeout(function () {
+        document.getElementById("Seccarga").className = "Seccarga ocultar";
+        document.getElementById("SecPruebas").className = "SecPruebas animated fadeInUpBig";
+    }, 2000);
+    if (localStorage.getItem('porcentajeTarea') === null) {
+        porcentajeTarea = incrementoAvance - incrementoAvance;
+        localStorage.setItem('porcentajeTarea', porcentajeTarea);
+    }
+    else {
+        porcentajeTarea = parseFloat(localStorage.getItem('porcentajeTarea'), 10);
     }
 
-    var arrayCheck=["0"];
+    for (i = 0; i < checkList.length; i++) {
+        var span = document.createElement("IMG");
+        span.setAttribute("src", "img/Todas/borrar.png");
+        span.className = "btnEliminar";
+        span.id=checkList[i].id;
+        checkList[i].appendChild(span);
+    }
+    var btnEliminar = document.getElementsByClassName("btnEliminar");
+    for (i = 0; i < btnEliminar.length; i++) {
+        btnEliminar[i].onclick = function () {
+            var div = this.parentElement;
+            div.style.display = "none";
+            borradosPruebas.push(div.id);
+            localStorage.setItem('borradosPruebas', borradosPruebas);
+        }
+    }
+
+    var arrayCheck = ["0"];
     if (localStorage.getItem('pruebasCompletas') !== null) {
-        var chequeados=localStorage.getItem('pruebasCompletas');
-        for(var i=1, len=chequeados.length; i<len; i++) {
-            if(i%2==0)
-            {
+        var chequeados = localStorage.getItem('pruebasCompletas');
+        for (var i = 1, len = chequeados.length; i < len; i++) {
+            if (i % 2 == 0) {
                 var value = chequeados[i];
                 document.getElementById(value).classList.add('checked');
                 arrayCheck.push(value);
                 localStorage.setItem('pruebasCompletas', arrayCheck);
-            }            
+            }
         }
     }
     listaTareas.addEventListener('click', function (ev) {
         if (ev.target.classList.contains('checked')) {
             ev.target.classList.remove('checked');
             if (localStorage.getItem('porcentajeTarea') !== null) {
-                porcentajeTarea=parseFloat(localStorage.getItem('porcentajeTarea'),10);
-                porcentajeTarea =porcentajeTarea- incrementoAvance;
-                
-                localStorage.setItem('porcentajeTarea', porcentajeTarea); 
-                arrayCheck = arrayCheck.filter(function(item) { 
+                porcentajeTarea = parseFloat(localStorage.getItem('porcentajeTarea'), 10);
+                porcentajeTarea = porcentajeTarea - incrementoAvance;
+
+                localStorage.setItem('porcentajeTarea', porcentajeTarea);
+                arrayCheck = arrayCheck.filter(function (item) {
                     return item !== ev.target.id
                 })
                 localStorage.setItem('pruebasCompletas', arrayCheck);
             }
-            else{
-                porcentajeTarea =porcentajeTarea- incrementoAvance;
-                localStorage.setItem('porcentajeTarea', porcentajeTarea); 
-                arrayCheck = arrayCheck.filter(function(item) { 
+            else {
+                porcentajeTarea = porcentajeTarea - incrementoAvance;
+                localStorage.setItem('porcentajeTarea', porcentajeTarea);
+                arrayCheck = arrayCheck.filter(function (item) {
                     return item !== ev.target.id
                 })
                 localStorage.setItem('pruebasCompletas', arrayCheck);
             }
         }
-        else
-        {
-            
+        else {
             ev.target.classList.add('checked');
-                                  
-            porcentajeTarea =porcentajeTarea+ incrementoAvance;
-            localStorage.setItem('porcentajeTarea', porcentajeTarea);  
+            porcentajeTarea = porcentajeTarea + incrementoAvance;
+            localStorage.setItem('porcentajeTarea', porcentajeTarea);
             arrayCheck.push(ev.target.id);
             localStorage.setItem('pruebasCompletas', arrayCheck);
-                       
-        }  
-        
-    },false);
+
+        }
+
+    }, false);
 }
 app.initialize();
