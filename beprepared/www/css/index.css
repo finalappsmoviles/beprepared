@@ -26,7 +26,8 @@ body {
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
     -webkit-user-select: none;  
-    font-family: system-ui, -apple-system, -apple-system-font, 'Segoe UI', 'Roboto', sans-serif;
+    
+    font-family: 'Roboto', sans-serif;
     font-size:12px;
     margin:0px;
     padding:0px;
@@ -73,12 +74,10 @@ section
     padding-top:225px;
     padding-left:100px;
   }
-  /* Safari */
   @-webkit-keyframes spin {
     0% { -webkit-transform: rotate(0deg); }
     100% { -webkit-transform: rotate(360deg); }
-  }
-  
+  }  
   @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
@@ -155,3 +154,198 @@ section
 } */
   
   
+  .SecPruebas
+{
+    background-color: white;
+}
+#infoUsuario
+{    
+    height: 143px;
+    width: 360px;    
+    background-color: #1166af;
+    padding-left:20px;
+    padding-right:20px;
+}
+#headInfoUsuario
+{
+    padding-top:20px;
+    margin-bottom:5px;
+    height: 49px;    
+    color:white;    
+    font-size: 13pt;
+}
+#opcionesPruebas
+{
+    float: right;
+}
+#volverPruebas
+{
+    float: left;
+    padding-top:2px;
+}
+#menuPruebas
+{
+    padding-left:5.6px; 
+    padding-right:5.6px;
+    display:inline-block;     
+}
+#bodyInfoUsuario
+{
+    float: left;
+    height: 94px;
+    padding-left:20px;
+    padding-right: 20px;     
+    color:white;  
+}
+#nivelPruebas
+{
+    margin-top:-6px;
+    padding-left:20px;
+}
+#saludPruebas
+{
+    float:right;
+    padding-right:170px;
+    margin-top: -80px;
+}
+#experienciaPruebas
+{
+    float:right;
+    padding-right:170px;
+    margin-top: -55px;
+}
+#barraSaludPruebas
+{
+    float:right;
+    margin-top: -80px;
+}
+#barraExpPruebas
+{
+    float:right;
+    margin-top: -50px;
+}
+#pExpPruebas
+{
+    float:right;
+    margin-top: -38px;
+}
+#pSaludPruebas
+{
+    float:right;
+    margin-top: -68px;
+}
+#footer
+{
+    height: 59px;
+    width: 360px;    
+    background-color: #1166af;
+    padding-left:20px;
+    padding-right:20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    color:white;
+}
+#pruebasFooter
+{
+    float: left;
+    padding-left:8px;
+}
+#txtPruebas
+{
+    padding-top:15px;
+
+}
+#espFooter
+{
+    float: right;
+    margin-top:-53px;
+    margin-right: 25px;
+}
+#txtEsp
+{
+    float: right;    
+    margin-top:-26px;
+}
+#desFooter
+{   
+    float: left; 
+    margin-left:10px;
+}
+#txtDes
+{    
+    padding-top:32px;
+    padding-left:-40px;
+}
+#footer2
+{
+    margin-left:125px;
+    height: 39px;
+    margin-top:-58px;
+}
+.checklist
+{
+    height: 465px;
+    width: 360px;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+ul li {
+    cursor: pointer;
+    position: relative;
+    padding-left:30px;
+    list-style-type: none;    
+    font-size: 11px;
+    transition: 0.2s;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: #2d2e2d;
+    border-color: #b4cfd6;
+    border-style: solid;
+    border-width: 0px 0 1px 0;
+    height: 40px;
+    padding-right:40px;
+    padding-top:10px;
+}
+
+ul li.checked {
+    color: #b4cfd6;
+    text-decoration: line-through;
+}
+ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #264B72;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 10px;
+    width: 5px;
+} 
+.btnEliminar{
+    float: right;
+    width:15px;
+    height: 20px;
+    margin-right: -10px;
+    margin-top:-10px;
+    display: block;
+}
+#tituloPrueba
+{
+    font-size: 20px;
+    color:#f6b419;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    padding-left:20px;
+}
+#divEliminar
+{
+    width:40px;
+    height:405px;
+    float:right;
+}

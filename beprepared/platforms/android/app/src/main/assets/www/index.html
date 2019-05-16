@@ -1,49 +1,75 @@
 <!DOCTYPE html>
-<!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
 
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
 <html>
-    <head>
-        <!--
-        Customize this policy to fit your own app's needs. For more guidance, see:
-            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
-        Some notes:
-            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
-            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
-            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
-                * Enable inline JS: add 'unsafe-inline' to default-src
-        -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
-        <meta name="format-detection" content="telephone=no">
-        <meta name="msapplication-tap-highlight" content="no">
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-        <link rel="stylesheet" type="text/css" href="css/index.css">
-        <title>Hello World</title>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <title>Be Prepared</title>
+
+<body>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
+
     <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
+        <section id="Seccarga" class="Seccarga animated fadeInUpBig" > 
+            <img id="logoCarga" src="img/Todas/imagen_scout_pantalla_bienvenido.png"> 
+            <div class="loader"></div>
+        </section>
+        <section id="Secbienvenidos" class="Secbienvenidos ocultar" >                     
+        </section>
+        <section id="SecUnidad" class="SecUnidad ocultar">            
+        </section>
+        <section id="SecEnfoque" class="SecEnfoque ocultar">            
+        </section>
+        <section id="SecPruebas" class="SecPruebas  ocultar"> 
+            <div id="infoUsuario">
+                <div id="headInfoUsuario">
+                    <img id="volverPruebas" src="img/pantallas/pruebas/imagenes/volver.png">
+                    <img id="menuPruebas" src="img/pantallas/pruebas/imagenes/menu.png">
+                    Sofía Álvarez
+                    <img id="opcionesPruebas" src="img/pantallas/pruebas/imagenes/opciones.png">
+                </div>
+                <div id="bodyInfoUsuario">
+                    <img id="usuarioPruebas" src="img/pantallas/pruebas/imagenes/ella_azul.png">
+                    <p id="nivelPruebas">Nivel 1</p>
+                    <img id="saludPruebas" src="img/pantallas/pruebas/imagenes/salud.png">
+                    <img id="barraSaludPruebas" src="img/Todas/barra.png">
+                    <p id="pSaludPruebas">Salud</p>
+                    <img id="experienciaPruebas" src="img/pantallas/pruebas/imagenes/experiencia.png">
+                    <img id="barraExpPruebas" src="img/Todas/barra.png">
+                    <p id="pExpPruebas">Experiencia</p>
+                </div>                
             </div>
-        </div>
+            <div id="checkListPruebas" class="checklist animated fadeInLeftBig" >                      
+                <p id="tituloPrueba">Pruebas de investidura</p>
+                <ul id="myUL">
+                    <li id="1">Participa satisfactoriamene en por lo menos seis (6) reuniones de Equipo y Sociedad</li>
+                    <li id="2">Aprende y explica la Ley y la promesa del pionero</li>
+                    <li id="3">Explica el significado del Lema del Pionero</li>
+                    <li id="4">Practica y explica la Divisa del Pionero</li>
+                    <li id="5">Recita la Oración del Pionero y explica su significado</li>
+                    <li id="6">Conoce y explica los Fines, Principios y Virtudes Movimiento Scout</li>
+                </ul>
+            </div>
+            <div id="checkListDesafios" class="checklist ocultar">                      
+            </div>
+            <div id="checkListEspecialidades" class="checklist ocultar">                      
+            </div>
+            <div id="footer">
+                <img id="pruebasFooter" src="img/pantallas/pruebas/imagenes/pruebas.png">
+                <p id="txtPruebas">Pruebas</p>
+                <div id="footer2">
+                    <img id="desFooter" src="img/pantallas/pruebas/imagenes/desafios.png">
+                    <p id="txtDes">Desafios</p>
+                    <img id="espFooter" src="img/pantallas/pruebas/imagenes/especialidades.png">
+                    <p id="txtEsp">Especialidades</p>
+                </div>
+            </div>
+        </section>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
     </body>
+
 </html>

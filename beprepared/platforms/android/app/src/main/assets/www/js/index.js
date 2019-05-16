@@ -20,13 +20,14 @@ var app = {
     // Application Constructor
     initialize: function() {
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
+        iniciarPrograma();
     },
 
     // deviceready Event Handler
     //
     // Bind any cordova events here. Common events are:
     // 'pause', 'resume', etc.
-    onDeviceReady: function() {
+    onDeviceReady: function() {       
         this.receivedEvent('deviceready');
     },
 
@@ -42,5 +43,91 @@ var app = {
         console.log('Received Event: ' + id);
     }
 };
+function iniciarPrograma()
+{    
+    
+    
+    var listaTareas = document.querySelector('ul');
+    var incrementoAvance=1/listaTareas.childElementCount;
+    var porcentajeTarea;    
+    var checkList = document.getElementsByTagName("LI");
+    var i;
+    var borradosPruebas,borradosDesafios,borradosEspecialidades;
+    setTimeout(function(){
+        document.getElementById("Seccarga").className= "Seccarga ocultar";
+        document.getElementById("SecPruebas").className="SecPruebas animated fadeInUpBig";
+    }, 2000);
+    if(localStorage.getItem('porcentajeTarea') === null)
+    {
+        porcentajeTarea = incrementoAvance-incrementoAvance;
+        localStorage.setItem('porcentajeTarea', porcentajeTarea);
+    }
+    else{
+        porcentajeTarea = parseFloat(localStorage.getItem('porcentajeTarea'),10); 
 
+    }
+    
+    for (i = 0; i < checkList.length; i++) {
+        var span = document.createElement("IMG");
+        span.setAttribute("src", "img/Todas/borrar.png");  
+        span.className = "close";
+        checkList[i].appendChild(span);        
+    } 
+    var close = document.getElementsByClassName("close");
+    for (i = 0; i < close.length; i++) {
+        close[i].onclick = function() {
+            var div = this.parentElement;
+            div.style.display = "none";
+        }    
+    }
+
+    var arrayCheck=["0"];
+    if (localStorage.getItem('pruebasCompletas') !== null) {
+        var chequeados=localStorage.getItem('pruebasCompletas');
+        for(var i=1, len=chequeados.length; i<len; i++) {
+            if(i%2==0)
+            {
+                var value = chequeados[i];
+                document.getElementById(value).classList.add('checked');
+                arrayCheck.push(value);
+                localStorage.setItem('pruebasCompletas', arrayCheck);
+            }            
+        }
+    }
+    listaTareas.addEventListener('click', function (ev) {
+        if (ev.target.classList.contains('checked')) {
+            ev.target.classList.remove('checked');
+            if (localStorage.getItem('porcentajeTarea') !== null) {
+                porcentajeTarea=parseFloat(localStorage.getItem('porcentajeTarea'),10);
+                porcentajeTarea =porcentajeTarea- incrementoAvance;
+                
+                localStorage.setItem('porcentajeTarea', porcentajeTarea); 
+                arrayCheck = arrayCheck.filter(function(item) { 
+                    return item !== ev.target.id
+                })
+                localStorage.setItem('pruebasCompletas', arrayCheck);
+            }
+            else{
+                porcentajeTarea =porcentajeTarea- incrementoAvance;
+                localStorage.setItem('porcentajeTarea', porcentajeTarea); 
+                arrayCheck = arrayCheck.filter(function(item) { 
+                    return item !== ev.target.id
+                })
+                localStorage.setItem('pruebasCompletas', arrayCheck);
+            }
+        }
+        else
+        {
+            
+            ev.target.classList.add('checked');
+                                  
+            porcentajeTarea =porcentajeTarea+ incrementoAvance;
+            localStorage.setItem('porcentajeTarea', porcentajeTarea);  
+            arrayCheck.push(ev.target.id);
+            localStorage.setItem('pruebasCompletas', arrayCheck);
+                       
+        }  
+        
+    },false);
+}
 app.initialize();
