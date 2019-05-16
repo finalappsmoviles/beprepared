@@ -57,11 +57,6 @@ function iniciarPrograma() {
             document.getElementById(borradosPruebas[i]).style.display = "none";
         }
     }
-
-    setTimeout(function () {
-        document.getElementById("Seccarga").className = "Seccarga ocultar";
-        document.getElementById("SecPruebas").className = "SecPruebas animated fadeInUpBig";
-    }, 2000);
     if (localStorage.getItem('porcentajeTarea') === null) {
         porcentajeTarea = 0;
         localStorage.setItem('porcentajeTarea', porcentajeTarea);
