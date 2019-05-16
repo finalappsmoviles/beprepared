@@ -52,10 +52,13 @@ section
     background-color: white;
     
 }
-.Secbienvenidos
+ .Secbienvenidos
 {
-    background-color: #b0b969;
-}
+    position: absolute;
+    /* background: url("img/Todas/fondo_pantalla_bienvenido.png"); */
+    /* background-color: #b0b969;  */
+    text-align: center;
+} 
 .loader {
     border: 9px solid #f3f3f3;
     border-radius: 50%;
@@ -79,6 +82,16 @@ section
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
   }
+  .secBienvenidosTextoStyle{
+   
+    font-family: "Loved by the King"; 
+    font-size: 18pt; 
+    font-style: normal; 
+    color: #0c5e65; 
+   
+}
+  
+  
   .SecPruebas
 {
     background-color: white;
@@ -180,6 +193,11 @@ section
     padding-top:15px;
 
 }
+.checklist
+{
+    height: 468px;
+    width: 360px;
+}
 #espFooter
 {
     float: right;
@@ -207,11 +225,7 @@ section
     height: 39px;
     margin-top:-58px;
 }
-.checklist
-{
-    height: 465px;
-    width: 360px;
-}
+
 ul {
     margin: 0;
     padding: 0;
@@ -252,12 +266,13 @@ ul li.checked::before {
     height: 10px;
     width: 5px;
 } 
-.close{
+.btnEliminar{
     float: right;
     width:15px;
     height: 20px;
     margin-right: -10px;
     margin-top:-10px;
+    display: block;
 }
 #tituloPrueba
 {
@@ -266,4 +281,10 @@ ul li.checked::before {
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
     padding-left:20px;
+}
+#divEliminar
+{
+    width:40px;
+    height:405px;
+    float:right;
 }

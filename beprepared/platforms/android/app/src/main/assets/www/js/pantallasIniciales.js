@@ -26,7 +26,7 @@ function clickEnSiguiente(){
 function ellaSeleccionado(){
     
     esSeleccion = true;
-    document.getElementById('imgpersonajeSeleccionado').src = "img/Todas/eleccion_ella.png";
+    document.getElementById('personajeSeleccionado').src = "img/Todas/eleccion_ella.png";
 }
 function elSeleccionado(){
    

@@ -44,6 +44,10 @@ var app = {
     }
 };
 function iniciarPrograma() {
+    setTimeout(function(){
+        document.getElementById("Seccarga").className= "Seccarga ocultar";
+        document.getElementById("Secbienvenidos").className="Secbienvenidos animated fadeInUpBig";
+    }, 2000);
     var listaTareas = document.querySelector('ul');
     var txtLista = document.getElementsByTagName('span');
     var incrementoAvance = 1 / listaTareas.childElementCount;

@@ -1,0 +1,62 @@
+#posiBienvenidosTexto{
+    position: absolute;
+    top: 50px;
+    right: 130px;
+}
+#posiPersonajeTexto{
+  position: absolute;
+  top: 200px;
+  right: 116px;
+
+}
+#posiNombreTexto{
+  position: absolute;
+  top: 370px;
+  right: 100px;
+  
+  
+}
+#nombreUsuario{
+   font-family: "Roboto"; 
+   font-size: 13pt; 
+    font-style: thin; 
+    color: #b0b969; 
+    /* border-width: 738px; */
+    border: none;
+    border-bottom: 2pt solid #b0b969;
+    
+}
+::placeholder {
+   font-family: "Roboto"; 
+   font-size: 13pt; 
+    font-style: thin; 
+    color: #b0b969; 
+   opacity: 1; 
+ }
+
+ #boton_siguiente{
+     position: absolute;
+     bottom: 20px;
+     right: 20px;
+ }
+ #logoBienvenidos{
+     position: absolute;
+     right: 106px;
+     top: 166px;
+ }
+#inputNombre{
+   position: absolute;
+   top: 450px;
+   right: 75px;
+   opacity: 0.6;
+}
+#el_opcion{
+   position: absolute;
+   top: 280px;
+   left: 97px;
+}
+#ella_opcion{
+   position: absolute;
+   top: 280px;
+   right: 97px;
+}
