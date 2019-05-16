@@ -1,0 +1,23 @@
+#encabezadoEnfoque{
+    height: 143px;
+    background-color: #243E90; 
+}
+#textoNombreEnf{
+    font-family: "Roboto"; 
+    font-size: 18pt; 
+     font-style: Thin; 
+     color: white; 
+     position: absolute;
+     top: 7px;
+     left: 70px;
+     margin: auto;
+}
+#imgpersonajeSeleccionadoEnf{
+    position: absolute;
+    top: -530px;
+    left: -200px;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
