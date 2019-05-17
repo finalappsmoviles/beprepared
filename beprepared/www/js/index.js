@@ -36,10 +36,10 @@ var app = {
 };
 
 function iniciarPrograma() {
-    setTimeout(function(){
-        document.getElementById("Seccarga").className= "Seccarga ocultar";
-        document.getElementById("Secbienvenidos").className="Secbienvenidos animated fadeInUpBig";
-    }, 2000);
+    // setTimeout(function(){
+    //     document.getElementById("Seccarga").className= "Seccarga ocultar";
+    //     document.getElementById("Secbienvenidos").className="Secbienvenidos animated fadeInUpBig";
+    // }, 2000);
     
     borradosPruebas = localStorage.getItem('borradosPruebas') != null ? JSON.parse(localStorage.getItem('borradosPruebas')) : [];
     for (i = 0; i < borradosPruebas.length; i++) {
