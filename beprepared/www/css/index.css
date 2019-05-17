@@ -288,3 +288,14 @@ ul li.checked::before {
     height:405px;
     float:right;
 }
+.removed {
+    transition: all 0.5s ease-out;
+    opacity: 0;
+  }
+#nombrePruebas
+{
+    margin-top:-20px;
+    margin-left:55px;
+    margin-bottom: -20px;
+    color:white;
+}
