@@ -1,10 +1,11 @@
-var listaTareas = document.querySelector('ul');
+var listaTareas = document.getElementById('pruebas');
+// var txtLista = document.getElementsByClassName('pruebasItem');
 var txtLista = document.getElementsByTagName('span');
 var incrementoAvance = 1 / listaTareas.childElementCount;
 var porcentajeTarea, volverPruebas, volverPruebasPuntos;
 var checkList = document.getElementsByTagName("LI");
 var i;
-var borradosPruebas = [], borradosDesafios, borradosEspecialidades;
+var borradosPruebas= ["0"], borradosDesafios, borradosEspecialidades;
 
 var arrayCheck = ["0"];
 var app = {
@@ -40,13 +41,20 @@ function iniciarPrograma() {
     //     document.getElementById("Seccarga").className= "Seccarga ocultar";
     //     document.getElementById("Secbienvenidos").className="Secbienvenidos animated fadeInUpBig";
     // }, 2000);
-    
-    borradosPruebas = localStorage.getItem('borradosPruebas') != null ? JSON.parse(localStorage.getItem('borradosPruebas')) : [];
-    for (i = 0; i < borradosPruebas.length; i++) {
-        if (borradosPruebas[i] !== "0" && borradosPruebas[i] !== "\"" && borradosPruebas[i] !== "") {
-            document.getElementById(borradosPruebas[i]).style.display = "none";
+    var bString="borradosPruebas";
+   if (localStorage.getItem("borradosPruebas") != null){
+        var borradosPruebasR=localStorage.getItem('borradosPruebas').split(',');
+        for (i = 0; i < borradosPruebasR.length; i++) {
+            if (borradosPruebasR[i] !== "0" && borradosPruebasR[i] !== "\"" && borradosPruebasR[i] !== "") {
+                document.getElementById(borradosPruebasR[i]).style.display = "none";
+                console.log(borradosPruebasR);                
+                borradosPruebas.push(borradosPruebasR[i]);
+                console.log(borradosPruebas);
+                localStorage.setItem('borradosPruebas', borradosPruebas);
+            }
         }
-    }
+    } 
+    
     if (localStorage.getItem('porcentajeTarea') === null) {
         porcentajeTarea = 0;
         localStorage.setItem('porcentajeTarea', porcentajeTarea);
@@ -55,8 +63,17 @@ function iniciarPrograma() {
         porcentajeTarea = parseFloat(localStorage.getItem('porcentajeTarea'), 10);
     }
     agregandoBtnEliminar();
+
     if (localStorage.getItem('pruebasCompletas') !== null) {
-        chequeadosInicio();        
+        var chequeados = localStorage.getItem('pruebasCompletas');
+        for (var i = 1, len = chequeados.length; i < len; i++) {
+            if (i % 2 == 0) {
+                var value = chequeados[i];
+                document.getElementById(value).classList.add('checked');
+                arrayCheck.push(value);
+                localStorage.setItem('pruebasCompletas', arrayCheck);
+            }
+        }     
     }
     for (i = 0; i < txtLista.length; i++) {
         txtLista[i].addEventListener('click', function(){
@@ -77,18 +94,6 @@ function iniciarPrograma() {
     
 }
 
-function chequeadosInicio()
-{
-    var chequeados = localStorage.getItem('pruebasCompletas');
-    for (var i = 1, len = chequeados.length; i < len; i++) {
-        if (i % 2 == 0) {
-            var value = chequeados[i];
-            document.getElementById(value).classList.add('checked');
-            arrayCheck.push(value);
-            localStorage.setItem('pruebasCompletas', arrayCheck);
-        }
-    }
-}
 
 function agregandoBtnEliminar()
 {
@@ -107,13 +112,14 @@ function agregandoBtnEliminar()
             if (div.classList.contains('checked')) {
                 var porcentajeTarea1 = (porcentajeTarea - incrementoAvance);
                 localStorage.setItem('porcentajeTarea', porcentajeTarea1);
-            }
-            div.className='removed';
-            borradosPruebas.push(parseInt(div.id));
+            }            
+            
+            borradosPruebas.push(div.id);
+            
             setTimeout(function(){
                 div.style.display = "none";
             }, 400);
-            localStorage.setItem('borradosPruebas', JSON.stringify(borradosPruebas));
+            localStorage.setItem('borradosPruebas', borradosPruebas);
         }
     }
 }
