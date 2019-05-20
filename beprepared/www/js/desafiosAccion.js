@@ -15,6 +15,8 @@ desFooter=document.getElementById("desFooter");
 checkListDesafios=document.getElementById("checkListDesafios");
 checkListPruebas=document.getElementById("checkListPruebas");
 headInfoUsuario=document.getElementById("headInfoUsuario");
+var nombrePruebas=document.getElementById("nombrePruebas");
+var volverPruebasPuntos=document.getElementById("volverPruebasPuntos");
 
 
 function abrirDesafios()
@@ -31,16 +33,14 @@ function abrirDesafios()
 
 function abrirPruebas()
 {
-    pruebasFooter.addEventListener("click",function()
-    {
-        checkListPruebas.className= "checklist animated fadeInLeftBig";
-        checkListDesafios.className="checklist ocultar"; 
-        pruebasFooter.src="img/pantallas/pruebas/imagenes/pruebas.png";
-        desFooter.src="img/pantallas/pruebas/imagenes/desafios.png";
-        bodyInfoUsuario.className="bodyInfoUsuario";
-        volverPruebas.id="volverPruebas";
-        volverPruebasPuntos.id="volverPruebasPuntos";
-    });
+    checkListPruebas.className= "checklist animated fadeInLeftBig";
+    checkListDesafios.className="checklist ocultar"; 
+    pruebasFooter.src="img/pantallas/pruebas/imagenes/pruebas.png";
+    desFooter.src="img/pantallas/pruebas/imagenes/desafios.png";
+    bodyInfoUsuario.className="bodyInfoUsuario";
+    volverPruebas.id="volverPruebas";
+    volverPruebasPuntos.id="volverPruebasPuntos";
+   
 }
 function ClickDesCheck(id)
 {

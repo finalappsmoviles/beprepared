@@ -30,14 +30,13 @@ body {
     height: 690px;
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
-    -webkit-user-select: none;  
-    
+    -webkit-user-select: none;     
     font-family: 'Roboto', sans-serif;
     font-size:12px;
     margin:0px;
     padding:0px;
-    /* Padding to avoid the "unsafe" areas behind notches in the screen */
-    padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-right, 0px);
+    /* Padding to avoid the "unsafe" areas behind notches in the screen
+    padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-right, 0px); */
     
 }
 * {
@@ -47,6 +46,10 @@ section
 {
     width: 360px;
     height: 690px;
+    overflow:hidden;
+    background-repeat: no-repeat;
+    margin: 0px;
+    padding:0px;
 }
 .ocultar
 {
@@ -92,11 +95,8 @@ section
     font-family: "Loved by the King"; 
     font-size: 18pt; 
     font-style: normal; 
-    color: #0c5e65; 
-   
-}
-  
-  
+    color: #0c5e65;    
+} 
   .SecPruebas
 {
     background-color: white;
@@ -104,8 +104,8 @@ section
 
 #headInfoUsuario
 {
-    padding-top:20px;
-    padding-bottom:35px;
+    padding-top:17px;
+    padding-bottom:38px;
     height: 49px;    
     color:white;    
     font-size: 13pt;
@@ -119,6 +119,11 @@ section
     float: right;
 }
 #volverPruebas
+{
+    float: left;
+    padding-top:2px;
+}
+#volverDesafios
 {
     float: left;
     padding-top:2px;
@@ -302,6 +307,7 @@ ul li.checked::before {
     font-weight: 600;
     padding-left:20px;
     margin-top:60px;
+    margin-bottom: 30px;
 }
 #tituloDesCheck
 {
@@ -334,7 +340,8 @@ ul li.checked::before {
     height: 100px;
     width:360px;
     padding:0px;
-    margin-top:-10px;
+    margin-top:-40px;
+    margin-bottom:25px;
 }
 #imgDes
 {
@@ -356,7 +363,7 @@ ul li.checked::before {
     margin-left: 148px;
     margin-top:-15px;
 }
-#avanceDes
+.avanceDes
 {
     font-weight: 600;
     font-size:16px;
