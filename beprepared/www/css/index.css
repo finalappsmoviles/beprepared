@@ -252,6 +252,9 @@ ul li {
     padding-right:40px;
     padding-top:10px;
 }
+#desSalir li:first-child{
+    height: 70px;
+}
 
 ul li.checked {
     color: #b4cfd6;
@@ -293,7 +296,7 @@ ul li.checked::before {
     font-family: 'Roboto', sans-serif;
     font-weight: 600;
     padding-left:20px;
-    margin-top:80px;
+    margin-top:60px;
 }
 #tituloDesCheck
 {
@@ -302,7 +305,7 @@ ul li.checked::before {
     font-family: 'Roboto', sans-serif;
     font-weight: 600;
     padding-left:20px;
-    margin-top:20px; 
+    margin-top:10px; 
 }
 #divEliminar
 {
