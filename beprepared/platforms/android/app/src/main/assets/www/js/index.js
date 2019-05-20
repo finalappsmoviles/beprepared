@@ -37,10 +37,10 @@ var app = {
 };
 
 function iniciarPrograma() {
-    // setTimeout(function(){
-    //     document.getElementById("Seccarga").className= "Seccarga ocultar";
-    //     document.getElementById("Secbienvenidos").className="Secbienvenidos animated fadeInUpBig";
-    // }, 2000);     
+    setTimeout(function(){
+        document.getElementById("Seccarga").className= "Seccarga ocultar";
+        document.getElementById("Secbienvenidos").className="Secbienvenidos animated fadeInUpBig";
+    }, 2000);     
 
     if (localStorage.getItem('borradosPruebas') !== null) {
         var borrados = localStorage.getItem('borradosPruebas');
