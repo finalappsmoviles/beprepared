@@ -43,7 +43,7 @@ var app = {
 function iniciarPrograma() {
     setTimeout(function(){
         document.getElementById("Seccarga").className= "Seccarga ocultar";
-        document.getElementById("Secbienvenidos").className="Secbienvenidos animated fadeInRightBig";
+        document.getElementById("Secbienvenidos").className="Secbienvenidos animated fadeInUpBig";
     }, 2000);     
 
     if (localStorage.getItem('borradosPruebas') !== null) {
@@ -60,9 +60,13 @@ function iniciarPrograma() {
     if (localStorage.getItem('porcentajePrueba') === null) {
         porcentajePrueba = 0;
         localStorage.setItem('porcentajePrueba', porcentajePrueba);
+        document.getElementById("avancePrueba").innerHTML=(porcentajePrueba*100).toFixed()+"%";
+
     }
     else {
         porcentajePrueba = parseFloat(localStorage.getItem('porcentajePrueba'), 10);
+        document.getElementById("avancePrueba").innerHTML=(porcentajePrueba*100).toFixed()+"%";
+        
     }
     agregandoBtnEliminar();
 
@@ -77,11 +81,11 @@ function iniciarPrograma() {
     volverPruebas = document.getElementById("volverPruebas");
     volverPruebasPuntos = document.getElementById("volverPruebasPuntos");
     volverPruebas.addEventListener('click', function () {
-        document.getElementById("SecUnidad").className = "SecUnidad animated fadeInRightBig";
+        document.getElementById("SecUnidad").className = "SecUnidad animated fadeInUpBig";
         document.getElementById("SecPruebas").className = "SecPruebas ocultar";
     }, false);
     volverPruebasPuntos.addEventListener('click', function () {
-        document.getElementById("SecUnidad").className = "SecUnidad animated fadeInRightBig";
+        document.getElementById("SecUnidad").className = "SecUnidad animated fadeInUpBig";
         document.getElementById("SecPruebas").className = "SecPruebas ocultar";
     }, false);
 
@@ -90,11 +94,11 @@ function iniciarPrograma() {
     if (localStorage.getItem('porcentajedesSalir') === null) {
         porcentajedesSalir = 0;
         localStorage.setItem('porcentajedesSalir', porcentajedesSalir);
-        document.getElementById("avancedesSalir").innerHTML=(porcentajedesSalir*100)+"%";
+        document.getElementById("avancedesSalir").innerHTML=(porcentajedesSalir*100).toFixed()+"%";
     }
     else {
         porcentajedesSalir = parseFloat(localStorage.getItem('porcentajedesSalir'), 10);
-        document.getElementById("avancedesSalir").innerHTML=(porcentajedesSalir*100)+"%";
+        document.getElementById("avancedesSalir").innerHTML=(porcentajedesSalir*100).toFixed()+"%";
     }
     if (localStorage.getItem('checkdesSalir') !== null) {    
         var chequeadosDes = localStorage.getItem('checkdesSalir');
@@ -112,11 +116,11 @@ function iniciarPrograma() {
     if (localStorage.getItem('porcentajedesVivir') === null) {
         porcentajedesVivir = 0;
         localStorage.setItem('porcentajedesVivir', porcentajedesVivir);
-        document.getElementById("avancedesVivir").innerHTML=(porcentajedesVivir*100)+"%";
+        document.getElementById("avancedesVivir").innerHTML=(porcentajedesVivir*100).toFixed()+"%";
     }
     else {
         porcentajedesVivir = parseFloat(localStorage.getItem('porcentajedesVivir'), 10);
-        document.getElementById("avancedesVivir").innerHTML=(porcentajedesVivir*100)+"%";        
+        document.getElementById("avancedesVivir").innerHTML=(porcentajedesVivir*100).toFixed()+"%";        
     }
     if (localStorage.getItem('checkdesVivir') !== null) {    
         var chequeadosDes = localStorage.getItem('checkdesVivir');
@@ -135,11 +139,11 @@ function iniciarPrograma() {
     if (localStorage.getItem('porcentajedesDar') === null) {
         porcentajedesDar = 0;
         localStorage.setItem('porcentajedesDar', porcentajedesDar);
-        document.getElementById("avancedesDar").innerHTML=(porcentajedesDar*100)+"%";
+        document.getElementById("avancedesDar").innerHTML=(porcentajedesDar*100).toFixed()+"%";
     }
     else {
         porcentajedesDar = parseFloat(localStorage.getItem('porcentajedesDar'), 10);
-        document.getElementById("avancedesDar").innerHTML=(porcentajedesDar*100)+"%";
+        document.getElementById("avancedesDar").innerHTML=(porcentajedesDar*100).toFixed()+"%";
     }
     if (localStorage.getItem('checkdesDar') !== null) {    
         var chequeadosDes = localStorage.getItem('checkdesDar');
@@ -158,11 +162,11 @@ function iniciarPrograma() {
      if (localStorage.getItem('porcentajedesCrear') === null) {
         porcentajedesCrear = 0;
         localStorage.setItem('porcentajedesCrear', porcentajedesCrear);
-        document.getElementById("avancedesCrear").innerHTML=(porcentajedesCrear*100)+"%";
+        document.getElementById("avancedesCrear").innerHTML=(porcentajedesCrear*100).toFixed()+"%";
     }
     else {
         porcentajedesCrear = parseFloat(localStorage.getItem('porcentajedesCrear'), 10);
-        document.getElementById("avancedesCrear").innerHTML=(porcentajedesCrear*100)+"%";
+        document.getElementById("avancedesCrear").innerHTML=(porcentajedesCrear*100).toFixed()+"%";
     }
     if (localStorage.getItem('checkdesCrear') !== null) {    
         var chequeadosDes = localStorage.getItem('checkdesCrear');
@@ -181,11 +185,11 @@ function iniciarPrograma() {
     if (localStorage.getItem('porcentajedesBuscar') === null) {
         porcentajedesBuscar = 0;
         localStorage.setItem('porcentajedesBuscar', porcentajedesBuscar);
-        document.getElementById("avancedesBuscar").innerHTML=((porcentajedesBuscar*100))+"%"
+        document.getElementById("avancedesBuscar").innerHTML=((porcentajedesBuscar*100).toFixed())+"%"
     }
     else {
         porcentajedesBuscar = parseFloat(localStorage.getItem('porcentajedesBuscar'), 10);
-        document.getElementById("avancedesBuscar").innerHTML=(porcentajedesBuscar*100)+"%"
+        document.getElementById("avancedesBuscar").innerHTML=(porcentajedesBuscar*100).toFixed()+"%"
         
     }
     if (localStorage.getItem('checkdesBuscar') !== null) {    
@@ -260,7 +264,7 @@ function clickChecklist(div,idUl) {
             window['porcentaje' + idUl ]= parseFloat(localStorage.getItem(porcentaje), 10);
             window['porcentaje' + idUl ] = parseFloat(localStorage.getItem(porcentaje),10) - incrementoAvance;
             localStorage.setItem(porcentaje, window['porcentaje' + idUl ]);   
-            document.getElementById(avance).innerHTML=(window['porcentaje' + idUl ]*100)+"%";        
+            document.getElementById(avance).innerHTML=(window['porcentaje' + idUl ]*100).toFixed()+"%";        
             window['check'+idUl +'Local'] = window['check'+idUl +'Local'].filter(function (item) {
                 return item !== div.id
             })
@@ -271,7 +275,7 @@ function clickChecklist(div,idUl) {
         div.classList.add('checked');
         window['porcentaje' + idUl] = parseFloat(localStorage.getItem(porcentaje),10) + incrementoAvance;
         localStorage.setItem(porcentaje, window['porcentaje' + idUl ]);
-        document.getElementById(avance).innerHTML=(window['porcentaje' + idUl ]*100)+"%";
+        document.getElementById(avance).innerHTML=(window['porcentaje' + idUl ]*100).toFixed()+"%";
         window['check'+idUl +'Local'].push(div.id);    
         localStorage.setItem(check,window['check'+idUl +'Local']);
     }

@@ -299,6 +299,15 @@ ul li.checked::before {
     padding-left:20px;
     margin-top:80px;
 }
+#avancePrueba
+{
+    font-size: 16px;
+    color:#f6b419;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    padding-left:200px;
+    margin-top:-35px;
+}
 #tituloMenDes
 {
     font-size: 16px;
