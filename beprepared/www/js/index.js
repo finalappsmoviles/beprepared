@@ -8,6 +8,10 @@ var arrayBorrados = ["0"], borradosDesafios, borradosEspecialidades;
 
 var checkPruebaLocal = ["0"];
 var checkdesSalirLocal = ["0"];
+var checkdesVivirLocal=["0"];
+var checkdesDarLocal=["0"];
+var checkdesCrearLocal=["0"];
+var checkdesBuscarLocal=["0"];
 var app = {
     // Application Constructor
     initialize: function () {
@@ -37,10 +41,10 @@ var app = {
 };
 
 function iniciarPrograma() {
-    setTimeout(function(){
-        document.getElementById("Seccarga").className= "Seccarga ocultar";
-        document.getElementById("Secbienvenidos").className="Secbienvenidos animated fadeInUpBig";
-    }, 2000);     
+    // setTimeout(function(){
+    //     document.getElementById("Seccarga").className= "Seccarga ocultar";
+    //     document.getElementById("Secbienvenidos").className="Secbienvenidos animated fadeInUpBig";
+    // }, 2000);     
 
     if (localStorage.getItem('borradosPruebas') !== null) {
         var borrados = localStorage.getItem('borradosPruebas');
@@ -66,6 +70,7 @@ function iniciarPrograma() {
     for (i = 0; i < txtLista.length; i++) {
         txtLista[i].addEventListener('click', function () {
             var div = this.parentElement;
+            
             clickChecklist(div,(this.parentElement).parentElement.id);
         }, false);
     }
@@ -80,7 +85,8 @@ function iniciarPrograma() {
         document.getElementById("SecPruebas").className = "SecPruebas ocultar";
     }, false);
 
-    // //CheckList Desafio Salir
+    // //ChecksList Desafio Salir
+
     if (localStorage.getItem('porcentajedesSalir') === null) {
         porcentajedesSalir = 0;
         localStorage.setItem('porcentajedesSalir', porcentajedesSalir);
@@ -100,6 +106,90 @@ function iniciarPrograma() {
             }
         }
     }
+    // //CheckList Desafio Vvir
+    if (localStorage.getItem('porcentajedesVivir') === null) {
+        porcentajedesVivir = 0;
+        localStorage.setItem('porcentajedesVivir', porcentajedesVivir);
+    }
+    else {
+        porcentajedesVivir = parseFloat(localStorage.getItem('porcentajedesVivir'), 10);
+    }
+    if (localStorage.getItem('checkdesVivir') !== null) {    
+        var chequeadosDes = localStorage.getItem('checkdesVivir');
+        for (var i = 1, len = chequeadosDes.length; i < len; i++) {
+            if (i % 2 == 0) {
+                var value = chequeadosDes[i];
+                document.getElementById(value).classList.add('checked');
+                
+                checkdesVivirLocal.push(value);
+                localStorage.setItem('checkdesVivir', checkdesVivirLocal);
+            }
+        }
+    }
+
+    // //CheckList Desafio Dar
+    if (localStorage.getItem('porcentajedesDar') === null) {
+        porcentajedesDar = 0;
+        localStorage.setItem('porcentajedesDar', porcentajedesDar);
+    }
+    else {
+        porcentajedesDar = parseFloat(localStorage.getItem('porcentajedesDar'), 10);
+    }
+    if (localStorage.getItem('checkdesDar') !== null) {    
+        var chequeadosDes = localStorage.getItem('checkdesDar');
+        for (var i = 1, len = chequeadosDes.length; i < len; i++) {
+            if (i % 2 == 0) {
+                var value = chequeadosDes[i];
+                document.getElementById(value).classList.add('checked');
+                
+                checkdesDarLocal.push(value);
+                localStorage.setItem('checkdesDar', checkdesDarLocal);
+            }
+        }
+    }
+
+     // //CheckList Desafio Crear
+     if (localStorage.getItem('porcentajedesCrear') === null) {
+        porcentajedesCrear = 0;
+        localStorage.setItem('porcentajedesCrear', porcentajedesCrear);
+    }
+    else {
+        porcentajedesCrear = parseFloat(localStorage.getItem('porcentajedesCrear'), 10);
+    }
+    if (localStorage.getItem('checkdesCrear') !== null) {    
+        var chequeadosDes = localStorage.getItem('checkdesCrear');
+        for (var i = 1, len = chequeadosDes.length; i < len; i++) {
+            if (i % 2 == 0) {
+                var value = chequeadosDes[i];
+                document.getElementById(value).classList.add('checked');
+                
+                checkdesCrearLocal.push(value);
+                localStorage.setItem('checkdesCrear', checkdesCrearLocal);
+            }
+        }
+    }
+
+    // //CheckList Desafio Buscar
+    if (localStorage.getItem('porcentajedesBuscar') === null) {
+        porcentajedesBuscar = 0;
+        localStorage.setItem('porcentajedesBuscar', porcentajedesBuscar);
+    }
+    else {
+        porcentajedesBuscar = parseFloat(localStorage.getItem('porcentajedesBuscar'), 10);
+    }
+    if (localStorage.getItem('checkdesBuscar') !== null) {    
+        var chequeadosDes = localStorage.getItem('checkdesBuscar');
+        for (var i = 1, len = chequeadosDes.length; i < len; i++) {
+            if (i % 2 == 0) {
+                var value = chequeadosDes[i];
+                document.getElementById(value).classList.add('checked');
+                
+                checkdesBuscarLocal.push(value);
+                localStorage.setItem('checkdesBuscar', checkdesBuscarLocal);
+            }
+        }
+    }
+
 }
 function chequeados() {
     if (localStorage.getItem('checkPrueba') !== null) {

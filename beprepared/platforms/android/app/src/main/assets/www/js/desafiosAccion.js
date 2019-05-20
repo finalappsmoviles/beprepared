@@ -26,6 +26,7 @@ function abrirDesafios()
         desFooter.src="img/pantallas/desafios/imagenes/desafios.png";
         DesMenu.className= "checklist animated fadeInLeftBig";
         DesSalirCheck.className="ocultar"; 
+        bodyInfoUsuario.className="bodyInfoUsuario";
     });
 }
 function abrirPruebas()

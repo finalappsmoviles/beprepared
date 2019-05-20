@@ -16,7 +16,12 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-* {
+html{
+    margin:    0 auto;
+    max-width: 360px;
+    max-height:690px;
+}
+ * {
     -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
 }
 
@@ -252,7 +257,7 @@ ul li {
     padding-right:40px;
     padding-top:10px;
 }
-#desSalir li:first-child{
+.desCheck li:first-child{
     height: 70px;
 }
 
