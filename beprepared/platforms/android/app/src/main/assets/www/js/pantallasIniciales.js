@@ -19,7 +19,7 @@ function clickEnSiguiente(){
     document.getElementById('textoNombre').innerHTML= Nombre;
    
      document.getElementById("Secbienvenidos").className= "Secbienvenidos ocultar";
-    document.getElementById("SecUnidad").className="SecUnidad animated fadeInUpBig";
+    document.getElementById("SecUnidad").className="SecUnidad animated fadeInRightBig";
 
 }
 
@@ -41,19 +41,19 @@ function clickEnSiguienteUnidad(){
     var Nombre = Usuario.Nombre =document.getElementById("nombreUsuario").value;
     document.getElementById('textoNombreEnf').innerHTML= Nombre;
     document.getElementById("SecUnidad").className= "SecUnidad ocultar";
-    document.getElementById("SecPruebas").className="SecPruebas animated fadeInUpBig";
+    document.getElementById("SecPruebas").className="SecPruebas animated fadeInRightBig";
     
 
 }
 function clickEnVolverSecBienvenidos(){
     document.location.reload(true);
     document.getElementById("SecUnidad").className= "SecUnidad ocultar";
-    document.getElementById("Secbienvenidos").className="Secbienvenidos animated fadeInUpBig";
+    document.getElementById("Secbienvenidos").className="Secbienvenidos animated fadeInRightBig";
 
 }
 function clickEnVolverSecUnidad(){
   
     document.getElementById("SecEnfoque").className= "secEnfoque ocultar";
-    document.getElementById("SecUnidad").className="SecUnidad animated fadeInUpBig";
+    document.getElementById("SecUnidad").className="SecUnidad animated fadeInRightBig";
 
 }

@@ -15,6 +15,8 @@ desFooter=document.getElementById("desFooter");
 checkListDesafios=document.getElementById("checkListDesafios");
 checkListPruebas=document.getElementById("checkListPruebas");
 headInfoUsuario=document.getElementById("headInfoUsuario");
+var nombrePruebas=document.getElementById("nombrePruebas");
+var volverPruebasPuntos=document.getElementById("volverPruebasPuntos");
 
 
 function abrirDesafios()
@@ -31,13 +33,13 @@ function abrirDesafios()
 
 function abrirPruebas()
 {
-        checkListPruebas.className= "checklist animated fadeInLeftBig";
-        checkListDesafios.className="checklist ocultar"; 
-        pruebasFooter.src="img/pantallas/pruebas/imagenes/pruebas.png";
-        desFooter.src="img/pantallas/pruebas/imagenes/desafios.png";
-        bodyInfoUsuario.className="bodyInfoUsuario";
-        volverPruebas.id="volverPruebas";
-        volverPruebasPuntos.id="volverPruebasPuntos";
+    checkListPruebas.className= "checklist animated fadeInLeftBig";
+    checkListDesafios.className="checklist ocultar"; 
+    pruebasFooter.src="img/pantallas/pruebas/imagenes/pruebas.png";
+    desFooter.src="img/pantallas/pruebas/imagenes/desafios.png";
+    bodyInfoUsuario.className="bodyInfoUsuario";
+    volverPruebas.id="volverPruebas";
+    volverPruebasPuntos.id="volverPruebasPuntos";
    
 }
 function ClickDesCheck(id)
@@ -51,36 +53,36 @@ function ClickDesCheck(id)
     document.getElementById("volverDesafios").addEventListener("click",function()
     {        
         document.getElementById("SecUnidad").className="SecUnidad ocultar";
-        SecPruebas.className="SecPruebas animated fadeInUpBig";
-        DesMenu.className= "checklist animated fadeInUpBig";
+        SecPruebas.className="SecPruebas animated fadeInRightBig";
+        DesMenu.className= "checklist animated fadeInRightBig";
         desafioCheck.className="checklist ocultar";
         volverPruebas.id="volverPruebas";
         bodyInfoUsuario.className="bodyInfoUsuario";
         document.getElementById("tituloMenDes").style.marginTop="60px";  
         volverPruebas.addEventListener('click',function(){
-            document.getElementById("SecUnidad").className= "SecUnidad animated fadeInUpBig";
+            document.getElementById("SecUnidad").className= "SecUnidad animated fadeInRightBig";
             document.getElementById("SecPruebas").className="SecPruebas ocultar"; 
         },false);
         volverPruebasPuntos.addEventListener('click',function(){
-            document.getElementById("SecUnidad").className= "SecUnidad animated fadeInUpBig";
+            document.getElementById("SecUnidad").className= "SecUnidad animated fadeInRightBig";
             document.getElementById("SecPruebas").className="SecPruebas ocultar"; 
         },false);
     });
     document.getElementById("volverDesafiosPuntos").addEventListener("click",function()
     {
         document.getElementById("SecUnidad").className="SecUnidad ocultar";
-        SecPruebas.className="SecPruebas animated fadeInUpBig";
-        DesMenu.className= "checklist animated fadeInUpBig";
+        SecPruebas.className="SecPruebas animated fadeInRightBig";
+        DesMenu.className= "checklist animated fadeInRightBig";
         desafioCheck.className="checklist ocultar";
         volverPruebasPuntos.id="volverPruebasPuntos";
         bodyInfoUsuario.className="bodyInfoUsuario";
         document.getElementById("tituloMenDes").style.marginTop="60px";  
         volverPruebas.addEventListener('click',function(){
-            document.getElementById("SecUnidad").className= "SecUnidad animated fadeInUpBig";
+            document.getElementById("SecUnidad").className= "SecUnidad animated fadeInRightBig";
             document.getElementById("SecPruebas").className="SecPruebas ocultar"; 
         },false);
         volverPruebasPuntos.addEventListener('click',function(){
-            document.getElementById("SecUnidad").className= "SecUnidad animated fadeInUpBig";
+            document.getElementById("SecUnidad").className= "SecUnidad animated fadeInRightBig";
             document.getElementById("SecPruebas").className="SecPruebas ocultar"; 
         },false);          
     });  

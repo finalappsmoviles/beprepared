@@ -25,7 +25,7 @@ function abrirDesafios()
     checkListPruebas.className="checklist ocultar"; 
     pruebasFooter.src="img/pantallas/desafios/imagenes/pruebas.png";
     desFooter.src="img/pantallas/desafios/imagenes/desafios.png";
-    DesMenu.className= "checklist animated fadeInLeftBig";
+    DesMenu.className= "checklist animated fadeInRightBig";
     DesSalirInfoCheck.className="ocultar"; 
     DesVivirInfoCheck.className="ocultar"; 
     bodyInfoUsuario.className="bodyInfoUsuario";    
@@ -33,7 +33,7 @@ function abrirDesafios()
 
 function abrirPruebas()
 {
-    checkListPruebas.className= "checklist animated fadeInLeftBig";
+    checkListPruebas.className= "checklist animated fadeInRightBig";
     checkListDesafios.className="checklist ocultar"; 
     pruebasFooter.src="img/pantallas/pruebas/imagenes/pruebas.png";
     desFooter.src="img/pantallas/pruebas/imagenes/desafios.png";
@@ -45,7 +45,7 @@ function abrirPruebas()
 function ClickDesCheck(id)
 {
     var desafioCheck=document.getElementById(id.id+"Check");    
-    desafioCheck.className= "checklist animated fadeInLeftBig";
+    desafioCheck.className= "checklist animated fadeInRightBig";
     DesMenu.className="ocultar"; 
     bodyInfoUsuario.className="ocultar";
     volverPruebas.id="volverDesafios";
@@ -53,8 +53,8 @@ function ClickDesCheck(id)
     document.getElementById("volverDesafios").addEventListener("click",function()
     {        
         document.getElementById("SecUnidad").className="SecUnidad ocultar";
-        SecPruebas.className="SecPruebas animated fadeInUpBig";
-        DesMenu.className= "checklist animated fadeInUpBig";
+        SecPruebas.className="SecPruebas animated fadeInLeftBig";
+        DesMenu.className= "checklist animated fadeInRightBig";
         desafioCheck.className="checklist ocultar";
         volverPruebas.id="volverPruebas";
         bodyInfoUsuario.className="bodyInfoUsuario";
@@ -71,8 +71,8 @@ function ClickDesCheck(id)
     document.getElementById("volverDesafiosPuntos").addEventListener("click",function()
     {
         document.getElementById("SecUnidad").className="SecUnidad ocultar";
-        SecPruebas.className="SecPruebas animated fadeInUpBig";
-        DesMenu.className= "checklist animated fadeInUpBig";
+        SecPruebas.className="SecPruebas animated fadeInLeftBig";
+        DesMenu.className= "checklist animated fadeInRightBig";
         desafioCheck.className="checklist ocultar";
         volverPruebasPuntos.id="volverPruebasPuntos";
         bodyInfoUsuario.className="bodyInfoUsuario";

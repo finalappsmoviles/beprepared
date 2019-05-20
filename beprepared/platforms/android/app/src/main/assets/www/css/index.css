@@ -123,6 +123,11 @@ section
     float: left;
     padding-top:2px;
 }
+#volverDesafios
+{
+    float: left;
+    padding-top:2px;
+}
 #menuPruebas
 {
     padding-left:5.6px; 
@@ -302,6 +307,7 @@ ul li.checked::before {
     font-weight: 600;
     padding-left:20px;
     margin-top:60px;
+    margin-bottom: 30px;
 }
 #tituloDesCheck
 {
@@ -334,7 +340,8 @@ ul li.checked::before {
     height: 100px;
     width:360px;
     padding:0px;
-    margin-top:-10px;
+    margin-top:-40px;
+    margin-bottom:25px;
 }
 #imgDes
 {
@@ -356,7 +363,7 @@ ul li.checked::before {
     margin-left: 148px;
     margin-top:-15px;
 }
-#avanceDes
+.avanceDes
 {
     font-weight: 600;
     font-size:16px;
