@@ -53,7 +53,7 @@ function iniciarPrograma() {
                 var value = borrados[i];
                 document.getElementById(value).style.display = "none";
                 arrayBorrados.push(value);
-                localStorage.setItem('borradosPruebas', checkPrueba);
+                localStorage.setItem('borradosPruebas', checkPruebaLocal);
             }
         }
     }

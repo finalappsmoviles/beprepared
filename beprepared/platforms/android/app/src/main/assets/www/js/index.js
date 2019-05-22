@@ -53,7 +53,7 @@ function iniciarPrograma() {
                 var value = borrados[i];
                 document.getElementById(value).style.display = "none";
                 arrayBorrados.push(value);
-                localStorage.setItem('borradosPruebas', checkPrueba);
+                localStorage.setItem('borradosPruebas', checkPruebaLocal);
             }
         }
     }
@@ -235,9 +235,10 @@ function agregandoBtnEliminar() {
             if (div.classList.contains('checked')) {
                 var porcentajePrueba1 = (porcentajePrueba - incrementoAvance);
                 localStorage.setItem('porcentajePrueba', porcentajePrueba1);
-                var nuevoBorrado=checkPrueba.indexOf(div.id);
-                if (nuevoBorrado !== -1) checkPrueba.splice(nuevoBorrado, 1);
-                localStorage.setItem('checkPrueba', checkPrueba);                
+                document.getElementById("avancePrueba").innerHTML=(porcentajePrueba1*100).toFixed()+"%";
+                var nuevoBorrado=checkPruebaLocal.indexOf(div.id);
+                if (nuevoBorrado !== -1) checkPruebaLocal.splice(nuevoBorrado, 1);
+                localStorage.setItem('checkPrueba', checkPruebaLocal);                
             }
             arrayBorrados.push(div.id);
             setTimeout(function () {
