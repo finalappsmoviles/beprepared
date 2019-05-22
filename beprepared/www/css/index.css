@@ -174,15 +174,34 @@ section
     float:right;
     margin-top: -50px;
 }
-#pExpPruebas
+#barraSaludDes
 {
     float:right;
-    margin-top: -38px;
+    margin-top: -80px;
+}
+#barraExpDes
+{
+    float:right;
+    margin-top: -50px;
+}
+#pExpPruebas
+{
+    margin-left:210px;
 }
 #pSaludPruebas
 {
+    margin-left:240px;
+    margin-top: -64px;
+}
+#procSaludPruebas
+{
     float:right;
-    margin-top: -68px;
+    margin-top: -64px; 
+}
+#procExpPruebas
+{
+    float:right;
+    margin-top: -38px; 
 }
 #footer
 {
