@@ -45,7 +45,7 @@ function iniciarPrograma() {
         document.getElementById("Seccarga").className= "Seccarga ocultar";
         document.getElementById("Secbienvenidos").className="Secbienvenidos animated fadeInUpBig";
     }, 2000);     
-
+    
     if (localStorage.getItem('borradosPruebas') !== null) {
         var borrados = localStorage.getItem('borradosPruebas');
         for (var i = 1, len = borrados.length; i < len; i++) {
@@ -61,12 +61,10 @@ function iniciarPrograma() {
         porcentajePrueba = 0;
         localStorage.setItem('porcentajePrueba', porcentajePrueba);
         document.getElementById("avancePrueba").innerHTML=(porcentajePrueba*100).toFixed()+"%";
-
     }
     else {
         porcentajePrueba = parseFloat(localStorage.getItem('porcentajePrueba'), 10);
         document.getElementById("avancePrueba").innerHTML=(porcentajePrueba*100).toFixed()+"%";
-        
     }
     agregandoBtnEliminar();
 
@@ -204,6 +202,8 @@ function iniciarPrograma() {
             }
         }
     }
+    var PondPorc=((porcentajedesBuscar+porcentajedesCrear+porcentajedesDar+porcentajedesVivir+porcentajedesSalir+porcentajePrueba)*100)/6;
+    ImgPorcentaje(PondPorc);
 
 }
 function chequeados() {
@@ -266,6 +266,8 @@ function clickChecklist(div,idUl) {
             window['porcentaje' + idUl ] = parseFloat(localStorage.getItem(porcentaje),10) - incrementoAvance;
             localStorage.setItem(porcentaje, window['porcentaje' + idUl ]);   
             document.getElementById(avance).innerHTML=(window['porcentaje' + idUl ]*100).toFixed()+"%";        
+            var PondPorc=((porcentajedesBuscar+porcentajedesCrear+porcentajedesDar+porcentajedesVivir+porcentajedesSalir+porcentajePrueba)*100)/6;
+            ImgPorcentaje(PondPorc);
             window['check'+idUl +'Local'] = window['check'+idUl +'Local'].filter(function (item) {
                 return item !== div.id
             })
@@ -277,8 +279,42 @@ function clickChecklist(div,idUl) {
         window['porcentaje' + idUl] = parseFloat(localStorage.getItem(porcentaje),10) + incrementoAvance;
         localStorage.setItem(porcentaje, window['porcentaje' + idUl ]);
         document.getElementById(avance).innerHTML=(window['porcentaje' + idUl ]*100).toFixed()+"%";
+        var PondPorc=((porcentajedesBuscar+porcentajedesCrear+porcentajedesDar+porcentajedesVivir+porcentajedesSalir+porcentajePrueba)*100)/6;
+        ImgPorcentaje(PondPorc);
         window['check'+idUl +'Local'].push(div.id);    
         localStorage.setItem(check,window['check'+idUl +'Local']);
+    }
+}
+function ImgPorcentaje(porcentaje)
+{
+    
+    if(porcentaje<=25)
+    {
+        document.getElementById("barraSaludPruebas").src="img/Todas/porcentaje1.png";
+        document.getElementById("barraExpPruebas").src="img/Todas/porcentaje1A.png";
+        document.getElementById("procSaludPruebas").innerHTML=(porcentaje).toFixed()+"%";
+        document.getElementById("procExpPruebas").innerHTML=(porcentaje).toFixed()+"%";
+    }
+    else if(porcentaje<=50)
+    {
+        document.getElementById("barraSaludPruebas").src="img/Todas/porcentaje2.png";
+        document.getElementById("barraExpPruebas").src="img/Todas/porcentaje2A.png";
+        document.getElementById("procSaludPruebas").innerHTML=(porcentaje).toFixed()+"%";
+        document.getElementById("procExpPruebas").innerHTML=(porcentaje).toFixed()+"%";
+    }
+    else if(porcentaje>50&&porcentaje<100)
+    {
+        document.getElementById("barraSaludPruebas").src="img/Todas/porcentaje3.png";
+        document.getElementById("barraExpPruebas").src="img/Todas/porcentaje3A.png";
+        document.getElementById("procSaludPruebas").innerHTML=(porcentaje).toFixed()+"%";
+        document.getElementById("procExpPruebas").innerHTML=(porcentaje).toFixed()+"%";
+    }
+    else if(porcentaje==100)
+    {
+        document.getElementById("barraSaludPruebas").src="img/Todas/porcentaje4.png";
+        document.getElementById("barraExpPruebas").src="img/Todas/porcentaje4A.png";
+        document.getElementById("procSaludPruebas").innerHTML=(porcentaje).toFixed()+"%";
+        document.getElementById("procExpPruebas").innerHTML=(porcentaje).toFixed()+"%";
     }
 }
 app.initialize();

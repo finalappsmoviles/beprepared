@@ -19,7 +19,7 @@
 html{
     margin:    0 auto;
     max-width: 360px;
-    max-height:690px;
+    max-height:730px;
 }
  * {
     -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
@@ -27,7 +27,7 @@ html{
 
 body {
     width: 360px;
-    height: 690px;
+    height: 730px;
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
     -webkit-user-select: none;     
@@ -45,7 +45,7 @@ body {
 section
 {
     width: 360px;
-    height: 690px;
+    height: 730px;
     overflow:hidden;
     background-repeat: no-repeat;
     margin: 0px;
@@ -75,7 +75,7 @@ section
     height: 100px;
     -webkit-animation: spin 2s linear infinite; /* Safari */
     animation: spin 2s linear infinite;    
-    margin-top:20px;
+    margin-top:40px;
     margin-left:130px;
   }
   #logoCarga{    
@@ -174,19 +174,38 @@ section
     float:right;
     margin-top: -50px;
 }
-#pExpPruebas
+#barraSaludDes
 {
     float:right;
-    margin-top: -38px;
+    margin-top: -80px;
+}
+#barraExpDes
+{
+    float:right;
+    margin-top: -50px;
+}
+#pExpPruebas
+{
+    margin-left:210px;
 }
 #pSaludPruebas
 {
+    margin-left:240px;
+    margin-top: -64px;
+}
+#procSaludPruebas
+{
     float:right;
-    margin-top: -68px;
+    margin-top: -64px; 
+}
+#procExpPruebas
+{
+    float:right;
+    margin-top: -38px; 
 }
 #footer
 {
-    height: 59px;
+    height: 79px;
     width: 360px;    
     background-color: #1166af;
     padding-left:20px;
@@ -208,7 +227,7 @@ section
 .checklist
 {
     padding-top:20px;
-    height: 580px;
+    height: 610px;
     width: 360px;
 }
 #espFooter

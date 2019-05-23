@@ -28,7 +28,7 @@ function abrirDesafios()
     DesMenu.className= "checklist animated fadeInRightBig";
     DesSalirInfoCheck.className="ocultar"; 
     DesVivirInfoCheck.className="ocultar"; 
-    bodyInfoUsuario.className="bodyInfoUsuario";    
+    bodyInfoUsuario.className="bodyInfoUsuario";  
 }
 
 function abrirPruebas()
@@ -40,7 +40,6 @@ function abrirPruebas()
     bodyInfoUsuario.className="bodyInfoUsuario";
     volverPruebas.id="volverPruebas";
     volverPruebasPuntos.id="volverPruebasPuntos";
-   
 }
 function ClickDesCheck(id)
 {

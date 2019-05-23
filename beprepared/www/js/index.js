@@ -287,8 +287,15 @@ function clickChecklist(div,idUl) {
 }
 function ImgPorcentaje(porcentaje)
 {
-    
-    if(porcentaje<=25)
+    if(porcentaje==0)
+    {
+        document.getElementById("barraSaludPruebas").src="img/Todas/barra.png";
+        document.getElementById("barraExpPruebas").src="img/Todas/barra.png";
+        document.getElementById("procSaludPruebas").innerHTML=(porcentaje).toFixed()+"%";
+        document.getElementById("procExpPruebas").innerHTML=(porcentaje).toFixed()+"%";
+    }
+
+    else if(porcentaje<=25&&porcentaje>0)
     {
         document.getElementById("barraSaludPruebas").src="img/Todas/porcentaje1.png";
         document.getElementById("barraExpPruebas").src="img/Todas/porcentaje1A.png";
