@@ -16,23 +16,27 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-* {
+html{
+    margin:    0 auto;
+    max-width: 360px;
+    max-height:730px;
+}
+ * {
     -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
 }
 
 body {
     width: 360px;
-    height: 690px;
+    height: 730px;
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
-    -webkit-user-select: none;  
-    
+    -webkit-user-select: none;     
     font-family: 'Roboto', sans-serif;
     font-size:12px;
     margin:0px;
     padding:0px;
-    /* Padding to avoid the "unsafe" areas behind notches in the screen */
-    padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-right, 0px);
+    /* Padding to avoid the "unsafe" areas behind notches in the screen
+    padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-right, 0px); */
     
 }
 * {
@@ -41,7 +45,11 @@ body {
 section
 {
     width: 360px;
-    height: 690px;
+    height: 730px;
+    overflow:hidden;
+    background-repeat: no-repeat;
+    margin: 0px;
+    padding:0px;
 }
 .ocultar
 {
@@ -67,7 +75,7 @@ section
     height: 100px;
     -webkit-animation: spin 2s linear infinite; /* Safari */
     animation: spin 2s linear infinite;    
-    margin-top:20px;
+    margin-top:40px;
     margin-left:130px;
   }
   #logoCarga{    
@@ -87,36 +95,35 @@ section
     font-family: "Loved by the King"; 
     font-size: 18pt; 
     font-style: normal; 
-    color: #0c5e65; 
-   
-}
-  
-  
+    color: #0c5e65;    
+} 
   .SecPruebas
 {
     background-color: white;
 }
-#infoUsuario
-{    
-    height: 143px;
-    width: 360px;    
-    background-color: #1166af;
-    padding-left:20px;
-    padding-right:20px;
-}
+
 #headInfoUsuario
 {
-    padding-top:20px;
-    margin-bottom:5px;
+    padding-top:17px;
+    padding-bottom:38px;
     height: 49px;    
     color:white;    
     font-size: 13pt;
+    width: 360px;
+    background-color: #1166af;
+    padding-left:20px;
+    padding-right:20px;
 }
 #opcionesPruebas
 {
     float: right;
 }
 #volverPruebas
+{
+    float: left;
+    padding-top:2px;
+}
+#volverDesafios
 {
     float: left;
     padding-top:2px;
@@ -134,6 +141,11 @@ section
     padding-left:20px;
     padding-right: 20px;     
     color:white;  
+    width: 360px;
+    background-color: #1166af;
+    padding-left:20px;
+    padding-right:20px;
+    margin-top:-5px;
 }
 #nivelPruebas
 {
@@ -162,19 +174,38 @@ section
     float:right;
     margin-top: -50px;
 }
-#pExpPruebas
+#barraSaludDes
 {
     float:right;
-    margin-top: -38px;
+    margin-top: -80px;
+}
+#barraExpDes
+{
+    float:right;
+    margin-top: -50px;
+}
+#pExpPruebas
+{
+    margin-left:210px;
 }
 #pSaludPruebas
 {
+    margin-left:240px;
+    margin-top: -64px;
+}
+#procSaludPruebas
+{
     float:right;
-    margin-top: -68px;
+    margin-top: -64px; 
+}
+#procExpPruebas
+{
+    float:right;
+    margin-top: -38px; 
 }
 #footer
 {
-    height: 59px;
+    height: 79px;
     width: 360px;    
     background-color: #1166af;
     padding-left:20px;
@@ -195,7 +226,8 @@ section
 }
 .checklist
 {
-    height: 468px;
+    padding-top:20px;
+    height: 610px;
     width: 360px;
 }
 #espFooter
@@ -235,7 +267,7 @@ ul li {
     position: relative;
     padding-left:30px;
     list-style-type: none;    
-    font-size: 11px;
+    font-size: 13px;
     transition: 0.2s;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -245,9 +277,12 @@ ul li {
     border-color: #b4cfd6;
     border-style: solid;
     border-width: 0px 0 1px 0;
-    height: 40px;
+    height: 50px;
     padding-right:40px;
     padding-top:10px;
+}
+.desCheck li:first-child{
+    height: 70px;
 }
 
 ul li.checked {
@@ -276,15 +311,91 @@ ul li.checked::before {
 }
 #tituloPrueba
 {
-    font-size: 20px;
+    font-size: 16px;
     color:#f6b419;
     font-family: 'Roboto', sans-serif;
-    font-weight: 500;
+    font-weight: 600;
     padding-left:20px;
+    margin-top:80px;
+}
+#avancePrueba
+{
+    font-size: 16px;
+    color:#f6b419;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    padding-left:200px;
+    margin-top:-35px;
+}
+#tituloMenDes
+{
+    font-size: 16px;
+    color:#f6b419;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    padding-left:20px;
+    margin-top:60px;
+    margin-bottom: 30px;
+}
+#tituloDesCheck
+{
+    font-size: 16px;
+    color:#f6b419;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    padding-left:20px;
+    margin-top:10px; 
 }
 #divEliminar
 {
     width:40px;
     height:405px;
     float:right;
+}
+.removed {
+    transition: all 0.5s ease-out;
+    opacity: 0;
+  }
+#nombrePruebas
+{
+    margin-top:-20px;
+    margin-left:55px;
+    margin-bottom: -20px;
+    color:white;
+}
+.desAccion
+{
+    height: 100px;
+    width:360px;
+    padding:0px;
+    margin-top:-40px;
+    margin-bottom:25px;
+}
+#imgDes
+{
+    margin-top:-20px;
+    margin-left:20px;
+}
+#tituloDes
+{
+    font-size:16px;
+    color:#1166af;
+    margin-top:-100px;
+    margin-left: 148px;
+    font-weight: 600;
+}
+.descripDes
+{
+    color:#37b0cb;
+    font-size:12px;
+    margin-left: 148px;
+    margin-top:-15px;
+}
+.avanceDes
+{
+    font-weight: 600;
+    font-size:16px;
+    color:#f6b419;
+    margin-left: 148px;
+    margin-top:-10px;
 }

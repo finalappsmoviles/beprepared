@@ -26,7 +26,7 @@ function clickEnSiguiente(){
 function ellaSeleccionado(){
     
     esSeleccion = true;
-    document.getElementById('personajeSeleccionado').src = "img/Todas/eleccion_ella.png";
+    document.getElementById('imgpersonajeSeleccionado').src = "img/Todas/eleccion_ella.png";
 }
 function elSeleccionado(){
    
@@ -41,7 +41,8 @@ function clickEnSiguienteUnidad(){
     var Nombre = Usuario.Nombre =document.getElementById("nombreUsuario").value;
     document.getElementById('textoNombreEnf').innerHTML= Nombre;
     document.getElementById("SecUnidad").className= "SecUnidad ocultar";
-    document.getElementById("SecPruebas").className="SecPruebas animated fadeInUpBig";
+    document.getElementById("SecPruebas").className="SecPruebas animated fadeInLeftBig";
+    
     
 
 }

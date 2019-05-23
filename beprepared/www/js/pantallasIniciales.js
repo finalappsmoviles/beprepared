@@ -65,7 +65,10 @@ function clickEnSiguienteUnidad(){
     //var Nombre = Usuario.Nombre =document.getElementById("nombreUsuario").value;
     document.getElementById('textoNombreEnf').innerHTML= Scout.Nombre;
     document.getElementById("SecUnidad").className= "SecUnidad ocultar";
+
     document.getElementById("SecEnfoque").className="SecEnfoque animated fadeInUpBig";
+
+    
 
     if(Scout.mostrarAna === true){
         setTimeout(()=>{

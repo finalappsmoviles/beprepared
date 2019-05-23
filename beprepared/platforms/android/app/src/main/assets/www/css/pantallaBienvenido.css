@@ -3,6 +3,10 @@
     top: 50px;
     right: 130px;
 }
+.Secbienvenidos{
+                        background-image: url("../img/Todas/fondo_pantalla_bienvenido.png");
+} 
+                    
 #posiPersonajeTexto{
   position: absolute;
   top: 200px;
@@ -20,7 +24,7 @@
    font-family: "Roboto"; 
    font-size: 13pt; 
     font-style: thin; 
-    color: #b0b969; 
+    color:#0c5e65; 
     /* border-width: 738px; */
     border: none;
     border-bottom: 2pt solid #b0b969;
@@ -30,7 +34,7 @@
    font-family: "Roboto"; 
    font-size: 13pt; 
     font-style: thin; 
-    color: #b0b969; 
+    color: #b0b969;
    opacity: 1; 
  }
 
