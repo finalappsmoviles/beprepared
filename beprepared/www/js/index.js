@@ -144,5 +144,17 @@ function iniciarPrograma() {
 
     }
 
+    if(localStorage.getItem("user") !== null){
+        var persoSelect = JSON.parse(localStorage.getItem("user"));
+       var Scout = JSON.parse(localStorage.getItem("user"));
+
+      
+        document.getElementById("nombreUsuario").value = Scout.Nombre;
+       
+        Scout.mostrarAna = false;
+        Scout.Personaje = persoSelect.Personaje;
+        localStorage.setItem('user',JSON.stringify(Scout));
+    }
+
 }
 app.initialize();

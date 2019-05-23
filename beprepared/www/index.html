@@ -17,6 +17,28 @@
     </head>
 
     <body>
+            <section id="lightbox" class="ocultar">
+                    <div id="ventanaAna" >
+                            <img id="nombreAna" src="img/Todas/ana_azul.png">
+                            <img id="figuraAna" src="img/Todas/ana.png">
+                        <p id="AnaText1" >
+                          ¡Bienvenido a la sección de pioneros!Como </br>
+                          puedes ver, nuestro progreso se mide en porcen- </br>
+                          tajes para estar al tanto de cuanto hemos comple- </br>
+                          tado hasta la fecha.
+                        </p>
+                        <img id="flechaDialogo" src="img/Todas/flecha_dialogo.png" ondblclick="siguienteTextoAna()">
+                    </div>
+                        <p id="AnaText2" class="ocultar" >
+                          La flecha en la parte inferior es para especificar en </br>
+                          que momento ganaste tu uniforme o el adelanto. </br>
+                        </br>
+                          Ahora, continua explorando con las barras para </br>
+                          saber más de esta increible aventura.
+                        </p>
+                        <span id="meQuedaClaro" class="ocultar" ondblclick="todoClaroText()">Me queda claro</span>
+                    </div>
+            </section>
         <section id="Seccarga" class="Seccarga animated fadeInUpBig" > 
             <img id="logoCarga" src="img/Todas/imagen_scout_pantalla_bienvenido.png"> 
             <div class="loader"></div>
@@ -34,13 +56,28 @@
                     <img id="icono_nombre_usuario" src="img/Todas/icono_nombre_usuario.png">
                 </form>
                 <img id="boton_siguiente" src="img/Todas/siguiente.png" onclick="clickEnSiguiente()">
-               
+                <div id="anaBox" >
+                        <img id="nombreAnaBienvenidos" src="img/Todas/nombre_ana.png">
+                        <img id="figuraAnaBienvenidos" src="img/Todas/ana_pantalla_bienvenida.png">
+                    <p id="AnaTextBienvenidos" >
+                      Oh, debes de ser nuevo aquí. Yo soy Ana y seré </br>
+                        tu guía en Be Prepared. </br>
+                    </br>
+                     Primero ¿Como deberiamos llamarte? </br>
+                      Cuando estes listo continuaremos para elegir </br>
+                      la unidad en la que te encuentras.
+                    </p>
+                    
+                </div>
                
         </section>
         <section id="SecUnidad" class="SecUnidad ocultar">  
             <section id="encabezadoUnidad">
                     <img id="imgVolverInicio" src="img/Todas/volver_inicio.png" onclick="clickEnVolverSecBienvenidos()">
                     <img id="imgOpcionesInicio" src="img/Todas/opciones_inicio.png" >
+                    <p id="nivelText">Nivel 1</p>
+                    <p id="saludText">Salud</p>
+                    <p id="expeText">Experiencia</p>
                     <img id="imgMenuInicio" src="img/Todas/menu_inicio.png" >
                     <span id="textoNombre">Sofia Álvarez</span>
                     <img id="imgpersonajeSeleccionado" src="img/Todas/eleccion_ella.png" >
@@ -51,14 +88,20 @@
             </section>
                 <p id="eligeText">Elige tu unidad</p>
                 <img id="imgTropa" src="img/Todas/tropa.png" >
+                <p id="tropaText">Tropa</p>   
                 <img id="imgSociedad" src="img/Todas/Sociedad.png" >
+                <p id="sociedadText">Sociedad</p>   
                 <img id="imgClan" src="img/Todas/clan.png" >
+                <p id="clanText">Clan</p>   
                 <img id="boton_siguiente" src="img/Todas/siguiente.png" onclick="clickEnSiguienteUnidad()">        
         </section>
         <section id="SecEnfoque" class="SecEnfoque ocultar">
                 <section id="encabezadoEnfoque">
                         <img id="imgVolverUnidad" src="img/Todas/volver.png" onclick="clickEnVolverSecUnidad()">
                     <img id="imgOpcionesInicio" src="img/Todas/opciones.png" >
+                    <p id="nivelText">Nivel 1</p>
+                    <p id="saludText">Salud</p>
+                    <p id="expeText">Experiencia</p>
                     <img id="imgMenuInicio" src="img/Todas/menu.png" >
                     <span id="textoNombreEnf">Sofia Álvarez</span>
                     <img id="imgpersonajeSeleccionadoEnf" src="img/Todas/ella_azul.png" >
@@ -68,14 +111,36 @@
                     <img id="imgExp" src="img/Todas/experiencia.png" >
                         
                 </section>    
-                <p id="eligeText">Pantalla Enfoque</p>        
+                <p id="eligeTextEnfoque">Elije tu enfoque</p>   
+                <img id="imgUniforme" src="img/Todas/uniforme.png">
+                <p id="uniformeText">Uniforme</p>
+                <p id="porcenUniforme">0%</p>
+                <img id="imgPl" src="img/Todas/pl.png">
+                <p id="PLText">Pionero Lider</p>
+                <p id="porcenPL">0%</p>
+                <img id="imgPp" src="img/Todas/pp.png" >
+                <p id="PPText">Pionero Promotor</p>
+                <p id="porcenPP">0%</p>
+                <img id="imgPs" src="img/Todas/ps.png" >
+                <p id="PSText">Pionero Servicio</p>
+                <p id="porcenPS">0%</p>
+
+                <div id="footerEnfoque">
+                    <img id="imgPruebasFooter" src="img/Todas/pruebas.png" onclick="irSeccionPruebas()">
+                    <p id="txtPruebasFoot">Pruebas</p>
+                    <div id="footer2">
+                        <img id="imgDesFooter" src="img/Todas/desafios.png" onclick="irSeccionPruebas()">
+                        <p id="txtDesFoot">Desafios</p>
+                        <img id="imgEspFooter" src="img/Todas/especialidades.png">
+                        <p id="txtEspFoot">Especialidades</p>
+                    </div>
         </section>
         <section id="SecPruebas" class="SecPruebas  ocultar"> 
             <div id="infoUsuario">
                 <div id="headInfoUsuario">
                     <img id="volverPruebas" src="img/pantallas/pruebas/imagenes/volver.png">
                     <img id="menuPruebas" src="img/pantallas/pruebas/imagenes/menu.png">
-                    Sofía Álvarez
+                    <span id="nombreTextPrueba">Sofia Álvarez</span>
                     <img id="opcionesPruebas" src="img/pantallas/pruebas/imagenes/opciones.png">
                 </div>
                 <div id="bodyInfoUsuario">

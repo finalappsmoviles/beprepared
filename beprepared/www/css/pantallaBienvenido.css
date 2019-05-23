@@ -1,22 +1,22 @@
 #posiBienvenidosTexto{
     position: absolute;
-    top: 50px;
+    top: 10px;
     right: 130px;
 }
 .Secbienvenidos{
-                        background-image: url("../img/Todas/fondo_pantalla_bienvenido.png");
+   background-image: url("../img/Todas/fondo_pantalla_bienvenido.png");
 } 
                     
 #posiPersonajeTexto{
   position: absolute;
-  top: 200px;
+  top: 160px;
   right: 116px;
 
 }
 #posiNombreTexto{
   position: absolute;
-  top: 370px;
-  right: 100px;
+  top: 320px;
+  right: 90px;
   
   
 }
@@ -25,7 +25,6 @@
    font-size: 13pt; 
     font-style: thin; 
     color:#0c5e65; 
-    /* border-width: 738px; */
     border: none;
     border-bottom: 2pt solid #b0b969;
     
@@ -46,21 +45,54 @@
  #logoBienvenidos{
      position: absolute;
      right: 106px;
-     top: 166px;
+     top: 116px;
  }
 #inputNombre{
    position: absolute;
-   top: 450px;
-   right: 75px;
+   top: 380px;
+   right: 65px;
    opacity: 0.6;
 }
 #el_opcion{
    position: absolute;
-   top: 280px;
+   top: 250px;
    left: 97px;
 }
 #ella_opcion{
    position: absolute;
-   top: 280px;
+   top: 250px;
    right: 97px;
+}
+#anaBox{
+   position: absolute;
+ 
+	top: 497px;
+    left: 28px;
+	background: white;
+	width: 300px;
+    height: 121px;
+	margin: auto;
+    border-radius: 8px;
+}
+#nombreAnaBienvenidos{
+   position: absolute;
+   top: -11px;
+   right: 225px;
+}
+#figuraAnaBienvenidos{
+   position: absolute;
+   top: -70px;
+   right: 19px;
+}
+#AnaTextBienvenidos{
+   font-family: "Roboto"; 
+   font-size: 9pt; 
+    font-style: Thin; 
+    color: black; 
+    position: absolute;
+    font-weight: bold;
+    top: 16px;
+    
+   left: 39px;
+   margin: auto;
 }

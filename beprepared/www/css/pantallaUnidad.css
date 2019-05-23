@@ -10,28 +10,28 @@
      color: white; 
      position: absolute;
      top: 7px;
-     left: 70px;
+     left: 78px;
      margin: auto;
 }
 
 #imgVolverInicio{
     position: absolute;
-    top: 8px;
-    left: 4px;
+    top: 10px;
+    left: 17px;
     margin: auto;
 }
 
 #imgOpcionesInicio{
     position: absolute;
-    top: 8px;
-    left: 320px;
+    top: 10px;
+    left: 310px;
     margin: auto;
 }
 
 #imgMenuInicio{
     position: absolute;
-    top: 15px;
-    left: 30px;
+    top: 17px;
+    left: 40px;
     margin: auto;
 }
 
@@ -47,7 +47,7 @@
 #imgBarraSalud{
     position: absolute;
     top: -560px;
-    left: 100px;
+    left: 120px;
     right: 0;
     bottom: 0;
     margin: auto;
@@ -56,7 +56,7 @@
 #imgSalud{
     position: absolute;
     top: -560px;
-    left: 280px;
+    left: -60px;
     right: 0;
     bottom: 0;
     margin: auto;
@@ -65,7 +65,7 @@
 #imgBarraExp{
     position: absolute;
     top: -490px;
-    left: 100px;
+    left: 120px;
     right: 0;
     bottom: 0;
     margin: auto;
@@ -74,7 +74,7 @@
 #imgExp{
     position: absolute;
     top: -490px;
-    left: 280px;
+    left: -60px;
     right: 0;
     bottom: 0;
     margin: auto;
@@ -93,7 +93,7 @@
 }
 #imgClan{
     position: absolute;
-    top: 500px;
+    top: 470px;
     left: 0;
     right: 0;
     bottom: 0;
@@ -101,7 +101,7 @@
 }
 #imgTropa{
     position: absolute;
-    top: -100px;
+    top: -130px;
     left: 0;
     right: 0;
     bottom: 0;
@@ -109,9 +109,74 @@
 }
 #imgSociedad{
     position: absolute;
-    top: 200px;
+    top: 170px;
     left: 0;
     right: 0;
     bottom: 0;
     margin: auto;
+}
+#tropaText{
+    position: absolute;
+    top: 337px;
+    left: 153px;
+    margin: auto;
+    font-family: "Roboto"; 
+    font-style: Thin; 
+    font-size: 16pt; 
+    color: #231f20; 
+    opacity: 70%;
+}
+#sociedadText{
+    position: absolute;
+    top: 485px;
+    left: 138px;
+    margin: auto;
+    font-family: "Roboto"; 
+    font-style: Thin; 
+    font-size: 16pt; 
+    color: #231f20; 
+    font-weight: bold;
+    
+}
+#clanText{
+    position: absolute;
+    top: 640px;
+    left: 159px;
+    margin: auto;
+    font-family: "Roboto"; 
+    font-style: Thin; 
+    font-size: 16pt; 
+    color: #231f20; 
+    opacity: 70%;
+}
+#nivelText{
+    position: absolute;
+    top: 118px;
+    left: 65px;
+    margin: auto;
+    font-family: "Roboto"; 
+    font-style: Thin; 
+    font-size: 9pt; 
+    color: white; 
+    
+}
+#saludText{
+    position: absolute;
+    top: 74px;
+    left: 286px;
+    margin: auto;
+    font-family: "Roboto"; 
+    font-style: Thin; 
+    font-size: 9pt; 
+    color: white; 
+}
+#expeText{
+    position: absolute;
+    top: 109px;
+    left: 254px;
+    margin: auto;
+    font-family: "Roboto"; 
+    font-style: Thin; 
+    font-size: 9pt; 
+    color: white; 
 }

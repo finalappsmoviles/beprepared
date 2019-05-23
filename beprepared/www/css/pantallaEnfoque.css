@@ -1,6 +1,6 @@
 #encabezadoEnfoque{
     height: 143px;
-    background-color: #243E90; 
+    background-color: #1166af; 
 }
 #textoNombreEnf{
     font-family: "Roboto"; 
@@ -9,7 +9,7 @@
      color: white; 
      position: absolute;
      top: 7px;
-     left: 70px;
+     left: 80px;
      margin: auto;
 }
 #imgpersonajeSeleccionadoEnf{
@@ -20,4 +20,264 @@
     bottom: 0;
     margin: auto;
 }
-
+#imgUniforme{
+    position: absolute;
+    top: -20px;
+    left: -180px;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+#PSText{
+    font-family: "Roboto"; 
+    font-size: 14pt; 
+     font-style: Thin; 
+     color: black; 
+     position: absolute;
+     top: 400px;
+    left: 200px;
+    margin: auto; 
+}
+#PLText{
+    font-family: "Roboto"; 
+    font-size: 14pt; 
+     font-style: Thin; 
+     color: black; 
+     position: absolute;
+     top: 570px;
+    left: 210px;
+    margin: auto; 
+}
+#porcenPS{
+    font-family: "Roboto"; 
+    font-size: 14pt; 
+     font-style: Thin; 
+     color: black; 
+     position: absolute;
+     top: 383px;
+    left: 250px;
+    margin: auto;
+}
+#porcenUniforme{
+    font-family: "Roboto"; 
+    font-size: 14pt; 
+     font-style: Thin; 
+     color: black; 
+     position: absolute;
+     top: 383px;
+    left: 88px;
+    margin: auto;
+}
+#porcenPL{
+    font-family: "Roboto"; 
+    font-size: 14pt; 
+     font-style: Thin; 
+     color: black; 
+     position: absolute;
+     top: 550px;
+     left: 250px;
+    margin: auto;
+}
+#porcenPP{
+    font-family: "Roboto"; 
+    font-size: 14pt; 
+     font-style: Thin; 
+     color: black; 
+     position: absolute;
+     top: 550px;
+     left: 88px;
+    margin: auto;
+}
+#uniformeText{
+    font-family: "Roboto"; 
+    font-size: 14pt; 
+     font-style: Thin; 
+     color: black; 
+     position: absolute;
+     top: 400px;
+    left: 55px;
+    margin: auto; 
+}
+#PPText{
+    font-family: "Roboto"; 
+    font-size: 14pt; 
+     font-style: Thin; 
+     color: black; 
+     position: absolute;
+     top: 570px;
+    left: 19px;
+    margin: auto; 
+}
+#imgPs{
+    position: absolute;
+    top: -20px;
+    left: 150px;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+#imgPp{
+    position: absolute;
+    top: 320px;
+    left: -180px;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+#imgPl{
+    position: absolute;
+    top: 320px;
+    left: 150px;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+#footerEnfoque
+{
+    position: absolute;
+    height: 59px;
+    width: 360px;    
+    background-color: #1166af;
+    /* padding-left:20px;
+    padding-right:20px;
+    padding-top: 10px; */
+    bottom: 0px;
+    
+    color:white;
+}
+#imgPruebasFooter
+{
+    position: absolute;
+    float: left;
+    padding-left:26px;
+    padding-top: 13px;
+}
+#txtPruebasFoot
+{
+    position: absolute;
+    float: left;
+    padding-left: 17px;
+    padding-top: 27px;
+    
+}
+#imgEspFooter
+{
+    position: absolute;
+    float: right;
+    right:45px;
+    bottom: 18px;
+}
+#txtEspFoot
+{
+    position: absolute;
+    float: right;
+    right: 20px;
+    top: 30px;
+}
+#imgDesFooter
+{   
+    position: absolute;
+    float: right;
+    right: 175px;
+    bottom: 18px;
+}
+#txtDesFoot
+{    
+    position: absolute;
+    float: right;
+    right: 170px;
+    top: 29px;
+}
+#eligeTextEnfoque{
+    position: absolute;
+    top: 180px;
+    left: 80px;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    font-family: "Loved by the King"; 
+    font-size: 32pt; 
+    font-style: normal; 
+    color: goldenrod;
+}
+#imgVolverUnidad{
+    position: absolute;
+    top: 10px;
+    left: 17px;
+    margin: auto;
+}
+#lightbox{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+    background: rgba(0,0,0,.5);
+	width: 360px;
+    height: 690px;
+	margin: 0;
+	padding: 0;
+	z-index: 2;
+}
+#ventanaAna{
+    position: absolute;
+ 
+	top: 497px;
+    left: 28px;
+	background: white;
+	width: 300px;
+    height: 86px;
+	margin: auto;
+    border-radius: 8px;
+}
+#nombreAna{
+    position: absolute;
+	top: -8px;
+    left: 28px;
+	margin: auto;
+   
+}
+#figuraAna{
+    position: absolute;
+	top: -72px;
+    left: 215px;
+	margin: auto;
+}
+#AnaText1{
+    font-family: "Roboto"; 
+    font-size: 9pt; 
+     font-style: Thin; 
+     color: black; 
+     position: absolute;
+     font-weight: bold;
+     top: 18px;
+    left: 19px;
+    margin: auto; 
+}
+#flechaDialogo{
+    position: absolute;
+	top: 80px;
+    left: 140px;
+	margin: auto;
+}
+#AnaText2{
+    font-family: "Roboto"; 
+    font-size: 9pt; 
+     font-style: Thin; 
+     color: black; 
+     position: absolute;
+     font-weight: bold;
+     top: 515px;
+    left: 39px;
+    margin: auto; 
+}
+#meQuedaClaro{
+    font-family: "Roboto"; 
+    font-size: 8pt; 
+     font-style: Thin; 
+     color: #1166af; 
+     position: absolute;
+     font-weight: bold;
+     top: 578px;
+    left: 244px;
+    border-bottom: 2px solid #1166af;
+    margin: auto; 
+}
