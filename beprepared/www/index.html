@@ -28,7 +28,7 @@
                     tajes para estar al tanto de cuanto hemos comple- </br>
                     tado hasta la fecha.
                 </p>
-                <img id="flechaDialogo" src="img/Todas/flecha_dialogo.png" ondblclick="siguienteTextoAna()">
+                <img id="flechaDialogo" src="img/Todas/flecha_dialogo.png" onclick="siguienteTextoAna()">
             </div>
             <p id="AnaText2" class="ocultar">
                 La flecha en la parte inferior es para especificar en </br>
@@ -37,7 +37,7 @@
                 Ahora, continua explorando con las barras para </br>
                 saber más de esta increible aventura.
             </p>
-            <span id="meQuedaClaro" class="ocultar" ondblclick="todoClaroText()">Me queda claro</span>
+            <span id="meQuedaClaro" class="ocultar" onclick="todoClaroText()">Me queda claro</span>
             </div>
         </section>
         <section id="Seccarga" class="Seccarga animated fadeInUpBig">
@@ -83,71 +83,78 @@
                 <img id="imgMenuInicio" src="img/Todas/menu_inicio.png">
                 <span id="textoNombre">Sofia Álvarez</span>
                 <img id="imgpersonajeSeleccionado" src="img/Todas/eleccion_ella.png">
-                <img id="imgBarraSalud" src="img/Todas/barra.png">
-                <img id="imgSalud" src="img/Todas/salud.png">
-                <img id="imgBarraExp" src="img/Todas/barra.png">
-                <img id="imgExp" src="img/Todas/experiencia.png">
+                <img id="imgSalud" src="img/pantallas/pruebas/imagenes/salud.png">
+                <img id="barraSaludUni" src="img/Todas/barra.png">
+                <p id="procSaludUni">100%</p>
+                <img id="imgExp" src="img/pantallas/pruebas/imagenes/experiencia.png">
+                <img id="barraExpUni" src="img/Todas/barra.png">
+                <p id="procExpUni">0%</p>
             </section>
             <p id="eligeText">Elige tu unidad</p>
             <img id="imgTropa" src="img/Todas/tropa.png">
             <p id="tropaText">Tropa</p>
-            <img id="imgSociedad" src="img/Todas/Sociedad.png">
+            <img id="imgSociedad" src="img/Todas/Sociedad.png" onclick="clickEnSiguienteUnidad()">
             <p id="sociedadText">Sociedad</p>
             <img id="imgClan" src="img/Todas/clan.png">
             <p id="clanText">Clan</p>
             <img id="boton_siguiente" src="img/Todas/siguiente.png" onclick="clickEnSiguienteUnidad()">
         </section>
         <section id="SecEnfoque" class="SecEnfoque ocultar">
-            <section id="encabezadoEnfoque">
-                <img id="imgVolverUnidad" src="img/Todas/volver.png" onclick="clickEnVolverSecUnidad()">
-                <img id="imgOpcionesInicio" src="img/Todas/opciones.png">
-                <p id="nivelText">Nivel 1</p>
-                <p id="saludText">Salud</p>
-                <p id="expeText">Experiencia</p>
-                <img id="imgMenuInicio" src="img/Todas/menu.png">
-                <span id="textoNombreEnf">Sofia Álvarez</span>
-                <img id="imgpersonajeSeleccionadoEnf" src="img/Todas/ella_azul.png">
-                <img id="imgBarraSalud" src="img/Todas/barra.png">
-                <img id="imgSalud" src="img/Todas/salud.png">
-                <img id="imgBarraExp" src="img/Todas/barra.png">
-                <img id="imgExp" src="img/Todas/experiencia.png">
+            <div id="infoUsuario">
+                <div id="headInfoUsuario">
+                    <img id="volverPruebas" src="img/pantallas/pruebas/imagenes/volver.png">
 
-            </section>
+                    <span id="textoNombreEnf">Sofia Álvarez</span>
+                    <img id="volverPruebasPuntos" src="img/pantallas/pruebas/imagenes/menu.png">
+                    <img id="opcionesPruebas" src="img/pantallas/pruebas/imagenes/opciones.png">
+                </div>
+                <div id="bodyInfoUsuario" class="bodyInfoUsuario">
+                    <img id="imgpersonajeSeleccionadoEnf" src="img/Todas/ella_azul.png">
+                    <p id="nivelPruebasEnf">Nivel 1</p>
+                    <img id="saludPruebas" src="img/pantallas/pruebas/imagenes/salud.png">
+                    <img id="barraSaludEnf" src="img/Todas/barra.png">
+                    <p id="pSaludPruebas">Salud</p>
+                    <p id="procSaludEnf">100%</p>
+                    <img id="experienciaPruebas" src="img/pantallas/pruebas/imagenes/experiencia.png">
+                    <img id="barraExpEnf" src="img/Todas/barra.png">
+                    <p id="pExpPruebas">Experiencia</p>
+                    <p id="procExpEnf">0%</p>
+                </div>
+            </div>
+
             <p id="eligeTextEnfoque">Elije tu enfoque</p>
-            <img id="imgUniforme" src="img/Todas/uniforme.png">
+            <img id="imgUniforme" src="img/Todas/uniforme.png" onclick="irSeccionPruebas()">
             <p id="uniformeText">Uniforme</p>
             <p id="porcenUniforme">0%</p>
             <img id="imgPl" src="img/Todas/pl.png">
             <p id="PLText">Pionero Lider</p>
-            <p id="porcenPL">0%</p>
+            <!-- <p id="porcenPL">0%</p> -->
             <img id="imgPp" src="img/Todas/pp.png">
             <p id="PPText">Pionero Promotor</p>
-            <p id="porcenPP">0%</p>
+            <!-- <p id="porcenPP">0%</p> -->
             <img id="imgPs" src="img/Todas/ps.png">
             <p id="PSText">Pionero Servicio</p>
-            <p id="porcenPS">0%</p>
+            <!-- <p id="porcenPS">0%</p> -->
 
             <div id="footerEnfoque">
-                <img id="imgPruebasFooter" src="img/Todas/pruebas.png" onclick="irSeccionPruebas()">
+                <img id="imgPruebasFooter" src="img/pantallas/desafios/imagenes/pruebas.png">
                 <p id="txtPruebasFoot">Pruebas</p>
                 <div id="footer2">
-                    <img id="imgDesFooter" src="img/Todas/desafios.png" onclick="irSeccionPruebas()">
+                    <img id="imgDesFooter" src="img/pantallas/pruebas/imagenes/desafios.png">
                     <p id="txtDesFoot">Desafios</p>
-                    <img id="imgEspFooter" src="img/Todas/especialidades.png">
+                    <img id="imgEspFooter" src="img/pantallas/desafios/imagenes/especialidades.png">
                     <p id="txtEspFoot">Especialidades</p>
                 </div>
+            </div>
         </section>
         <section id="SecPruebas" class="SecPruebas  animated fadeInRightBig ocultar">
             <div id="infoUsuario">
                 <div id="headInfoUsuario">
-                    <img id="volverPruebas" src="img/pantallas/pruebas/imagenes/volver.png">
-                   <img id="menuPruebas" src="img/pantallas/pruebas/imagenes/menu.png">
-                        <span id="nombreTextPrueba">Sofia Álvarez</span>
-                    
-                        <img id="volverPruebasPuntos" src="img/pantallas/pruebas/imagenes/menu.png">
-                        <p id="nombrePruebas">Sofía Álvarez</p>
-                        
-                        <img id="opcionesPruebas" src="img/pantallas/pruebas/imagenes/opciones.png">
+                    <img id="volverPruebas" src="img/pantallas/pruebas/imagenes/volver.png" onclick="clickvolverPruebas()">
+
+                    <span id="nombreTextPrueba">Sofia Álvarez</span>
+                    <img id="volverPruebasPuntos" src="img/pantallas/pruebas/imagenes/menu.png" onclick="clickvolverPruebas()">
+                    <img id="opcionesPruebas" src="img/pantallas/pruebas/imagenes/opciones.png">
                 </div>
                 <div id="bodyInfoUsuario" class="bodyInfoUsuario">
                     <img id="usuarioPruebas" src="img/pantallas/pruebas/imagenes/ella_azul.png">
@@ -155,7 +162,7 @@
                     <img id="saludPruebas" src="img/pantallas/pruebas/imagenes/salud.png">
                     <img id="barraSaludPruebas" src="img/Todas/barra.png">
                     <p id="pSaludPruebas">Salud</p>
-                    <p id="procSaludPruebas">0%</p>
+                    <p id="procSaludPruebas">100%</p>
                     <img id="experienciaPruebas" src="img/pantallas/pruebas/imagenes/experiencia.png">
                     <img id="barraExpPruebas" src="img/Todas/barra.png">
                     <p id="pExpPruebas">Experiencia</p>
