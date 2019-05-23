@@ -30,7 +30,7 @@ body {
 #posiNombreTexto{
   position: absolute;
   top: 320px;
-  right: 90px;
+  right: 120px;
   
   
 }
@@ -41,7 +41,7 @@ body {
     color:#0c5e65; 
     border: none;
     border-bottom: 2pt solid #b0b969;
-    
+   
 }
 ::placeholder {
    font-family: "Roboto"; 
@@ -53,7 +53,7 @@ body {
 
  #boton_siguiente{
      position: absolute;
-     bottom: 20px;
+     bottom: 50px;
      right: 20px;
  }
  #logoBienvenidos{

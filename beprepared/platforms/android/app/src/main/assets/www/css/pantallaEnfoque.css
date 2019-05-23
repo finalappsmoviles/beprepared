@@ -311,3 +311,15 @@ body {
     margin-top: -38px; 
     color:white;
 }
+#volverEnf
+{
+    float: left;
+    padding-top:2px;
+}
+#volverEnfPuntos
+{
+    margin-left:5px;
+    float: left;
+    margin-top:10px;
+    
+}
