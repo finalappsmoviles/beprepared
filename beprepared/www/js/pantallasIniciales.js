@@ -11,7 +11,7 @@ var Usuario = {
 var Scout;
 
 function clickEnSiguiente() {
-    StatusBar.hide();
+    //StatusBar.hide();
     
     if (localStorage.getItem("user") !== null) {
 
@@ -27,7 +27,7 @@ function clickEnSiguiente() {
         }
         document.getElementById('textoNombre').innerHTML = Scout.Nombre;
         document.getElementById("Secbienvenidos").className = "Secbienvenidos ocultar";
-        document.getElementById("SecUnidad").className = "SecUnidad animated fadeInUpBig";
+        document.getElementById("SecUnidad").className = "SecUnidad animated fadeIn";
 
     } else {
 
@@ -41,7 +41,7 @@ function clickEnSiguiente() {
         document.getElementById('textoNombre').innerHTML = Scout.Nombre;
 
         document.getElementById("Secbienvenidos").className = "Secbienvenidos ocultar";
-        document.getElementById("SecUnidad").className = "SecUnidad animated fadeInUpBig";
+        document.getElementById("SecUnidad").className = "SecUnidad animated fadeIn";
 
     }
 
@@ -103,7 +103,7 @@ function clickEnVolverSecBienvenidos() {
     localStorage.setItem('user', JSON.stringify(Scout));
 
     document.getElementById("SecUnidad").className = "SecUnidad ocultar";
-    document.getElementById("Secbienvenidos").className = "Secbienvenidos animated fadeInUpBig";
+    document.getElementById("Secbienvenidos").className = "Secbienvenidos animated fadeIn";
 
 }
 function clickEnVolverSecUnidad() {
@@ -172,7 +172,7 @@ function irSeccionPruebas() {
 
 }
 function clickvolverPruebas() {
-    document.getElementById("SecEnfoque").className = "SecUnidad animated fadeInUpBig";
+    document.getElementById("SecEnfoque").className = "SecUnidad animated fadeIn";
     document.getElementById("SecPruebas").className = "SecPruebas ocultar";
     document.getElementById("bodyInfoUsuario").className="bodyInfoUsuario";
 }
@@ -187,6 +187,67 @@ function chequeados() {
                 document.getElementById(value).classList.add('checked');
                 checkPruebaLocal.push(value);
                 localStorage.setItem('checkPrueba', checkPruebaLocal);
+            }
+        }
+    }
+    if (localStorage.getItem('checkdesSalir') !== null) {
+        var chequeadosDes = localStorage.getItem('checkdesSalir');
+        for (var i = 1, len = chequeadosDes.length; i < len; i++) {
+            if (i % 2 == 0) {
+                var value = chequeadosDes[i];
+                document.getElementById(value).classList.add('checked');
+
+                checkdesSalirLocal.push(value);
+                localStorage.setItem('checkdesSalir', checkdesSalirLocal);
+            }
+        }
+    }
+    if (localStorage.getItem('checkdesVivir') !== null) {
+        var chequeadosDes = localStorage.getItem('checkdesVivir');
+        for (var i = 1, len = chequeadosDes.length; i < len; i++) {
+            if (i % 2 == 0) {
+                var value = chequeadosDes[i];
+                document.getElementById(value).classList.add('checked');
+
+                checkdesVivirLocal.push(value);
+                localStorage.setItem('checkdesVivir', checkdesVivirLocal);
+            }
+        }
+    }
+
+    if (localStorage.getItem('checkdesDar') !== null) {
+        var chequeadosDes = localStorage.getItem('checkdesDar');
+        for (var i = 1, len = chequeadosDes.length; i < len; i++) {
+            if (i % 2 == 0) {
+                var value = chequeadosDes[i];
+                document.getElementById(value).classList.add('checked');
+
+                checkdesDarLocal.push(value);
+                localStorage.setItem('checkdesDar', checkdesDarLocal);
+            }
+        }
+    }
+    if (localStorage.getItem('checkdesCrear') !== null) {
+        var chequeadosDes = localStorage.getItem('checkdesCrear');
+        for (var i = 1, len = chequeadosDes.length; i < len; i++) {
+            if (i % 2 == 0) {
+                var value = chequeadosDes[i];
+                document.getElementById(value).classList.add('checked');
+
+                checkdesCrearLocal.push(value);
+                localStorage.setItem('checkdesCrear', checkdesCrearLocal);
+            }
+        }
+    }
+    if (localStorage.getItem('checkdesBuscar') !== null) {
+        var chequeadosDes = localStorage.getItem('checkdesBuscar');
+        for (var i = 1, len = chequeadosDes.length; i < len; i++) {
+            if (i % 2 == 0) {
+                var value = chequeadosDes[i];
+                document.getElementById(value).classList.add('checked');
+
+                checkdesBuscarLocal.push(value);
+                localStorage.setItem('checkdesBuscar', checkdesBuscarLocal);
             }
         }
     }
@@ -207,7 +268,9 @@ function agregandoBtnEliminar() {
                 var porcentajePrueba1 = (porcentajePrueba - incrementoAvance);
                 localStorage.setItem('porcentajePrueba', porcentajePrueba1);
                 document.getElementById("avancePrueba").innerHTML = (porcentajePrueba1 * 100).toFixed() + "%";
-                ImgPorcentaje(porcentajePrueba1);
+                //console.log((parseFloat(localStorage.getItem('porcentajePrueba'))));
+                var PondPorc = ((porcentajedesBuscar + porcentajedesCrear + porcentajedesDar + porcentajedesVivir + porcentajedesSalir + parseFloat(localStorage.getItem('porcentajePrueba')) * 100) / 6);
+                ImgPorcentaje(PondPorc);
                 var nuevoBorrado = checkPruebaLocal.indexOf(div.id);
                 if (nuevoBorrado !== -1) checkPruebaLocal.splice(nuevoBorrado, 1);
                 localStorage.setItem('checkPrueba', checkPruebaLocal);

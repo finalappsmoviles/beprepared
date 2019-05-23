@@ -62,7 +62,7 @@ function iniciarPrograma() {
         porcentajePrueba = parseFloat(localStorage.getItem('porcentajePrueba'), 10);
         document.getElementById("avancePrueba").innerHTML = (porcentajePrueba * 100).toFixed() + "%";
     }
-
+    //checkList desafio salir
     if (localStorage.getItem('porcentajedesSalir') === null) {
         porcentajedesSalir = 0;
         localStorage.setItem('porcentajedesSalir', porcentajedesSalir);
@@ -72,18 +72,7 @@ function iniciarPrograma() {
         porcentajedesSalir = parseFloat(localStorage.getItem('porcentajedesSalir'), 10);
         document.getElementById("avancedesSalir").innerHTML = (porcentajedesSalir * 100).toFixed() + "%";
     }
-    if (localStorage.getItem('checkdesSalir') !== null) {
-        var chequeadosDes = localStorage.getItem('checkdesSalir');
-        for (var i = 1, len = chequeadosDes.length; i < len; i++) {
-            if (i % 2 == 0) {
-                var value = chequeadosDes[i];
-                document.getElementById(value).classList.add('checked');
-
-                checkdesSalirLocal.push(value);
-                localStorage.setItem('checkdesSalir', checkdesSalirLocal);
-            }
-        }
-    }
+    
     // //CheckList Desafio Vvir
     if (localStorage.getItem('porcentajedesVivir') === null) {
         porcentajedesVivir = 0;
@@ -94,18 +83,7 @@ function iniciarPrograma() {
         porcentajedesVivir = parseFloat(localStorage.getItem('porcentajedesVivir'), 10);
         document.getElementById("avancedesVivir").innerHTML = (porcentajedesVivir * 100).toFixed() + "%";
     }
-    if (localStorage.getItem('checkdesVivir') !== null) {
-        var chequeadosDes = localStorage.getItem('checkdesVivir');
-        for (var i = 1, len = chequeadosDes.length; i < len; i++) {
-            if (i % 2 == 0) {
-                var value = chequeadosDes[i];
-                document.getElementById(value).classList.add('checked');
-
-                checkdesVivirLocal.push(value);
-                localStorage.setItem('checkdesVivir', checkdesVivirLocal);
-            }
-        }
-    }
+    
 
     // //CheckList Desafio Dar
     if (localStorage.getItem('porcentajedesDar') === null) {
@@ -117,18 +95,7 @@ function iniciarPrograma() {
         porcentajedesDar = parseFloat(localStorage.getItem('porcentajedesDar'), 10);
         document.getElementById("avancedesDar").innerHTML = (porcentajedesDar * 100).toFixed() + "%";
     }
-    if (localStorage.getItem('checkdesDar') !== null) {
-        var chequeadosDes = localStorage.getItem('checkdesDar');
-        for (var i = 1, len = chequeadosDes.length; i < len; i++) {
-            if (i % 2 == 0) {
-                var value = chequeadosDes[i];
-                document.getElementById(value).classList.add('checked');
-
-                checkdesDarLocal.push(value);
-                localStorage.setItem('checkdesDar', checkdesDarLocal);
-            }
-        }
-    }
+    
 
     // //CheckList Desafio Crear
     if (localStorage.getItem('porcentajedesCrear') === null) {
@@ -140,18 +107,7 @@ function iniciarPrograma() {
         porcentajedesCrear = parseFloat(localStorage.getItem('porcentajedesCrear'), 10);
         document.getElementById("avancedesCrear").innerHTML = (porcentajedesCrear * 100).toFixed() + "%";
     }
-    if (localStorage.getItem('checkdesCrear') !== null) {
-        var chequeadosDes = localStorage.getItem('checkdesCrear');
-        for (var i = 1, len = chequeadosDes.length; i < len; i++) {
-            if (i % 2 == 0) {
-                var value = chequeadosDes[i];
-                document.getElementById(value).classList.add('checked');
-
-                checkdesCrearLocal.push(value);
-                localStorage.setItem('checkdesCrear', checkdesCrearLocal);
-            }
-        }
-    }
+    
 
     // //CheckList Desafio Buscar
     if (localStorage.getItem('porcentajedesBuscar') === null) {
@@ -164,18 +120,7 @@ function iniciarPrograma() {
         document.getElementById("avancedesBuscar").innerHTML = (porcentajedesBuscar * 100).toFixed() + "%"
 
     }
-    if (localStorage.getItem('checkdesBuscar') !== null) {
-        var chequeadosDes = localStorage.getItem('checkdesBuscar');
-        for (var i = 1, len = chequeadosDes.length; i < len; i++) {
-            if (i % 2 == 0) {
-                var value = chequeadosDes[i];
-                document.getElementById(value).classList.add('checked');
-
-                checkdesBuscarLocal.push(value);
-                localStorage.setItem('checkdesBuscar', checkdesBuscarLocal);
-            }
-        }
-    }
+    
     var PondPorc = ((porcentajedesBuscar + porcentajedesCrear + porcentajedesDar + porcentajedesVivir + porcentajedesSalir + porcentajePrueba) * 100) / 6;
     ImgPorcentaje(PondPorc);
 

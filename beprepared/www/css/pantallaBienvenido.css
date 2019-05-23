@@ -99,12 +99,10 @@ body {
    right: 19px;
 }
 #AnaTextBienvenidos{
-   font-family: "Roboto"; 
+  
    font-size: 9pt; 
-    font-style: Thin; 
-    color: black; 
+    color: #2d2d2d; 
     position: absolute;
-    font-weight: bold;
     top: 16px;
     
    left: 39px;

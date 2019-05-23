@@ -225,8 +225,8 @@ body {
  
 	top: 497px;
     left: 28px;
-	background: white;
-	width: 300px;
+	background-color: white;
+	width: 320px;
     height: 86px;
 	margin: auto;
     border-radius: 8px;
@@ -245,15 +245,14 @@ body {
 	margin: auto;
 }
 #AnaText1{
-    font-family: "Roboto"; 
-    font-size: 9pt; 
+    font-size: 9.5pt; 
      font-style: Thin; 
-     color: goldenrod; 
+     color: #2d2d2d;
      position: absolute;
-     font-weight: bold;
      top: 18px;
     left: 19px;
     margin: auto; 
+    text-align: justify;
 }
 #flechaDialogo{
     position: absolute;
@@ -262,23 +261,18 @@ body {
 	margin: auto;
 }
 #AnaText2{
-    font-family: "Roboto"; 
     font-size: 9pt; 
-     font-style: Thin; 
-     color: goldenrod; 
-     position: absolute;
-     font-weight: bold;
-     top: 515px;
-    left: 39px;
-    margin: auto; 
+    font-style: Thin; 
+    color: #2d2d2d;
+    margin-top: 515px;
+    margin-left: 39px;
+    text-align: justify;
 }
 #meQuedaClaro{
-    font-family: "Roboto"; 
-    font-size: 8pt; 
+    font-size: 9pt; 
      font-style: Thin; 
      color: #1166af; 
      position: absolute;
-     font-weight: bold;
      top: 578px;
     left: 244px;
     border-bottom: 2px solid #1166af;

@@ -11,7 +11,7 @@ var Usuario = {
 var Scout;
 
 function clickEnSiguiente() {
-    StatusBar.hide();
+    //StatusBar.hide();
     
     if (localStorage.getItem("user") !== null) {
 
@@ -190,6 +190,67 @@ function chequeados() {
             }
         }
     }
+    if (localStorage.getItem('checkdesSalir') !== null) {
+        var chequeadosDes = localStorage.getItem('checkdesSalir');
+        for (var i = 1, len = chequeadosDes.length; i < len; i++) {
+            if (i % 2 == 0) {
+                var value = chequeadosDes[i];
+                document.getElementById(value).classList.add('checked');
+
+                checkdesSalirLocal.push(value);
+                localStorage.setItem('checkdesSalir', checkdesSalirLocal);
+            }
+        }
+    }
+    if (localStorage.getItem('checkdesVivir') !== null) {
+        var chequeadosDes = localStorage.getItem('checkdesVivir');
+        for (var i = 1, len = chequeadosDes.length; i < len; i++) {
+            if (i % 2 == 0) {
+                var value = chequeadosDes[i];
+                document.getElementById(value).classList.add('checked');
+
+                checkdesVivirLocal.push(value);
+                localStorage.setItem('checkdesVivir', checkdesVivirLocal);
+            }
+        }
+    }
+
+    if (localStorage.getItem('checkdesDar') !== null) {
+        var chequeadosDes = localStorage.getItem('checkdesDar');
+        for (var i = 1, len = chequeadosDes.length; i < len; i++) {
+            if (i % 2 == 0) {
+                var value = chequeadosDes[i];
+                document.getElementById(value).classList.add('checked');
+
+                checkdesDarLocal.push(value);
+                localStorage.setItem('checkdesDar', checkdesDarLocal);
+            }
+        }
+    }
+    if (localStorage.getItem('checkdesCrear') !== null) {
+        var chequeadosDes = localStorage.getItem('checkdesCrear');
+        for (var i = 1, len = chequeadosDes.length; i < len; i++) {
+            if (i % 2 == 0) {
+                var value = chequeadosDes[i];
+                document.getElementById(value).classList.add('checked');
+
+                checkdesCrearLocal.push(value);
+                localStorage.setItem('checkdesCrear', checkdesCrearLocal);
+            }
+        }
+    }
+    if (localStorage.getItem('checkdesBuscar') !== null) {
+        var chequeadosDes = localStorage.getItem('checkdesBuscar');
+        for (var i = 1, len = chequeadosDes.length; i < len; i++) {
+            if (i % 2 == 0) {
+                var value = chequeadosDes[i];
+                document.getElementById(value).classList.add('checked');
+
+                checkdesBuscarLocal.push(value);
+                localStorage.setItem('checkdesBuscar', checkdesBuscarLocal);
+            }
+        }
+    }
 }
 function agregandoBtnEliminar() {
     for (i = 0; i < checkList.length; i++) {
@@ -207,7 +268,9 @@ function agregandoBtnEliminar() {
                 var porcentajePrueba1 = (porcentajePrueba - incrementoAvance);
                 localStorage.setItem('porcentajePrueba', porcentajePrueba1);
                 document.getElementById("avancePrueba").innerHTML = (porcentajePrueba1 * 100).toFixed() + "%";
-                ImgPorcentaje(porcentajePrueba1);
+                //console.log((parseFloat(localStorage.getItem('porcentajePrueba'))));
+                var PondPorc = ((porcentajedesBuscar + porcentajedesCrear + porcentajedesDar + porcentajedesVivir + porcentajedesSalir + parseFloat(localStorage.getItem('porcentajePrueba')) * 100) / 6);
+                ImgPorcentaje(PondPorc);
                 var nuevoBorrado = checkPruebaLocal.indexOf(div.id);
                 if (nuevoBorrado !== -1) checkPruebaLocal.splice(nuevoBorrado, 1);
                 localStorage.setItem('checkPrueba', checkPruebaLocal);
