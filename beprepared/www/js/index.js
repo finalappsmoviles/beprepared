@@ -28,87 +28,81 @@ var app = {
 };
 
 function iniciarPrograma() {
-    setTimeout(function(){
-        document.getElementById("Seccarga").className= "Seccarga ocultar";
-        document.getElementById("Secbienvenidos").className="Secbienvenidos animated fadeInUpBig";
-    }, 2000);     
-    document.getElementById("barraSaludPruebas").src="img/Todas/porcentaje4.png";
-    document.getElementById("barraSaludUni").src="img/Todas/porcentaje4.png";
-    document.getElementById("barraSaludEnf").src="img/Todas/porcentaje4.png";
+    setTimeout(function () {
+        document.getElementById("Seccarga").className = "Seccarga ocultar";
+        document.getElementById("Secbienvenidos").className = "Secbienvenidos animated fadeInUpBig";
+    }, 2000);
+    document.getElementById("barraSaludPruebas").src = "img/Todas/porcentaje4.png";
+    document.getElementById("barraSaludUni").src = "img/Todas/porcentaje4.png";
+    document.getElementById("barraSaludEnf").src = "img/Todas/porcentaje4.png";
 
 }
-function ImgPorcentaje(porcentaje)
-{
-    if(porcentaje==0)
-    {
-        document.getElementById("barraExpPruebas").src="img/Todas/barra.png";
-        document.getElementById("barraExpUni").src="img/Todas/barra.png";
-        document.getElementById("barraExpEnf").src="img/Todas/barra.png";
-
-        
-        document.getElementById("procExpPruebas").innerHTML=(porcentaje).toFixed()+"%";
-        document.getElementById("procExpUni").innerHTML=(porcentaje).toFixed()+"%";
-        document.getElementById("procExpEnf").innerHTML=(porcentaje).toFixed()+"%";
-        document.getElementById("porcenUniforme").innerHTML=(porcentaje).toFixed()+"%";
-
-    }    
+function ImgPorcentaje(porcentaje) {
+    if (porcentaje == 0) {
+        document.getElementById("barraExpPruebas").src = "img/Todas/barra.png";
+        document.getElementById("barraExpUni").src = "img/Todas/barra.png";
+        document.getElementById("barraExpEnf").src = "img/Todas/barra.png";
 
 
-    else if(porcentaje<=25&&porcentaje>0)
-    {
-        document.getElementById("barraExpPruebas").src="img/Todas/porcentaje1A.png";
-        document.getElementById("barraExpUni").src="img/Todas/porcentaje1A.png";
-        document.getElementById("barraExpEnf").src="img/Todas/porcentaje1A.png";
-        
-        
-        document.getElementById("procExpPruebas").innerHTML=(porcentaje).toFixed()+"%";
-        document.getElementById("procExpUni").innerHTML=(porcentaje).toFixed()+"%";
-        document.getElementById("procExpEnf").innerHTML=(porcentaje).toFixed()+"%";
-        document.getElementById("porcenUniforme").innerHTML=(porcentaje).toFixed()+"%";
+        document.getElementById("procExpPruebas").innerHTML = (porcentaje).toFixed() + "%";
+        document.getElementById("procExpUni").innerHTML = (porcentaje).toFixed() + "%";
+        document.getElementById("procExpEnf").innerHTML = (porcentaje).toFixed() + "%";
+        document.getElementById("porcenUniforme").innerHTML = (porcentaje).toFixed() + "%";
 
-        
     }
-    else if(porcentaje<=50)
-    {
-        
-        document.getElementById("barraExpPruebas").src="img/Todas/porcentaje2A.png";
-        document.getElementById("barraExpUni").src="img/Todas/porcentaje2A.png";
-        document.getElementById("barraExpEnf").src="img/Todas/porcentaje2A.png";
-        
-        
-        document.getElementById("procExpPruebas").innerHTML=(porcentaje).toFixed()+"%";
-        document.getElementById("procExpUni").innerHTML=(porcentaje).toFixed()+"%";
-        document.getElementById("procExpEnf").innerHTML=(porcentaje).toFixed()+"%";
-        document.getElementById("porcenUniforme").innerHTML=(porcentaje).toFixed()+"%";
-    }
-    else if(porcentaje>50&&porcentaje<100)
-    {
-        
-        document.getElementById("barraExpPruebas").src="img/Todas/porcentaje3A.png";
-        document.getElementById("barraExpUni").src="img/Todas/porcentaje3A.png";
-        document.getElementById("barraExpEnf").src="img/Todas/porcentaje3A.png";        
-        
-        document.getElementById("procExpPruebas").innerHTML=(porcentaje).toFixed()+"%";
-        document.getElementById("procExpUni").innerHTML=(porcentaje).toFixed()+"%";
-        document.getElementById("procExpEnf").innerHTML=(porcentaje).toFixed()+"%";
-        document.getElementById("porcenUniforme").innerHTML=(porcentaje).toFixed()+"%";
+
+
+    else if (porcentaje <= 25 && porcentaje > 0) {
+        document.getElementById("barraExpPruebas").src = "img/Todas/porcentaje1A.png";
+        document.getElementById("barraExpUni").src = "img/Todas/porcentaje1A.png";
+        document.getElementById("barraExpEnf").src = "img/Todas/porcentaje1A.png";
+
+
+        document.getElementById("procExpPruebas").innerHTML = (porcentaje).toFixed() + "%";
+        document.getElementById("procExpUni").innerHTML = (porcentaje).toFixed() + "%";
+        document.getElementById("procExpEnf").innerHTML = (porcentaje).toFixed() + "%";
+        document.getElementById("porcenUniforme").innerHTML = (porcentaje).toFixed() + "%";
 
 
     }
-    else if(porcentaje==100)
-    {
-        
-        document.getElementById("barraExpPruebas").src="img/Todas/porcentaje4A.png";
-        document.getElementById("barraExpUni").src="img/Todas/porcentaje4A.png";
-        document.getElementById("barraExpEnf").src="img/Todas/porcentaje4A.png";
-        
-        
-        document.getElementById("procExpPruebas").innerHTML=(porcentaje).toFixed()+"%";
-        document.getElementById("procExpUni").innerHTML=(porcentaje).toFixed()+"%";
-        document.getElementById("procExpEnf").innerHTML=(porcentaje).toFixed()+"%";
-        document.getElementById("porcenUniforme").innerHTML=(porcentaje).toFixed()+"%";
+    else if (porcentaje <= 50) {
 
-    
+        document.getElementById("barraExpPruebas").src = "img/Todas/porcentaje2A.png";
+        document.getElementById("barraExpUni").src = "img/Todas/porcentaje2A.png";
+        document.getElementById("barraExpEnf").src = "img/Todas/porcentaje2A.png";
+
+
+        document.getElementById("procExpPruebas").innerHTML = (porcentaje).toFixed() + "%";
+        document.getElementById("procExpUni").innerHTML = (porcentaje).toFixed() + "%";
+        document.getElementById("procExpEnf").innerHTML = (porcentaje).toFixed() + "%";
+        document.getElementById("porcenUniforme").innerHTML = (porcentaje).toFixed() + "%";
+    }
+    else if (porcentaje > 50 && porcentaje < 100) {
+
+        document.getElementById("barraExpPruebas").src = "img/Todas/porcentaje3A.png";
+        document.getElementById("barraExpUni").src = "img/Todas/porcentaje3A.png";
+        document.getElementById("barraExpEnf").src = "img/Todas/porcentaje3A.png";
+
+        document.getElementById("procExpPruebas").innerHTML = (porcentaje).toFixed() + "%";
+        document.getElementById("procExpUni").innerHTML = (porcentaje).toFixed() + "%";
+        document.getElementById("procExpEnf").innerHTML = (porcentaje).toFixed() + "%";
+        document.getElementById("porcenUniforme").innerHTML = (porcentaje).toFixed() + "%";
+
+
+    }
+    else if (porcentaje == 100) {
+
+        document.getElementById("barraExpPruebas").src = "img/Todas/porcentaje4A.png";
+        document.getElementById("barraExpUni").src = "img/Todas/porcentaje4A.png";
+        document.getElementById("barraExpEnf").src = "img/Todas/porcentaje4A.png";
+
+
+        document.getElementById("procExpPruebas").innerHTML = (porcentaje).toFixed() + "%";
+        document.getElementById("procExpUni").innerHTML = (porcentaje).toFixed() + "%";
+        document.getElementById("procExpEnf").innerHTML = (porcentaje).toFixed() + "%";
+        document.getElementById("porcenUniforme").innerHTML = (porcentaje).toFixed() + "%";
+
+
     }
 
 }

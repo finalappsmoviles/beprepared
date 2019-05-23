@@ -49,7 +49,7 @@ function ClickDesCheck(id)
     bodyInfoUsuario.className="ocultar";
     volverPruebas.id="volverDesafios";
     volverPruebasPuntos.id="volverDesafiosPuntos";
-    document.getElementById("volverDesafios").addEventListener("click",function()
+    document.getElementById("volverDesafios").onclick=function()
     {        
         document.getElementById("SecUnidad").className="SecUnidad ocultar";
         SecPruebas.className="SecPruebas animated fadeInLeftBig";
@@ -57,23 +57,48 @@ function ClickDesCheck(id)
         desafioCheck.className="checklist ocultar";
         volverPruebas.id="volverPruebas";
         bodyInfoUsuario.className="bodyInfoUsuario";
-        document.getElementById("tituloMenDes").style.marginTop="60px";  
-        volverPruebas.addEventListener('click',function(){
-            document.getElementById("SecUnidad").className= "SecUnidad animated fadeInUpBig";
+        document.getElementById("tituloMenDes").style.marginTop="60px";
+        volverPruebas.id="volverPruebas";
+        volverPruebasPuntos.id="volverPruebasPuntos";  
+        volverPruebas.onclick=function(){
+            document.getElementById("SecEnfoque").className= "SecUnidad animated fadeInUpBig";
             document.getElementById("SecPruebas").className="SecPruebas ocultar"; 
-        },false);
-        volverPruebasPuntos.addEventListener('click',function(){
-            document.getElementById("SecUnidad").className= "SecUnidad animated fadeInUpBig";
+        };
+        volverPruebasPuntos.onclick=function(){
+            document.getElementById("SecEnfoque").className= "SecUnidad animated fadeInUpBig";
             document.getElementById("SecPruebas").className="SecPruebas ocultar"; 
-        },false);
-    });
-    document.getElementById("volverDesafiosPuntos").addEventListener("click",function()
+        };
+    };
+    document.getElementById("volverDesafiosPuntos").onclick=function()
     {
         document.getElementById("SecUnidad").className="SecUnidad ocultar";
         SecPruebas.className="SecPruebas animated fadeInLeftBig";
         DesMenu.className= "checklist animated fadeInRightBig";
         desafioCheck.className="checklist ocultar";
         volverPruebasPuntos.id="volverPruebasPuntos";
+        bodyInfoUsuario.className="bodyInfoUsuario";
+        volverPruebas.id="volverPruebas";
+        volverPruebasPuntos.id="volverPruebasPuntos";
+        document.getElementById("tituloMenDes").style.marginTop="60px";  
+        volverPruebas.onclick=function(){
+            document.getElementById("SecEnfoque").className= "SecUnidad animated fadeInUpBig";
+            document.getElementById("SecPruebas").className="SecPruebas ocultar"; 
+        };
+        volverPruebasPuntos.onclick=function(){
+            document.getElementById("SecEnfoque").className= "SecUnidad animated fadeInUpBig";
+            document.getElementById("SecPruebas").className="SecPruebas ocultar"; 
+        };        
+    };  
+}
+function clickCambioId(id)
+{
+    var desafioCheck=document.getElementById(id.id+"Check");    
+    document.getElementById("SecUnidad").className="SecUnidad ocultar";
+        SecPruebas.className="SecPruebas animated fadeInLeftBig";
+        DesMenu.className= "checklist animated fadeInRightBig";
+        desafioCheck.className="checklist ocultar";
+        volverPruebas.setAttribute("onclick",clickvolverPruebas());
+        volverPruebasPuntos.setAttribute("onclick",clickvolverPruebas());
         bodyInfoUsuario.className="bodyInfoUsuario";
         document.getElementById("tituloMenDes").style.marginTop="60px";  
         volverPruebas.addEventListener('click',function(){
@@ -83,8 +108,7 @@ function ClickDesCheck(id)
         volverPruebasPuntos.addEventListener('click',function(){
             document.getElementById("SecUnidad").className= "SecUnidad animated fadeInUpBig";
             document.getElementById("SecPruebas").className="SecPruebas ocultar"; 
-        },false);          
-    });  
+        },false);
 }
 
 
