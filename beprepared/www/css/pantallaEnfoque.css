@@ -227,7 +227,7 @@ body {
     left: 28px;
 	background-color: white;
 	width: 320px;
-    height: 86px;
+    height: 95px;
 	margin: auto;
     border-radius: 8px;
 }
@@ -245,27 +245,26 @@ body {
 	margin: auto;
 }
 #AnaText1{
-    font-size: 9.5pt; 
+    font-size: 10pt; 
      font-style: Thin; 
      color: #2d2d2d;
      position: absolute;
      top: 18px;
-    left: 19px;
+    left: 9px;
     margin: auto; 
     text-align: justify;
 }
 #flechaDialogo{
     position: absolute;
-	top: 80px;
+	top: 90px;
     left: 140px;
 	margin: auto;
 }
 #AnaText2{
-    font-size: 9pt; 
+    font-size: 10pt; 
     font-style: Thin; 
     color: #2d2d2d;
-    margin-top: 515px;
-    margin-left: 39px;
+    margin-left: 9px;
     text-align: justify;
 }
 #meQuedaClaro{
@@ -273,8 +272,7 @@ body {
      font-style: Thin; 
      color: #1166af; 
      position: absolute;
-     top: 578px;
-    left: 244px;
+    left: 215px;
     border-bottom: 2px solid #1166af;
     margin: auto; 
 }

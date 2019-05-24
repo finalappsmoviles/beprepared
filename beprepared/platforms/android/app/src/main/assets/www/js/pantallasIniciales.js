@@ -11,7 +11,7 @@ var Usuario = {
 var Scout;
 
 function clickEnSiguiente() {
-    //StatusBar.hide();
+    StatusBar.hide();
     
     if (localStorage.getItem("user") !== null) {
 
@@ -27,7 +27,7 @@ function clickEnSiguiente() {
         }
         document.getElementById('textoNombre').innerHTML = Scout.Nombre;
         document.getElementById("Secbienvenidos").className = "Secbienvenidos ocultar";
-        document.getElementById("SecUnidad").className = "SecUnidad animated fadeInUpBig";
+        document.getElementById("SecUnidad").className = "SecUnidad animated fadeIn";
 
     } else {
 
@@ -41,7 +41,7 @@ function clickEnSiguiente() {
         document.getElementById('textoNombre').innerHTML = Scout.Nombre;
 
         document.getElementById("Secbienvenidos").className = "Secbienvenidos ocultar";
-        document.getElementById("SecUnidad").className = "SecUnidad animated fadeInUpBig";
+        document.getElementById("SecUnidad").className = "SecUnidad animated fadeIn";
 
     }
 
@@ -85,7 +85,7 @@ function clickEnSiguienteUnidad() {
 }
 function siguienteTextoAna() {
 
-    document.getElementById('ventanaAna').style.height = "104px";
+    document.getElementById('ventanaAna').style.height = "126px";
     document.getElementById('AnaText1').className = "ocultar";
     document.getElementById('flechaDialogo').className = "ocultar";
     document.getElementById('meQuedaClaro').className = "animated fadeInUpBig";
@@ -103,7 +103,7 @@ function clickEnVolverSecBienvenidos() {
     localStorage.setItem('user', JSON.stringify(Scout));
 
     document.getElementById("SecUnidad").className = "SecUnidad ocultar";
-    document.getElementById("Secbienvenidos").className = "Secbienvenidos animated fadeInUpBig";
+    document.getElementById("Secbienvenidos").className = "Secbienvenidos animated fadeIn";
 
 }
 function clickEnVolverSecUnidad() {
@@ -172,7 +172,7 @@ function irSeccionPruebas() {
 
 }
 function clickvolverPruebas() {
-    document.getElementById("SecEnfoque").className = "SecUnidad animated fadeInUpBig";
+    document.getElementById("SecEnfoque").className = "SecUnidad animated fadeIn";
     document.getElementById("SecPruebas").className = "SecPruebas ocultar";
     document.getElementById("bodyInfoUsuario").className="bodyInfoUsuario";
 }

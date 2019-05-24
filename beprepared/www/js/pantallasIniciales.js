@@ -11,7 +11,7 @@ var Usuario = {
 var Scout;
 
 function clickEnSiguiente() {
-    //StatusBar.hide();
+    StatusBar.hide();
     
     if (localStorage.getItem("user") !== null) {
 
@@ -85,7 +85,7 @@ function clickEnSiguienteUnidad() {
 }
 function siguienteTextoAna() {
 
-    document.getElementById('ventanaAna').style.height = "104px";
+    document.getElementById('ventanaAna').style.height = "126px";
     document.getElementById('AnaText1').className = "ocultar";
     document.getElementById('flechaDialogo').className = "ocultar";
     document.getElementById('meQuedaClaro').className = "animated fadeInUpBig";
