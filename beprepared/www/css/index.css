@@ -472,3 +472,21 @@ ul li.checked::before {
     margin-left: 148px;
     margin-top:-10px;
 }
+#agregarCir
+{
+    position:absolute;
+    margin-top:110px;
+    margin-left:310px;
+}
+#agregaPrueba
+{
+    position:absolute;
+    margin-top:75px;
+    margin-left:314px;
+}
+#txtNuevaPrueba
+{
+    position:absolute;
+    margin-top:78px;
+    margin-left:225px;
+}

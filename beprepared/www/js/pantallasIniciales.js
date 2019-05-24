@@ -9,9 +9,20 @@ var Usuario = {
     mostrarAna: true
 }
 var Scout;
-
+function clickExpandir()
+{
+    if(document.getElementById("Divagregar").className=="Divagregar ocultar")
+    {
+        document.getElementById("Divagregar").className="Divagregar animated rotateInUpRight";
+    }
+    else
+    {
+        document.getElementById("Divagregar").className="Divagregar ocultar";
+    }
+    
+}
 function clickEnSiguiente() {
-    StatusBar.hide();
+    // StatusBar.hide();
     
     if (localStorage.getItem("user") !== null) {
 
