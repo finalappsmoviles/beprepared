@@ -16,7 +16,7 @@ function clickEnSiguiente() {
     if (localStorage.getItem("user") !== null) {
 
         Scout = JSON.parse(localStorage.getItem("user"));
-
+        document.getElementById("nombreUsuario").value = Scout.Nombre;
         if (Scout.Personaje === false) {
 
             document.getElementById('imgpersonajeSeleccionado').src = "img/Todas/eleccion_el.png";
@@ -34,7 +34,7 @@ function clickEnSiguiente() {
         Usuario.Nombre = document.getElementById("nombreUsuario").value;
 
         localStorage.setItem('user', JSON.stringify(Usuario));
-
+        localStorage.setItem('nombreUsuario', JSON.stringify(Usuario.Nombre));
         Scout = JSON.parse(localStorage.getItem("user"));
 
 
