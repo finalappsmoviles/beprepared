@@ -11,7 +11,7 @@ var Usuario = {
 var Scout;
 
 function clickEnSiguiente() {
-    StatusBar.hide();
+   // StatusBar.hide();
     
     if (localStorage.getItem("user") !== null) {
 
@@ -115,6 +115,15 @@ function clickEnVolverSecUnidad() {
     document.getElementById("SecUnidad").className = "SecUnidad animated fadeInUpBig";
 
 }
+function irCreditos(){
+    document.getElementById("SecUnidad").className = "SecUnidad ocultar";
+    document.getElementById("SecCreditos").className = "SecCreditos animated fadeInUpBig";
+    
+}
+function regresarUnidad(){
+    document.getElementById("SecCreditos").className = "SecCreditos ocultar";
+    document.getElementById("SecUnidad").className = "SecUnidad animated fadeInUpBig";
+}
 
 function irSeccionPruebas() {
     
@@ -131,6 +140,16 @@ function irSeccionPruebas() {
     document.getElementById("SecEnfoque").className = "secEnfoque ocultar";
     document.getElementById("SecPruebas").className = "SecPruebas animated fadeInUpBig";
 
+    // Ana en sección de pruebas
+    if (Scout.mostrarAna == true) {
+       
+        setTimeout(() => {
+            
+            lightbox.className = "animated fadeInUpBig"
+            document.getElementById('ventanaAna').className = "ocultar";
+            document.getElementById('ventanaAnaPruebas').className = "animated fadeInUpBig";
+        }, 1000);
+    }
 
 
     if (localStorage.getItem("user") !== null) {
@@ -170,6 +189,33 @@ function irSeccionPruebas() {
 
     
 
+}
+function siguienteTextoAna2(){
+    document.getElementById('ventanaAnaPruebas').style.height = "126px";
+    document.getElementById('AnaTextPruebas1').className = "ocultar";
+    document.getElementById('flechaDialogo1').className = "ocultar";
+
+    document.getElementById('AnaTextPruebas2').className = "animated fadeInUpBig";
+    document.getElementById('flechaDialogo2').className = "animated fadeInUpBig";
+
+}
+function siguienteTextoAna3(){
+    
+    document.getElementById('AnaTextPruebas2').className = "ocultar";
+    document.getElementById('flechaDialogo2').className = "ocultar";
+
+    document.getElementById('AnaTextPruebas3').className = "animated fadeInUpBig";
+    document.getElementById('flechaDialogo3').className = "animated fadeInUpBig";
+
+}
+function siguienteTextoAna4(){
+
+    document.getElementById('ventanaAnaPruebas').style.height = "78px";
+    document.getElementById('AnaTextPruebas3').className = "ocultar";
+    document.getElementById('flechaDialogo3').className = "ocultar";
+
+    document.getElementById('AnaTextPruebas4').className = "animated fadeInUpBig";
+    document.getElementById('meQuedaClaroPruebas').className = "animated fadeInUpBig"
 }
 function clickvolverPruebas() {
     document.getElementById("SecEnfoque").className = "SecUnidad animated fadeIn";
@@ -320,3 +366,4 @@ function clickChecklist(div, idUl) {
         localStorage.setItem(check, window['check' + idUl + 'Local']);
     }
 }
+

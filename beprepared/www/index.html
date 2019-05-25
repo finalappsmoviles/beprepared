@@ -8,6 +8,8 @@
     <link rel="stylesheet" type="text/css" href="css/pantallaUnidad.css">
     <link rel="stylesheet" type="text/css" href="css/pantallaEnfoque.css">
     <link rel="stylesheet" type="text/css" href="css/pantallaBienvenido.css">
+    <link rel="stylesheet" type="text/css" href="css/pantallaCreditos.css">
+    <link rel="stylesheet" type="text/css" href="css/anaLightBox.css">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Loved+by+the+King" />
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <title>Be Prepared</title>
@@ -39,11 +41,66 @@
             </p>
             <span id="meQuedaClaro" class="ocultar" onclick="todoClaroText()">Me queda claro</span>
             </div>
+            <div id="ventanaAnaPruebas" class="ocultar">
+                    <img id="nombreAna" src="img/Todas/ana_azul.png">
+                    <img id="figuraAna" src="img/Todas/ana.png">
+                    <p id="AnaTextPruebas1">
+                        En esta sección tenemos nuestras pruebas. Al </br>
+                        costado derecho hay un botón que expande la </br>
+                        información para conocer elementos que te </br>
+                        pueden ayudar a pasar una prueba en especifico.
+                    </p>
+                    <img id="flechaDialogo1" src="img/Todas/flecha_dialogo.png" onclick="siguienteTextoAna2()">
+                
+                <p id="AnaTextPruebas2" class="ocultar">
+                   Cada prueba tiene una fecha de vencimiento </br>
+                    que puedes programar para retarte. </br> 
+                    </br>
+                    Cada que logres pasar una prueba, haz tap en </br>
+                    en el circulo. Asi sumarás experiencia para que tu </br>
+                    personaje suba de nivel.
+                </p>
+                <img id="flechaDialogo2" class="ocultar" src="img/Todas/flecha_dialogo.png" onclick="siguienteTextoAna3()">
+                <p id="AnaTextPruebas3" class="ocultar">
+                        Si no cumples con estas fechas o dejas pasar </br>
+                        mucho tiempo, tu vida irá disminuyendo para </br>
+                        ayudarte a mantener constancia.</br>
+                        </br>
+                        Asi mismo, recuperas parte de tu vida cada </br>
+                        que cumples con una prueba.
+                </p>
+                <img id="flechaDialogo3" class="ocultar" src="img/Todas/flecha_dialogo.png" onclick="siguienteTextoAna4()">
+                <p id="AnaTextPruebas4" class="ocultar">
+                            ¡Haz la prueba! Puedes explorar los otros </br>
+                            elementos con los botones de navegación. </br>
+                          
+                </p>
+                <span id="meQuedaClaroPruebas" class="ocultar" onclick="todoClaroText()">Me queda claro</span>
+                </div>
         </section>
         <section id="Seccarga" class="Seccarga animated fadeInUpBig">
 
             <img id="logoCarga" src="img/Todas/imagen_scout_pantalla_bienvenido.png">
             <div class="loader"></div>
+        </section>
+        <section id="SecCreditos" class="SecCreditos ocultar">
+            <section id="encabezadoCreditos">
+                <img id="imgRegresarCred" src="img/Todas/volver.png" onclick="regresarUnidad()">
+                <img id="imgMenuInicioCred" src="img/Todas/menu.png">
+                <p id="creditosTexto">Créditos</p>
+            </section>
+            <img id="danielaImg" src="img/Todas/Daniela.png">
+            <p id="danielaText" class="textFont">Daniela Hurtado Herrera</p>
+            <p id="desingText" class="textFont">Diseño Gráfico</p>
+            <p id="conceptoText" class="textFont">Concepto, diseño y gráficos</p>
+            <img id="nathaliaImg" src="img/Todas/natalia.png">
+            <p id="nathaliaText" class="textFont">Nathalia A. Ortega Gómez</p>
+            <p class="textFont" id="ingSis1">Ingeniería de Sistemas</p>
+            <p class="textFont" id="progra1">Programación</p>
+            <img id="isabelImg" src="img/Todas/isabel.png">
+            <p id="isabelText" class="textFont">Isabel Zuluaga González</p>
+            <p class="textFont" id="ingSis2">Ingeniería de Sistemas</p>
+            <p class="textFont" id="progra2">Programación</p>
         </section>
         <section id="Secbienvenidos" class="Secbienvenidos ocultar">
 
@@ -76,7 +133,7 @@
         <section id="SecUnidad" class="SecUnidad ocultar">
             <section id="encabezadoUnidad">
                 <img id="imgVolverInicio" src="img/Todas/volver_inicio.png" onclick="clickEnVolverSecBienvenidos()">
-                <img id="imgOpcionesInicio" src="img/Todas/opciones_inicio.png">
+                <img id="imgOpcionesInicio" src="img/Todas/opciones_inicio.png" onclick="irCreditos()">
                 <p id="nivelText">Nivel 1</p>
                 <p id="saludText">Salud</p>
                 <p id="expeText">Experiencia</p>
