@@ -27,7 +27,7 @@ function deshacerEliminar()
 }
 
 function clickEnSiguiente() {
-    // StatusBar.hide();
+    StatusBar.hide();
 
     if (localStorage.getItem("user") !== null) {
 

@@ -62,7 +62,7 @@ function ClickDesCheck(id)
     document.getElementById("volverDesafios").onclick=function()
     {        
         document.getElementById("SecUnidad").className="SecUnidad ocultar";
-        SecPruebas.className="SecPruebas animated fadeInLeftBig";
+        // SecPruebas.className="SecPruebas animated fadeInLeftBig";
         DesMenu.className= "checklist animated fadeInRightBig";
         desafioCheck.className="checklist ocultar";
         volverPruebas.id="volverPruebas";
@@ -83,7 +83,7 @@ function ClickDesCheck(id)
     document.getElementById("volverDesafiosPuntos").onclick=function()
     {
         document.getElementById("SecUnidad").className="SecUnidad ocultar";
-        SecPruebas.className="SecPruebas animated fadeInLeftBig";
+        // SecPruebas.className="SecPruebas animated fadeInLeftBig";
         DesMenu.className= "checklist animated fadeInRightBig";
         desafioCheck.className="checklist ocultar";
         volverPruebasPuntos.id="volverPruebasPuntos";

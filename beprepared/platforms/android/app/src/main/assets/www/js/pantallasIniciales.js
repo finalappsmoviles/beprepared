@@ -337,7 +337,7 @@ function clickBtnEliminar() {
                 var porcentajePrueba1 = (porcentajePrueba - incrementoAvance);
                 localStorage.setItem('porcentajePrueba', porcentajePrueba1);
                 document.getElementById("avancePrueba").innerHTML = (porcentajePrueba1 * 100).toFixed() + "%";
-                //console.log((parseFloat(localStorage.getItem('porcentajePrueba'))));
+                
                 var PondPorc = ((porcentajedesBuscar + porcentajedesCrear + porcentajedesDar + porcentajedesVivir + porcentajedesSalir + parseFloat(localStorage.getItem('porcentajePrueba')) * 100) / 6);
                 ImgPorcentaje(PondPorc);
                 var nuevoBorrado = checkPruebaLocal.indexOf(div.id);

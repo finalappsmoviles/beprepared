@@ -176,6 +176,7 @@ section
     background-color: #1166af;
     padding-left:20px;
     padding-right:20px;
+
 }
 #opcionesPruebas
 {
@@ -205,6 +206,13 @@ section
     float: left;
     padding-top:2px;
 }
+#volverDesafiosPuntos
+{
+    margin-left:5px;
+    float: left;
+    margin-top:10px;
+    
+}
 #menuPruebas
 {
     padding-left:5.6px; 
@@ -214,9 +222,7 @@ section
 #bodyInfoUsuario
 {
     float: left;
-    height: 94px;
-    padding-left:20px;
-    padding-right: 20px;     
+    height: 94px;   
     color:white;  
     width: 360px;
     background-color: #1166af;
@@ -325,6 +331,11 @@ section
     float: left; 
     margin-left:10px;
 }
+#desFooterCheck
+{
+    float: left; 
+    margin-left:10px;
+}
 #txtDes
 {    
     padding-top:32px;
@@ -423,7 +434,6 @@ ul li.checked::before {
     font-family: 'Roboto', sans-serif;
     font-weight: 600;
     padding-left:20px;
-    margin-top:100px; 
 }
 #divEliminar
 {

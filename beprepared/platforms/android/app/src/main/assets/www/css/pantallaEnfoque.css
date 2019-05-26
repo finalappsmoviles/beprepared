@@ -327,3 +327,26 @@ body {
     margin-top:10px;
     
 }
+#bodyInfoUsuarioEnf
+{
+    float: left;
+    height: 94px;   
+    color:white;  
+    width: 360px;
+    background-color: #1166af;
+    padding-left:20px;
+    padding-right:20px;
+    margin-top:-5px;
+}
+#headInfoUsuarioEnf
+{
+    padding-top:17px;
+    padding-bottom:38px;
+    height: 49px;    
+    color:white;    
+    font-size: 15pt;
+    width: 360px;
+    background-color: #1166af;
+    padding-left:20px;
+    padding-right:20px;
+}
