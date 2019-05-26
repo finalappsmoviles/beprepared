@@ -172,12 +172,15 @@ body {
     position: absolute;
     float: right;
     margin-left: 145px;
-    
+    filter: opacity(35%);
+
 }
+
 #txtEspFoot
 {
     float: right;    
-    margin-top:30px;
+    margin-top:31px;
+    filter: opacity(35%);
 }
 #imgDesFooter
 {   

@@ -42,6 +42,8 @@ var app = {
 };
 
 function iniciarPrograma() {
+    
+
     if (localStorage.getItem("user") !== null) {
         Scout = JSON.parse(localStorage.getItem("user"));
         localStorage.setItem('nombreUsuario', JSON.stringify(Scout.Nombre));
@@ -218,4 +220,51 @@ function clicksgteBienvenidos()
     document.getElementById("Secbienvenidos").className = "Secbienvenidos animated fadeInUpBig";
 }
 
+function clickEnSiguiente() {
+
+    // StatusBar.hide();
+    
+    contador=0;
+
+    if (localStorage.getItem("user") !== null) {
+
+
+        Scout = JSON.parse(localStorage.getItem("user"));
+        document.getElementById("nombreUsuario").value = Scout.Nombre;
+        if (Scout.Personaje === false) {
+
+            document.getElementById('imgpersonajeSeleccionado').src = "img/Todas/eleccion_el.png";
+        }
+        if (Scout.Personaje === true) {
+
+            document.getElementById('imgpersonajeSeleccionado').src = "img/Todas/eleccion_ella.png";
+        }
+        document.getElementById('textoNombre').innerHTML = Scout.Nombre;
+        document.getElementById("Secbienvenidos").className = "Secbienvenidos ocultar";
+        document.getElementById("SecUnidad").className = "SecUnidad animated fadeIn";
+        document.getElementById("nombreUsuario").disabled = true;
+    }
+    else {
+        if (document.getElementById("nombreUsuario").value != "") {
+            document.getElementById("nombreUsuario").className = "nombreUsuario";
+            Usuario.Nombre = document.getElementById("nombreUsuario").value;
+            localStorage.setItem('user', JSON.stringify(Usuario));
+            localStorage.setItem('nombreUsuario', JSON.stringify(Usuario.Nombre));
+            Scout = JSON.parse(localStorage.getItem("user"));
+            document.getElementById('textoNombre').innerHTML = Scout.Nombre;
+            document.getElementById("Secbienvenidos").className = "Secbienvenidos ocultar";
+            document.getElementById("SecUnidad").className = "SecUnidad animated fadeIn";
+            document.getElementById("nombreUsuario").disabled = true;
+        }
+        else {
+            setTimeout(function () {
+                document.getElementById("nombreUsuario").className = "nombreUsuario animated bounce error";
+            }, 50);
+            document.getElementById("nombreUsuario").className = "nombreUsuario";
+
+        }
+    }
+
+
+}
 app.initialize();

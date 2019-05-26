@@ -25,7 +25,7 @@
             <img id="nombreAna" src="img/Todas/ana_azul.png">
             <img id="figuraAna" src="img/Todas/ana.png">
             <p id="AnaText1">
-                ¡Bienvenido a la sección de pioneros!Como </br>
+                ¡Bienvenido a la sección de pioneros! Como </br>
                 puedes ver, nuestro progreso se mide en porcen- </br>
                 tajes para estar al tanto de cuanto hemos comple- </br>
                 tado hasta la fecha.
@@ -33,9 +33,7 @@
             <img id="flechaDialogo" src="img/Todas/flecha_dialogo.png" onclick="siguienteTextoAna()">
 
             <p id="AnaText2" class="ocultar">
-                La flecha en la parte inferior es para especificar en </br>
-                que momento ganaste tu uniforme o el adelanto. </br>
-                </br>
+              
                 Ahora, continua explorando con las barras para </br>
                 saber más de esta increible aventura.
             </p>
@@ -107,7 +105,7 @@
         <img id="ella_opcion" src="img/Todas/ella_inicio.png" onclick="ellaSeleccionado()">
         <p class="secBienvenidosTextoStyle" id="posiNombreTexto">¿Como deberias llamarte?</p>
         <form id="inputNombre">
-            <input id="nombreUsuario" type="text" name="nombreUsuario" placeholder="Tu nombre">
+            <input id="nombreUsuario" type="text" name="nombreUsuario" placeholder="Tu nombre" onkeypress="myFunction(event)">
             <img id="icono_nombre_usuario" src="img/Todas/icono_nombre_usuario.png">
         </form>
         <img id="boton_siguiente" src="img/Todas/siguiente.png" onclick="clickEnSiguiente()">
@@ -219,8 +217,8 @@
             <div id="footer2">
                 <img id="imgDesFooter" src="img/pantallas/pruebas/imagenes/desafios.png">
                 <p id="txtDesFoot">Desafios</p>
-                <img id="imgEspFooter" src="img/pantallas/desafios/imagenes/especialidades.png">
-                <p id="txtEspFoot">Especialidades</p>
+                <img id="imgEspFooter"src="img/pantallas/desafios/imagenes/especialidades.png">
+                <p id="txtEspFoot" class="claro">Especialidades</p>
             </div>
         </div>
     </section>
@@ -334,9 +332,8 @@
                 </div>
                 <p id="tituloDesCheck">Pruebas del desafío</p>
                 <ul id="desVivir" class="desCheck">
-                    <li id="B" class="desVivirItem"><span>Toma un curso de alta técnica Scout entre los siguientes:
-                            -Orden de Pionero Técnico</span> </li>
-                    <li id="C" class="desVivirItem"><span>Cocina 1 almuerzo ó 1 cena para concurso en
+                    <li id="B" class="desVivirItem"><span>Toma un curso de alta técnica Scout en Orden de Pionero Técnico </span> </li>
+                    <li id="C" class="desVivirItem"><span>Cocina un (1) almuerzo ó un (1) cena para concurso en
                             campamento</span></li>
                     <li id="D" class="desVivirItem"><span>Elabora un fichero de juegos y canciones Scouts</span>
                     </li>
@@ -356,7 +353,7 @@
                 <ul id="desDar" class="desCheck">
                     <li id="E" class="desDarItem"><span>Manten correspondencia con Scouts colombianos y de otros
                             países a través de correo</span> </li>
-                    <li id="F" class="desDarItem"><span>Participa y apoya una reunion de dos Unidades</span></li>
+                    <li id="F" class="desDarItem"><span>Participa y apoya una reunión de dos Unidades</span></li>
                     <li id="G" class="desDarItem"><span>Visita los lugares más representativos de tu
                             municipio</span> </li>
                     <li id="H" class="desDarItem"><span>Divulga y resalta los aspectos más positivos de
@@ -382,7 +379,7 @@
                     </li>
                     <li id="L" class="desCrearItem"><span>Diseña y participa en dos representaciones para
                             fogata</span> </li>
-                    <li id="M" class="desCrearItem"><span>PROYECTO ARTÍSTICO - CIENTÍFICO - TECNOLÓGICO</span></li>
+                    <li id="M" class="desCrearItem"><span>Proyecto artístico, científico, tecnológico.</span></li>
                 </ul>
             </div>
 
@@ -396,8 +393,7 @@
                 </div>
                 <p id="tituloDesCheck">Pruebas del desafío</p>
                 <ul id="desBuscar" class="desCheck">
-                    <li id="N" class="desBuscarItem"><span>PROYECTO ECOLÓGICO - DESARROLLA LA INSIGNIA DE LA
-                            CONSERVACIÓN MUNDIAL CSA</span> </li>
+                    <li id="N" class="desBuscarItem"><span>Proyecto ecológico -Desarrolla la insignia de la conservación mundial csa.</span> </li>
                     <li id="O" class="desBuscarItem"><span>Visita un jardín botánico o reserva ecológica</span></li>
                     <li id="P" class="desBuscarItem"><span>Participa en una actividad esperitual del Grupo
                             Scout</span> </li>
@@ -416,8 +412,8 @@
                 <img id="desFooter" src="img/pantallas/pruebas/imagenes/desafios.png" onclick="abrirDesafios()">
                 <p id="txtDes">Desafios</p>
                 <img id="espFooter" src="img/pantallas/pruebas/imagenes/especialidades.png"
-                    onclick="abrirEspecialidades()">
-                <p id="txtEsp">Especialidades</p>
+                    >
+                <p id="txtEsp" >Especialidades</p>
             </div>
         </div>
     </section>

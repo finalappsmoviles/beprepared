@@ -320,11 +320,13 @@ section
     float: right;
     margin-top:-53px;
     margin-right: 25px;
+    filter: opacity(35%);
 }
 #txtEsp
 {
     float: right;    
-    margin-top:-26px;
+    margin-top:-25px;
+    filter: opacity(35%);
 }
 #desFooter
 {   

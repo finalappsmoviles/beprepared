@@ -10,6 +10,13 @@ var Usuario = {
 }
 var contador;
 var Scout;
+function myFunction(event)
+{
+    if (event.keyCode === 13) {
+       clickEnSiguiente();
+    }
+}
+
 function deshacerEliminar() {
     if (localStorage.getItem('borradosPruebas') !== null && localStorage.getItem('borradosPruebas') !== "0") {
         var borrados = localStorage.getItem('borradosPruebas');
@@ -30,6 +37,7 @@ function deshacerEliminar() {
 function clickEnSiguiente() {
 
     StatusBar.hide();
+    
     contador=0;
 
     if (localStorage.getItem("user") !== null) {
@@ -116,7 +124,7 @@ function clickEnSiguienteUnidad() {
 }
 function siguienteTextoAna() {
 
-    document.getElementById('ventanaAna').style.height = "126px";
+    document.getElementById('ventanaAna').style.height = "86px";
     document.getElementById('AnaText1').className = "ocultar";
     document.getElementById('flechaDialogo').className = "ocultar";
     document.getElementById('meQuedaClaro').className = "animated fadeInUpBig";
