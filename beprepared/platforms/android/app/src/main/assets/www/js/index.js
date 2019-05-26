@@ -1,7 +1,7 @@
 var porcentajePrueba, volverPruebas, volverPruebasPuntos;
 var checkList = document.getElementsByClassName("pruebasItem");
 var i;
-var arrayBorrados = ["0"], borradosDesafios, borradosEspecialidades;
+var  borradosDesafios, borradosEspecialidades;
 
 var checkdesSalirLocal = ["0"];
 var checkdesVivirLocal = ["0"];
@@ -60,13 +60,14 @@ function iniciarPrograma() {
         {
             document.getElementById("Seccarga").className = "Seccarga ocultar";
             document.getElementById("Secbienvenidos").className = "Secbienvenidos animated fadeInUpBig";
+            document.getElementById("nombreUsuario").disabled = true;
         }
         else{
             document.getElementById("Seccarga").className = "Seccarga ocultar";
             document.getElementById("SecInstrucciones").className = "SecInstrucciones animated fadeIn";
         }
         
-    }, 2000);
+    }, 5050);
     document.getElementById("barraSaludPruebas").src = "img/Todas/porcentaje4.png";
     document.getElementById("barraSaludUni").src = "img/Todas/porcentaje4.png";
     document.getElementById("barraSaludEnf").src = "img/Todas/porcentaje4.png";
@@ -216,4 +217,5 @@ function clicksgteBienvenidos()
     document.getElementById("SecInstrucciones").className = "SecInstrucciones ocultar";
     document.getElementById("Secbienvenidos").className = "Secbienvenidos animated fadeInUpBig";
 }
+
 app.initialize();

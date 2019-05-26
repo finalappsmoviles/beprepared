@@ -1,19 +1,36 @@
 var listaTareas = document.getElementById('Prueba');
 var txtLista = document.getElementsByTagName('span');
 var incrementoAvance = 1 / listaTareas.childElementCount;
-
-var checkPruebaLocal = ["0"];
+var checkPruebaLocal = ["0"],arrayBorrados = ["0"];
 var Usuario = {
     Personaje: "Ella",
     Nombre: "Sofia Álvarez",
     mostrarAna: true
 }
 var Scout;
+function deshacerEliminar()
+{
+    if (localStorage.getItem('borradosPruebas') !== null&&localStorage.getItem('borradosPruebas') !== "0") {
+        var borrados = localStorage.getItem('borradosPruebas');
+        for (var i = 1, len = borrados.length; i < len; i++) {
+            if (i % 2 == 0) {
+                var arrayN=[];
+                arrayN[i]=borrados[i];
+                
+            }
+        }
+        var value=arrayN.pop();
+        document.getElementById(value).className = "animated fadeIn";
+        arrayBorrados.pop(value);
+        localStorage.setItem('borradosPruebas', arrayBorrados);
+    }
+}
 
 function clickEnSiguiente() {
     StatusBar.hide();
-    
+
     if (localStorage.getItem("user") !== null) {
+
 
         Scout = JSON.parse(localStorage.getItem("user"));
         document.getElementById("nombreUsuario").value = Scout.Nombre;
@@ -28,36 +45,47 @@ function clickEnSiguiente() {
         document.getElementById('textoNombre').innerHTML = Scout.Nombre;
         document.getElementById("Secbienvenidos").className = "Secbienvenidos ocultar";
         document.getElementById("SecUnidad").className = "SecUnidad animated fadeIn";
+        document.getElementById("nombreUsuario").disabled = true;
+    } 
+    else {
+        if (document.getElementById("nombreUsuario").value != "") {
+            document.getElementById("nombreUsuario").className = "nombreUsuario";
+            Usuario.Nombre = document.getElementById("nombreUsuario").value;
+            localStorage.setItem('user', JSON.stringify(Usuario));
+            localStorage.setItem('nombreUsuario', JSON.stringify(Usuario.Nombre));
+            Scout = JSON.parse(localStorage.getItem("user"));
+            document.getElementById('textoNombre').innerHTML = Scout.Nombre;
+            document.getElementById("Secbienvenidos").className = "Secbienvenidos ocultar";
+            document.getElementById("SecUnidad").className = "SecUnidad animated fadeIn";
+            document.getElementById("nombreUsuario").disabled = true;
+        }
+        else {
+            setTimeout(function () {
+                document.getElementById("nombreUsuario").className = "nombreUsuario animated bounce error";
+            }, 50);
+            document.getElementById("nombreUsuario").className = "nombreUsuario";
 
-    } else {
-
-        Usuario.Nombre = document.getElementById("nombreUsuario").value;
-
-        localStorage.setItem('user', JSON.stringify(Usuario));
-        localStorage.setItem('nombreUsuario', JSON.stringify(Usuario.Nombre));
-        Scout = JSON.parse(localStorage.getItem("user"));
-
-
-        document.getElementById('textoNombre').innerHTML = Scout.Nombre;
-
-        document.getElementById("Secbienvenidos").className = "Secbienvenidos ocultar";
-        document.getElementById("SecUnidad").className = "SecUnidad animated fadeIn";
-
+        }
     }
+    
 
 }
 function ellaSeleccionado() {
 
     Usuario.Personaje = true;
+    document.getElementById("ella_opcion").src="img/Todas/ella_inicio_grande.png"
+    document.getElementById("el_opcion").src="img/Todas/el_inicio.png"
     document.getElementById('imgpersonajeSeleccionado').src = "img/Todas/eleccion_ella.png";
 }
 function elSeleccionado() {
 
     Usuario.Personaje = false;
+    document.getElementById("el_opcion").src="img/Todas/el_inicio_grande.png"
+    document.getElementById("ella_opcion").src="img/Todas/ella_inicio.png"
     document.getElementById('imgpersonajeSeleccionado').src = "img/Todas/eleccion_el.png";
 }
 function clickEnSiguienteUnidad() {
-     
+
     Scout = JSON.parse(localStorage.getItem("user"));
     if (Scout.Personaje === false) {
 
@@ -117,7 +145,7 @@ function clickEnVolverSecUnidad() {
 }
 
 function irSeccionPruebas() {
-    
+
     Scout = JSON.parse(localStorage.getItem("user"));
     if (Scout.Personaje === false) {
 
@@ -150,35 +178,36 @@ function irSeccionPruebas() {
         for (var i = 1, len = borrados.length; i < len; i++) {
             if (i % 2 == 0) {
                 var value = borrados[i];
-                document.getElementById(value).style.display = "none";
+                document.getElementById(value).className = "ocultar";
                 arrayBorrados.push(value);
-                localStorage.setItem('borradosPruebas', checkPruebaLocal);
+                localStorage.setItem('borradosPruebas', arrayBorrados);
             }
         }
     }
-   
+
+
     agregandoBtnEliminar();
 
     chequeados();
     for (i = 0; i < txtLista.length; i++) {
         txtLista[i].addEventListener('click', function () {
             var div = this.parentElement;
-
+            
             clickChecklist(div, (this.parentElement).parentElement.id);
         }, false);
     }
 
-    
+
 
 }
 function clickvolverPruebas() {
     document.getElementById("SecEnfoque").className = "SecUnidad animated fadeIn";
     document.getElementById("SecPruebas").className = "SecPruebas ocultar";
-    document.getElementById("bodyInfoUsuario").className="bodyInfoUsuario";
+    document.getElementById("bodyInfoUsuario").className = "bodyInfoUsuario";
 }
 function chequeados() {
     if (localStorage.getItem('checkPrueba') !== null) {
-        
+
         var chequeados = localStorage.getItem('checkPrueba');
 
         for (var i = 1, len = chequeados.length; i < len; i++) {
@@ -260,28 +289,7 @@ function agregandoBtnEliminar() {
         span.id = checkList[i].id;
         checkList[i].appendChild(span);
     }
-    var btnEliminar = document.getElementsByClassName("btnEliminar");
-    for (i = 0; i < btnEliminar.length; i++) {
-        btnEliminar[i].onclick = function () {
-            var div = this.parentElement;
-            if (div.classList.contains('checked')) {
-                var porcentajePrueba1 = (porcentajePrueba - incrementoAvance);
-                localStorage.setItem('porcentajePrueba', porcentajePrueba1);
-                document.getElementById("avancePrueba").innerHTML = (porcentajePrueba1 * 100).toFixed() + "%";
-                //console.log((parseFloat(localStorage.getItem('porcentajePrueba'))));
-                var PondPorc = ((porcentajedesBuscar + porcentajedesCrear + porcentajedesDar + porcentajedesVivir + porcentajedesSalir + parseFloat(localStorage.getItem('porcentajePrueba')) * 100) / 6);
-                ImgPorcentaje(PondPorc);
-                var nuevoBorrado = checkPruebaLocal.indexOf(div.id);
-                if (nuevoBorrado !== -1) checkPruebaLocal.splice(nuevoBorrado, 1);
-                localStorage.setItem('checkPrueba', checkPruebaLocal);
-            }
-            arrayBorrados.push(div.id);
-            setTimeout(function () {
-                div.style.display = "none";
-            }, 400);
-            localStorage.setItem('borradosPruebas', arrayBorrados);
-        }
-    }
+    clickBtnEliminar(); 
 }
 
 function clickChecklist(div, idUl) {
@@ -320,3 +328,28 @@ function clickChecklist(div, idUl) {
         localStorage.setItem(check, window['check' + idUl + 'Local']);
     }
 }
+function clickBtnEliminar() {
+    var btnEliminar = document.getElementsByClassName("btnEliminar");
+    for (i = 0; i < btnEliminar.length; i++) {
+        btnEliminar[i].onclick = function () {
+            var div = this.parentElement;
+            if (div.classList.contains('checked')) {
+                var porcentajePrueba1 = (porcentajePrueba - incrementoAvance);
+                localStorage.setItem('porcentajePrueba', porcentajePrueba1);
+                document.getElementById("avancePrueba").innerHTML = (porcentajePrueba1 * 100).toFixed() + "%";
+                //console.log((parseFloat(localStorage.getItem('porcentajePrueba'))));
+                var PondPorc = ((porcentajedesBuscar + porcentajedesCrear + porcentajedesDar + porcentajedesVivir + porcentajedesSalir + parseFloat(localStorage.getItem('porcentajePrueba')) * 100) / 6);
+                ImgPorcentaje(PondPorc);
+                var nuevoBorrado = checkPruebaLocal.indexOf(div.id);
+                if (nuevoBorrado !== -1) checkPruebaLocal.splice(nuevoBorrado, 1);
+                localStorage.setItem('checkPrueba', checkPruebaLocal);
+            }
+            arrayBorrados.push(div.id);
+            setTimeout(function () {
+                div.className= "ocultar";
+            }, 400);
+            localStorage.setItem('borradosPruebas', arrayBorrados);
+        }
+    }
+}
+

@@ -220,6 +220,18 @@ body {
 	padding: 0;
 	z-index: 2;
 }
+#lightboxAgregar
+{
+    position: absolute;
+	top: 0px;
+	left: 0px;
+    background: rgba(0,0,0,.5);
+	width: 360px;
+    height: 730px;
+	margin: 0;
+	padding: 0;
+	z-index: 2;
+}
 #ventanaAna{
     position: absolute;
  

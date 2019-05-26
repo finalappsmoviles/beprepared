@@ -220,6 +220,18 @@ body {
 	padding: 0;
 	z-index: 2;
 }
+#lightboxAgregar
+{
+    position: absolute;
+	top: 0px;
+	left: 0px;
+    background: rgba(0,0,0,.5);
+	width: 360px;
+    height: 730px;
+	margin: 0;
+	padding: 0;
+	z-index: 2;
+}
 #ventanaAna{
     position: absolute;
  
@@ -314,4 +326,27 @@ body {
     float: left;
     margin-top:10px;
     
+}
+#bodyInfoUsuarioEnf
+{
+    float: left;
+    height: 94px;   
+    color:white;  
+    width: 360px;
+    background-color: #1166af;
+    padding-left:20px;
+    padding-right:20px;
+    margin-top:-5px;
+}
+#headInfoUsuarioEnf
+{
+    padding-top:17px;
+    padding-bottom:38px;
+    height: 49px;    
+    color:white;    
+    font-size: 15pt;
+    width: 360px;
+    background-color: #1166af;
+    padding-left:20px;
+    padding-right:20px;
 }

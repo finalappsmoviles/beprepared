@@ -58,7 +58,7 @@ section
 }
 #Seccarga
 {
-    background-image:  url("../img/Todas/CargaProv.jpg");
+    background-image:  url("../img/Todas/carga2.gif");
     
 }
 #SecInstrucciones
@@ -70,7 +70,7 @@ section
 #tituloInstrucciones
 {
     margin-top:52px;
-    margin-left:90px;
+    margin-left:100px;
     color:#0c5e65;
     font-size:15pt;
     font-weight: 400;
@@ -471,4 +471,16 @@ ul li.checked::before {
     color:#f6b419;
     margin-left: 148px;
     margin-top:-10px;
+}
+#deshacer
+{
+    position: absolute;
+    bottom:15px;
+    left:310px;
+   
+}
+
+.error
+{
+    border-color:red;
 }
