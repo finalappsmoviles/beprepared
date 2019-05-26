@@ -1,5 +1,5 @@
 var porcentajePrueba, volverPruebas, volverPruebasPuntos;
-var checkList = document.getElementsByClassName("pruebasItem");
+
 var i;
 var  borradosDesafios, borradosEspecialidades;
 

@@ -1,25 +1,26 @@
 var listaTareas = document.getElementById('Prueba');
 var txtLista = document.getElementsByTagName('span');
+var checkList = document.getElementsByClassName("pruebasItem");
 var incrementoAvance = 1 / listaTareas.childElementCount;
-var checkPruebaLocal = ["0"],arrayBorrados = ["0"];
+var checkPruebaLocal = ["0"], arrayBorrados = ["0"];
 var Usuario = {
     Personaje: "Ella",
     Nombre: "Sofia Álvarez",
     mostrarAna: true
 }
+var contador;
 var Scout;
-function deshacerEliminar()
-{
-    if (localStorage.getItem('borradosPruebas') !== null&&localStorage.getItem('borradosPruebas') !== "0") {
+function deshacerEliminar() {
+    if (localStorage.getItem('borradosPruebas') !== null && localStorage.getItem('borradosPruebas') !== "0") {
         var borrados = localStorage.getItem('borradosPruebas');
         for (var i = 1, len = borrados.length; i < len; i++) {
             if (i % 2 == 0) {
-                var arrayN=[];
-                arrayN[i]=borrados[i];
-                
+                var arrayN = [];
+                arrayN[i] = borrados[i];
+
             }
         }
-        var value=arrayN.pop();
+        var value = arrayN.pop();
         document.getElementById(value).className = "animated fadeIn";
         arrayBorrados.pop(value);
         localStorage.setItem('borradosPruebas', arrayBorrados);
@@ -27,7 +28,9 @@ function deshacerEliminar()
 }
 
 function clickEnSiguiente() {
+
     StatusBar.hide();
+    contador=0;
 
     if (localStorage.getItem("user") !== null) {
 
@@ -46,7 +49,7 @@ function clickEnSiguiente() {
         document.getElementById("Secbienvenidos").className = "Secbienvenidos ocultar";
         document.getElementById("SecUnidad").className = "SecUnidad animated fadeIn";
         document.getElementById("nombreUsuario").disabled = true;
-    } 
+    }
     else {
         if (document.getElementById("nombreUsuario").value != "") {
             document.getElementById("nombreUsuario").className = "nombreUsuario";
@@ -67,21 +70,21 @@ function clickEnSiguiente() {
 
         }
     }
-    
+
 
 }
 function ellaSeleccionado() {
 
     Usuario.Personaje = true;
-    document.getElementById("ella_opcion").src="img/Todas/ella_inicio_grande.png"
-    document.getElementById("el_opcion").src="img/Todas/el_inicio.png"
+    document.getElementById("ella_opcion").src = "img/Todas/ella_inicio_grande.png"
+    document.getElementById("el_opcion").src = "img/Todas/el_inicio.png"
     document.getElementById('imgpersonajeSeleccionado').src = "img/Todas/eleccion_ella.png";
 }
 function elSeleccionado() {
 
     Usuario.Personaje = false;
-    document.getElementById("el_opcion").src="img/Todas/el_inicio_grande.png"
-    document.getElementById("ella_opcion").src="img/Todas/ella_inicio.png"
+    document.getElementById("el_opcion").src = "img/Todas/el_inicio_grande.png"
+    document.getElementById("ella_opcion").src = "img/Todas/ella_inicio.png"
     document.getElementById('imgpersonajeSeleccionado').src = "img/Todas/eleccion_el.png";
 }
 function clickEnSiguienteUnidad() {
@@ -143,9 +146,18 @@ function clickEnVolverSecUnidad() {
     document.getElementById("SecUnidad").className = "SecUnidad animated fadeInUpBig";
 
 }
+function irCreditos() {
+    document.getElementById("SecUnidad").className = "SecUnidad ocultar";
+    document.getElementById("SecCreditos").className = "SecCreditos animated fadeInUpBig";
+
+}
+function regresarUnidad() {
+    document.getElementById("SecCreditos").className = "SecCreditos ocultar";
+    document.getElementById("SecUnidad").className = "SecUnidad animated fadeInUpBig";
+}
 
 function irSeccionPruebas() {
-
+    contador++;
     Scout = JSON.parse(localStorage.getItem("user"));
     if (Scout.Personaje === false) {
 
@@ -158,8 +170,40 @@ function irSeccionPruebas() {
     document.getElementById('nombreTextPrueba').innerHTML = Scout.Nombre;
     document.getElementById("SecEnfoque").className = "secEnfoque ocultar";
     document.getElementById("SecPruebas").className = "SecPruebas animated fadeInUpBig";
+    
+    if(contador==1)
+    {
+        irSeccionPruebasPrimero();
+    }
+  
+    // Ana en sección de pruebas
+    
+    if (Scout.mostrarAna == true) {
 
+        
+        setTimeout(() => {
+            
+            lightbox.className = "animated fadeInUpBig"
+            document.getElementById('ventanaAna').className = "ocultar";
+            document.getElementById('ventanaAnaPruebas').className = "animated fadeInUpBig";
+        }, 1000);
+    }
+    
 
+}
+function irSeccionPruebasOtros()
+{
+    document.getElementById("SecEnfoque").className = "secEnfoque ocultar";
+    document.getElementById("SecPruebas").className = "SecPruebas animated fadeInUpBig";
+    for (i = 0; i < txtLista.length; i++) {
+        txtLista[i].addEventListener('click', function () {
+            var div = this.parentElement;
+
+            clickChecklist(div, (this.parentElement).parentElement.id);
+        }, false);
+    }
+}
+function irSeccionPruebasPrimero() {
 
     if (localStorage.getItem("user") !== null) {
         var persoSelect = JSON.parse(localStorage.getItem("user"));
@@ -192,14 +236,31 @@ function irSeccionPruebas() {
     for (i = 0; i < txtLista.length; i++) {
         txtLista[i].addEventListener('click', function () {
             var div = this.parentElement;
-            
+
             clickChecklist(div, (this.parentElement).parentElement.id);
         }, false);
     }
+}
+function siguienteTextoAna2() {
+    document.getElementById('ventanaAnaPruebas').style.height = "116px";
+    document.getElementById('AnaTextPruebas1').className = "ocultar";
+    document.getElementById('flechaDialogo1').className = "ocultar";
 
-
+    document.getElementById('AnaTextPruebas2').className = "animated fadeInUpBig";
+    document.getElementById('flechaDialogo2').className = "animated fadeInUpBig";
 
 }
+function siguienteTextoAna3() {
+
+    document.getElementById('AnaTextPruebas2').className = "ocultar";
+    document.getElementById('flechaDialogo2').className = "ocultar";
+
+    document.getElementById('AnaTextPruebas3').className = "animated fadeInUpBig";
+    document.getElementById('meQuedaClaroPruebas').className = "animated fadeInUpBig"
+    
+
+}
+
 function clickvolverPruebas() {
     document.getElementById("SecEnfoque").className = "SecUnidad animated fadeIn";
     document.getElementById("SecPruebas").className = "SecPruebas ocultar";
@@ -213,7 +274,7 @@ function chequeados() {
         for (var i = 1, len = chequeados.length; i < len; i++) {
             if (i % 2 == 0) {
                 var value = chequeados[i];
-                document.getElementById(value).classList.add('checked');
+                document.getElementById(value).className="checked";
                 checkPruebaLocal.push(value);
                 localStorage.setItem('checkPrueba', checkPruebaLocal);
             }
@@ -224,7 +285,7 @@ function chequeados() {
         for (var i = 1, len = chequeadosDes.length; i < len; i++) {
             if (i % 2 == 0) {
                 var value = chequeadosDes[i];
-                document.getElementById(value).classList.add('checked');
+                document.getElementById(value).className="checked";
 
                 checkdesSalirLocal.push(value);
                 localStorage.setItem('checkdesSalir', checkdesSalirLocal);
@@ -236,7 +297,7 @@ function chequeados() {
         for (var i = 1, len = chequeadosDes.length; i < len; i++) {
             if (i % 2 == 0) {
                 var value = chequeadosDes[i];
-                document.getElementById(value).classList.add('checked');
+                document.getElementById(value).className="checked";
 
                 checkdesVivirLocal.push(value);
                 localStorage.setItem('checkdesVivir', checkdesVivirLocal);
@@ -249,7 +310,7 @@ function chequeados() {
         for (var i = 1, len = chequeadosDes.length; i < len; i++) {
             if (i % 2 == 0) {
                 var value = chequeadosDes[i];
-                document.getElementById(value).classList.add('checked');
+                document.getElementById(value).className="checked";
 
                 checkdesDarLocal.push(value);
                 localStorage.setItem('checkdesDar', checkdesDarLocal);
@@ -261,7 +322,7 @@ function chequeados() {
         for (var i = 1, len = chequeadosDes.length; i < len; i++) {
             if (i % 2 == 0) {
                 var value = chequeadosDes[i];
-                document.getElementById(value).classList.add('checked');
+                document.getElementById(value).className="checked";
 
                 checkdesCrearLocal.push(value);
                 localStorage.setItem('checkdesCrear', checkdesCrearLocal);
@@ -273,7 +334,7 @@ function chequeados() {
         for (var i = 1, len = chequeadosDes.length; i < len; i++) {
             if (i % 2 == 0) {
                 var value = chequeadosDes[i];
-                document.getElementById(value).classList.add('checked');
+                document.getElementById(value).className="checked";
 
                 checkdesBuscarLocal.push(value);
                 localStorage.setItem('checkdesBuscar', checkdesBuscarLocal);
@@ -289,7 +350,7 @@ function agregandoBtnEliminar() {
         span.id = checkList[i].id;
         checkList[i].appendChild(span);
     }
-    clickBtnEliminar(); 
+    clickBtnEliminar();
 }
 
 function clickChecklist(div, idUl) {
@@ -318,9 +379,11 @@ function clickChecklist(div, idUl) {
         }
     }
     else {
-        div.classList.add('checked');
+        div.className="checked";
         window['porcentaje' + idUl] = parseFloat(localStorage.getItem(porcentaje), 10) + incrementoAvance;
         localStorage.setItem(porcentaje, window['porcentaje' + idUl]);
+        
+        
         document.getElementById(avance).innerHTML = (window['porcentaje' + idUl] * 100).toFixed() + "%";
         var PondPorc = ((porcentajedesBuscar + porcentajedesCrear + porcentajedesDar + porcentajedesVivir + porcentajedesSalir + porcentajePrueba) * 100) / 6;
         ImgPorcentaje(PondPorc);
@@ -328,6 +391,7 @@ function clickChecklist(div, idUl) {
         localStorage.setItem(check, window['check' + idUl + 'Local']);
     }
 }
+
 function clickBtnEliminar() {
     var btnEliminar = document.getElementsByClassName("btnEliminar");
     for (i = 0; i < btnEliminar.length; i++) {
@@ -337,7 +401,7 @@ function clickBtnEliminar() {
                 var porcentajePrueba1 = (porcentajePrueba - incrementoAvance);
                 localStorage.setItem('porcentajePrueba', porcentajePrueba1);
                 document.getElementById("avancePrueba").innerHTML = (porcentajePrueba1 * 100).toFixed() + "%";
-                
+
                 var PondPorc = ((porcentajedesBuscar + porcentajedesCrear + porcentajedesDar + porcentajedesVivir + porcentajedesSalir + parseFloat(localStorage.getItem('porcentajePrueba')) * 100) / 6);
                 ImgPorcentaje(PondPorc);
                 var nuevoBorrado = checkPruebaLocal.indexOf(div.id);
@@ -346,10 +410,11 @@ function clickBtnEliminar() {
             }
             arrayBorrados.push(div.id);
             setTimeout(function () {
-                div.className= "ocultar";
+                div.className = "ocultar";
             }, 400);
             localStorage.setItem('borradosPruebas', arrayBorrados);
         }
     }
 }
+
 

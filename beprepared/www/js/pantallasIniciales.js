@@ -1,5 +1,6 @@
 var listaTareas = document.getElementById('Prueba');
 var txtLista = document.getElementsByTagName('span');
+var checkList = document.getElementsByClassName("pruebasItem");
 var incrementoAvance = 1 / listaTareas.childElementCount;
 var checkPruebaLocal = ["0"], arrayBorrados = ["0"];
 var Usuario = {
@@ -7,6 +8,7 @@ var Usuario = {
     Nombre: "Sofia Álvarez",
     mostrarAna: true
 }
+var contador;
 var Scout;
 function deshacerEliminar() {
     if (localStorage.getItem('borradosPruebas') !== null && localStorage.getItem('borradosPruebas') !== "0") {
@@ -27,8 +29,8 @@ function deshacerEliminar() {
 
 function clickEnSiguiente() {
 
-    // StatusBar.hide();
-
+    StatusBar.hide();
+    contador=0;
 
     if (localStorage.getItem("user") !== null) {
 
@@ -155,7 +157,7 @@ function regresarUnidad() {
 }
 
 function irSeccionPruebas() {
-
+    contador++;
     Scout = JSON.parse(localStorage.getItem("user"));
     if (Scout.Personaje === false) {
 
@@ -168,10 +170,17 @@ function irSeccionPruebas() {
     document.getElementById('nombreTextPrueba').innerHTML = Scout.Nombre;
     document.getElementById("SecEnfoque").className = "secEnfoque ocultar";
     document.getElementById("SecPruebas").className = "SecPruebas animated fadeInUpBig";
-
-    // Ana en sección de pruebas
-    if (Scout.mostrarAna == true) {
+    
+    if(contador==1)
+    {
         irSeccionPruebasPrimero();
+    }
+  
+    // Ana en sección de pruebas
+    
+    if (Scout.mostrarAna == true) {
+
+        
         setTimeout(() => {
             
             lightbox.className = "animated fadeInUpBig"
@@ -179,15 +188,20 @@ function irSeccionPruebas() {
             document.getElementById('ventanaAnaPruebas').className = "animated fadeInUpBig";
         }, 1000);
     }
-    else {
-        irSeccionPruebasPrimero();
-    }
+    
 
 }
 function irSeccionPruebasOtros()
 {
     document.getElementById("SecEnfoque").className = "secEnfoque ocultar";
     document.getElementById("SecPruebas").className = "SecPruebas animated fadeInUpBig";
+    for (i = 0; i < txtLista.length; i++) {
+        txtLista[i].addEventListener('click', function () {
+            var div = this.parentElement;
+
+            clickChecklist(div, (this.parentElement).parentElement.id);
+        }, false);
+    }
 }
 function irSeccionPruebasPrimero() {
 
@@ -228,7 +242,7 @@ function irSeccionPruebasPrimero() {
     }
 }
 function siguienteTextoAna2() {
-    document.getElementById('ventanaAnaPruebas').style.height = "96px";
+    document.getElementById('ventanaAnaPruebas').style.height = "116px";
     document.getElementById('AnaTextPruebas1').className = "ocultar";
     document.getElementById('flechaDialogo1').className = "ocultar";
 
@@ -242,18 +256,11 @@ function siguienteTextoAna3() {
     document.getElementById('flechaDialogo2').className = "ocultar";
 
     document.getElementById('AnaTextPruebas3').className = "animated fadeInUpBig";
-    document.getElementById('flechaDialogo3').className = "animated fadeInUpBig";
-
-}
-function siguienteTextoAna4() {
-
-    document.getElementById('ventanaAnaPruebas').style.height = "78px";
-    document.getElementById('AnaTextPruebas3').className = "ocultar";
-    document.getElementById('flechaDialogo3').className = "ocultar";
-
-    document.getElementById('AnaTextPruebas4').className = "animated fadeInUpBig";
     document.getElementById('meQuedaClaroPruebas').className = "animated fadeInUpBig"
+    
+
 }
+
 function clickvolverPruebas() {
     document.getElementById("SecEnfoque").className = "SecUnidad animated fadeIn";
     document.getElementById("SecPruebas").className = "SecPruebas ocultar";
@@ -375,6 +382,8 @@ function clickChecklist(div, idUl) {
         div.className="checked";
         window['porcentaje' + idUl] = parseFloat(localStorage.getItem(porcentaje), 10) + incrementoAvance;
         localStorage.setItem(porcentaje, window['porcentaje' + idUl]);
+        
+        
         document.getElementById(avance).innerHTML = (window['porcentaje' + idUl] * 100).toFixed() + "%";
         var PondPorc = ((porcentajedesBuscar + porcentajedesCrear + porcentajedesDar + porcentajedesVivir + porcentajedesSalir + porcentajePrueba) * 100) / 6;
         ImgPorcentaje(PondPorc);
