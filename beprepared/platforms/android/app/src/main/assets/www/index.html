@@ -11,25 +11,25 @@
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Loved+by+the+King" />
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <title>Be Prepared</title>
-    
+
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    </head>
+</head>
 
-    <body>
+<body>
 
-        <section id="lightbox" class="ocultar">
-            <div id="ventanaAna">
-                <img id="nombreAna" src="img/Todas/ana_azul.png">
-                <img id="figuraAna" src="img/Todas/ana.png">
-                <p id="AnaText1">
-                    ¡Bienvenido a la sección de pioneros!Como </br>
-                    puedes ver, nuestro progreso se mide en porcen- </br>
-                    tajes para estar al tanto de cuanto hemos comple- </br>
-                    tado hasta la fecha.
-                </p>
-                <img id="flechaDialogo" src="img/Todas/flecha_dialogo.png" onclick="siguienteTextoAna()">
-            
+    <section id="lightbox" class="ocultar">
+        <div id="ventanaAna">
+            <img id="nombreAna" src="img/Todas/ana_azul.png">
+            <img id="figuraAna" src="img/Todas/ana.png">
+            <p id="AnaText1">
+                ¡Bienvenido a la sección de pioneros!Como </br>
+                puedes ver, nuestro progreso se mide en porcen- </br>
+                tajes para estar al tanto de cuanto hemos comple- </br>
+                tado hasta la fecha.
+            </p>
+            <img id="flechaDialogo" src="img/Todas/flecha_dialogo.png" onclick="siguienteTextoAna()">
+
             <p id="AnaText2" class="ocultar">
                 La flecha en la parte inferior es para especificar en </br>
                 que momento ganaste tu uniforme o el adelanto. </br>
@@ -38,318 +38,337 @@
                 saber más de esta increible aventura.
             </p>
             <span id="meQuedaClaro" class="ocultar" onclick="todoClaroText()">Me queda claro</span>
-            </div>
+        </div>
+    </section>
+    <section id="Seccarga" class="Seccarga animated fadeInUpBig">
+    </section>
+    <section id="SecInstrucciones" class="ocultar">
+        <p id="tituloInstrucciones">Bienvenido a</p>
+        <img id="logoInstrucciones" src="img/pantallas/introduccion/imagenes/logo_introduccion.png">
+        <p id="esHora">Es hora de divertirse mientras haces cosas</p>
+        <img id="correrInstrucciones" src="img/pantallas/introduccion/imagenes/_ana_progreso.png">
+        <p id="txtProgresa">!Progresa en el juego,
+            <br>Progresa en los scouts¡</p>
+        <img id="hojasIzquierdo" src="img/pantallas/introduccion/imagenes/planta_izquierda_verde.png">
+        <div id="divDesbloquea">
+            <p id="desbloquea">Desbloquea elementos del juego<br>en la medida que cumples con tus<br> pruebas del plan
+                de adelanto. Con-<br> sigue tu uniforme y nuevas insignias <br> cumpliendo tus logros.
+            </p>
+        </div>
+        <img id="hojasDerecho" src="img/pantallas/introduccion/imagenes/planta_derecha_verde.png">
+        <img id="sgteInstrucciones" src="img/pantallas/introduccion/imagenes/siguiente.png"
+            onclick="clicksgteBienvenidos()">
+
+    </section>
+    <section id="Secbienvenidos" class="Secbienvenidos ocultar">
+
+        <p class="secBienvenidosTextoStyle" id="posiBienvenidosTexto" style="font-size:32pt">Bienvenido</p>
+        <img id="logoBienvenidos" src="img/Todas/imagen_scout_pantalla_bienvenido.png">
+        <p class="secBienvenidosTextoStyle" id="posiPersonajeTexto">Elige un personaje</p>
+        <img id="el_opcion" src="img/Todas/el_inicio.png" onclick="elSeleccionado()">
+        <img id="ella_opcion" src="img/Todas/ella_inicio.png" onclick="ellaSeleccionado()">
+        <p class="secBienvenidosTextoStyle" id="posiNombreTexto">¿Como deberias llamarte?</p>
+        <form id="inputNombre">
+            <input id="nombreUsuario" type="text" name="nombreUsuario" placeholder="Tu nombre">
+            <img id="icono_nombre_usuario" src="img/Todas/icono_nombre_usuario.png">
+        </form>
+        <img id="boton_siguiente" src="img/Todas/siguiente.png" onclick="clickEnSiguiente()">
+        <div id="anaBox">
+            <img id="nombreAnaBienvenidos" src="img/Todas/nombre_ana.png">
+            <img id="figuraAnaBienvenidos" src="img/Todas/ana_pantalla_bienvenida.png">
+            <p id="AnaTextBienvenidos">
+                Oh, debes de ser nuevo aquí. Yo soy Ana y seré </br>
+                tu guía en Be Prepared. </br>
+                </br>
+                Primero ¿Como deberiamos llamarte? </br>
+                Cuando estes listo continuaremos para elegir </br>
+                la unidad en la que te encuentras.
+            </p>
+
+        </div>
+
+    </section>
+    <section id="SecUnidad" class="SecUnidad ocultar">
+        <section id="encabezadoUnidad">
+            <img id="imgVolverInicio" src="img/Todas/volver_inicio.png" onclick="clickEnVolverSecBienvenidos()">
+            <img id="imgOpcionesInicio" src="img/Todas/opciones_inicio.png">
+            <p id="nivelText">Nivel 1</p>
+            <p id="saludText">Salud</p>
+            <p id="expeText">Experiencia</p>
+            <img id="imgMenuInicio" src="img/Todas/menu_inicio.png">
+            <span id="textoNombre">Sofia Álvarez</span>
+            <img id="imgpersonajeSeleccionado" src="img/Todas/eleccion_ella.png">
+            <img id="imgSalud" src="img/pantallas/pruebas/imagenes/salud.png">
+            <img id="barraSaludUni" src="img/Todas/barra.png">
+            <p id="procSaludUni">100%</p>
+            <img id="imgExp" src="img/pantallas/pruebas/imagenes/experiencia.png">
+            <img id="barraExpUni" src="img/Todas/barra.png">
+            <p id="procExpUni">0%</p>
         </section>
-        <section id="Seccarga" class="Seccarga animated fadeInUpBig">
+        <p id="eligeText">Elige tu unidad</p>
+        <img id="imgTropa" src="img/Todas/tropa.png">
+        <p id="tropaText">Tropa</p>
+        <img id="imgSociedad" src="img/pantallas/unidad/imagenes/Sociedad_color.png" onclick="clickEnSiguienteUnidad()">
+        <p id="sociedadText">Sociedad</p>
+        <img id="imgClan" src="img/Todas/clan.png">
+        <p id="clanText">Clan</p>
+        <img id="boton_siguiente" src="img/Todas/siguiente.png" onclick="clickEnSiguienteUnidad()">
+    </section>
+    <section id="SecEnfoque" class="SecEnfoque ocultar">
+        <div id="infoUsuario">
+            <div id="headInfoUsuarioEnf">
+                <img id="volverEnf" src="img/pantallas/pruebas/imagenes/volver.png" onclick="clickEnVolverSecUnidad()">
 
-            <img id="logoCarga" src="img/Todas/imagen_scout_pantalla_bienvenido.png">
-            <div class="loader"></div>
-        </section>
-        <section id="Secbienvenidos" class="Secbienvenidos ocultar">
+                <span id="textoNombreEnf">Sofia Álvarez</span>
+                <img id="volverEnfPuntos" src="img/pantallas/pruebas/imagenes/menu.png"
+                    onclick="clickEnVolverSecUnidad()">
+                <img id="opcionesPruebas" src="img/pantallas/pruebas/imagenes/opciones.png">
+            </div>
+            <div id="bodyInfoUsuarioEnf" class="bodyInfoUsuario">
+                <img id="imgpersonajeSeleccionadoEnf" src="img/Todas/ella_azul.png">
+                <p id="nivelPruebasEnf">Nivel 1</p>
+                <img id="saludPruebas" src="img/pantallas/pruebas/imagenes/salud.png">
+                <img id="barraSaludEnf" src="img/Todas/barra.png">
+                <p id="pSaludPruebas">Salud</p>
+                <p id="procSaludEnf">100%</p>
+                <img id="experienciaPruebas" src="img/pantallas/pruebas/imagenes/experiencia.png">
+                <img id="barraExpEnf" src="img/Todas/barra.png">
+                <p id="pExpPruebas">Experiencia</p>
+                <p id="procExpEnf">0%</p>
+            </div>
+        </div>
 
-            <p class="secBienvenidosTextoStyle" id="posiBienvenidosTexto" style="font-size:32pt">Bienvenido</p>
-            <img id="logoBienvenidos" src="img/Todas/imagen_scout_pantalla_bienvenido.png">
-            <p class="secBienvenidosTextoStyle" id="posiPersonajeTexto">Elige un personaje</p>
-            <img id="el_opcion" src="img/Todas/el_inicio.png" onclick="elSeleccionado()">
-            <img id="ella_opcion" src="img/Todas/ella_inicio.png" onclick="ellaSeleccionado()">
-            <p class="secBienvenidosTextoStyle" id="posiNombreTexto">¿Como deberias llamarte?</p>
-            <form id="inputNombre">
-                <input id="nombreUsuario" type="text" name="nombreUsuario" placeholder="Nombre de usuario">
-                <img id="icono_nombre_usuario" src="img/Todas/icono_nombre_usuario.png">
-            </form>
-            <img id="boton_siguiente" src="img/Todas/siguiente.png" onclick="clickEnSiguiente()">
-            <div id="anaBox">
-                <img id="nombreAnaBienvenidos" src="img/Todas/nombre_ana.png">
-                <img id="figuraAnaBienvenidos" src="img/Todas/ana_pantalla_bienvenida.png">
-                <p id="AnaTextBienvenidos">
-                    Oh, debes de ser nuevo aquí. Yo soy Ana y seré </br>
-                    tu guía en Be Prepared. </br>
-                    </br>
-                    Primero ¿Como deberiamos llamarte? </br>
-                    Cuando estes listo continuaremos para elegir </br>
-                    la unidad en la que te encuentras.
-                </p>
+        <p id="eligeTextEnfoque">Elije tu enfoque</p>
+        <img id="imgUniforme" src="img/Todas/uniforme.png" onclick="irSeccionPruebas()">
+        <p id="uniformeText">Uniforme</p>
+        <p id="porcenUniforme">0%</p>
+        <img id="imgPl" src="img/Todas/pl.png">
+        <p id="PLText">Pionero Lider</p>
+        <!-- <p id="porcenPL">0%</p> -->
+        <img id="imgPp" src="img/Todas/pp.png">
+        <p id="PPText">Pionero Promotor</p>
+        <!-- <p id="porcenPP">0%</p> -->
+        <img id="imgPs" src="img/Todas/ps.png">
+        <p id="PSText">Pionero Servicio</p>
+        <!-- <p id="porcenPS">0%</p> -->
 
+        <div id="footerEnfoque">
+            <img id="imgPruebasFooter" src="img/pantallas/desafios/imagenes/pruebas.png">
+            <p id="txtPruebasFoot">Pruebas</p>
+            <div id="footer2">
+                <img id="imgDesFooter" src="img/pantallas/pruebas/imagenes/desafios.png">
+                <p id="txtDesFoot">Desafios</p>
+                <img id="imgEspFooter" src="img/pantallas/desafios/imagenes/especialidades.png">
+                <p id="txtEspFoot">Especialidades</p>
+            </div>
+        </div>
+    </section>
+    <section id="SecPruebas" class="SecPruebas  animated fadeInRightBig ocultar">
+        <div id="infoUsuario">
+            <div id="headInfoUsuario">
+                <img id="volverPruebas" src="img/pantallas/pruebas/imagenes/volver.png" onclick="clickvolverPruebas()">
+
+                <span id="nombreTextPrueba">Sofia Álvarez</span>
+                <img id="volverPruebasPuntos" src="img/pantallas/pruebas/imagenes/menu.png"
+                    onclick="clickvolverPruebas()">
+                <img id="opcionesPruebas" src="img/pantallas/pruebas/imagenes/opciones.png">
+            </div>
+            <div id="bodyInfoUsuario" class="bodyInfoUsuario">
+                <img id="usuarioPruebas" src="img/pantallas/pruebas/imagenes/ella_azul.png">
+                <p id="nivelPruebas">Nivel 1</p>
+                <img id="saludPruebas" src="img/pantallas/pruebas/imagenes/salud.png">
+                <img id="barraSaludPruebas" src="img/Todas/barra.png">
+                <p id="pSaludPruebas">Salud</p>
+                <p id="procSaludPruebas">100%</p>
+                <img id="experienciaPruebas" src="img/pantallas/pruebas/imagenes/experiencia.png">
+                <img id="barraExpPruebas" src="img/Todas/barra.png">
+                <p id="pExpPruebas">Experiencia</p>
+                <p id="procExpPruebas">0%</p>
+            </div>
+        </div>
+        <div id="checkListPruebas" class="checklist animated fadeInLeftBig">
+            <p id="tituloPrueba">Pruebas de investidura</p>
+            <p id="avancePrueba">0%</p>
+            <ul id="Prueba" class="Prueba">
+                <li id="1" class="pruebasItem"><span>Participa satisfactoriamene en por lo menos seis (6) reuniones
+                        de Equipo y Sociedad</span> </li>
+                <li id="2" class="pruebasItem"><span>Aprende y explica la Ley y la promesa del pionero</span></li>
+                <li id="3" class="pruebasItem"><span>Explica el significado del Lema del Pionero</span> </li>
+                <li id="4" class="pruebasItem"><span>Practica y explica la Divisa del Pionero</span></li>
+                <li id="5" class="pruebasItem"><span>Recita la Oración del Pionero y explica su significado</span>
+                </li>
+                <li id="6" class="pruebasItem"><span>Conoce y explica los Fines, Principios y Virtudes Movimiento
+                        Scout</span></li>
+            </ul>
+            <img id="deshacer" src="img/Todas/Atras.png" onclick="deshacerEliminar()">
+        </div>
+        <div id="checkListDesafios" class="checklist ocultar">
+            <div id="DesMenu" class="animated fadeInRightBig">
+                <p id="tituloMenDes">Elige un desafío de acción</p>
+                <div class="desAccion" id="DesSalirInfo" onclick="ClickDesCheck(DesSalirInfo)">
+                    <img id="imgDesSalir" src="img/pantallas/desafios/imagenes/salir.png">
+                    <p id="tituloDes">Salir</p>
+                    <p id="ModuloDes" class="descripDes">Módulo: Caracter y afectividad</p>
+                    <p id="FinDes" class="descripDes">Fin: Formación del caracter</p>
+                    <p class="avanceDes" id="avancedesSalir">0%</p>
+                </div>
+                <div class="desAccion" id="DesVivirInfo" onclick="ClickDesCheck(DesVivirInfo)">
+                    <img id="imgDesVivir" src="img/pantallas/desafios/imagenes/vivir.png">
+                    <p id="tituloDes">Vivir</p>
+                    <p id="ModuloDes" class="descripDes">Módulo: Corporalidad</p>
+                    <p id="FinDes" class="descripDes">Fin: Desarrollo de cuerpo y mente sanos</p>
+                    <p class="avanceDes" id="avancedesVivir">0%</p>
+                </div>
+                <div class="desAccion" id="DesDarInfo" onclick="ClickDesCheck(DesDarInfo)">
+                    <img id="imgDesDar" src="img/pantallas/desafios/imagenes/dar.png">
+                    <p id="tituloDes">Dar</p>
+                    <p id="ModuloDes" class="descripDes">Módulo: Sociabilidad</p>
+                    <p id="FinDes" class="descripDes">Fin: Hacerse útil para servir a los demás</p>
+                    <p class="avanceDes" id="avancedesDar">0%</p>
+                </div>
+                <div class="desAccion" id="DesCrearInfo" onclick="ClickDesCheck(DesCrearInfo)">
+                    <img id="imgDesCrear" src="img/pantallas/desafios/imagenes/crear.png">
+                    <p id="tituloDes">Crear</p>
+                    <p id="ModuloDes" class="descripDes">Módulo: Creatividad</p>
+                    <p id="FinDes" class="descripDes">Fin: Preparación para una carrera u oficio</p>
+                    <p class="avanceDes" id="avancedesCrear">0%</p>
+                </div>
+                <div class="desAccion" id="DesBuscarInfo" onclick="ClickDesCheck(DesBuscarInfo)">
+                    <img id="imgDesBuscar" src="img/pantallas/desafios/imagenes/buscar.png">
+                    <p id="tituloDes">Buscar</p>
+                    <p id="ModuloDes" class="descripDes">Módulo: Esperitualidad</p>
+                    <p id="FinDes" class="descripDes">Fin: Acercarse más a Dios</p>
+                    <p class="avanceDes" id="avancedesBuscar">0%</p>
+                </div>
             </div>
 
-        </section>
-        <section id="SecUnidad" class="SecUnidad ocultar">
-            <section id="encabezadoUnidad">
-                <img id="imgVolverInicio" src="img/Todas/volver_inicio.png" onclick="clickEnVolverSecBienvenidos()">
-                <img id="imgOpcionesInicio" src="img/Todas/opciones_inicio.png">
-                <p id="nivelText">Nivel 1</p>
-                <p id="saludText">Salud</p>
-                <p id="expeText">Experiencia</p>
-                <img id="imgMenuInicio" src="img/Todas/menu_inicio.png">
-                <span id="textoNombre">Sofia Álvarez</span>
-                <img id="imgpersonajeSeleccionado" src="img/Todas/eleccion_ella.png">
-                <img id="imgSalud" src="img/pantallas/pruebas/imagenes/salud.png">
-                <img id="barraSaludUni" src="img/Todas/barra.png">
-                <p id="procSaludUni">100%</p>
-                <img id="imgExp" src="img/pantallas/pruebas/imagenes/experiencia.png">
-                <img id="barraExpUni" src="img/Todas/barra.png">
-                <p id="procExpUni">0%</p>
-            </section>
-            <p id="eligeText">Elige tu unidad</p>
-            <img id="imgTropa" src="img/Todas/tropa.png">
-            <p id="tropaText">Tropa</p>
-            <img id="imgSociedad" src="img/Todas/SociedadN.png" onclick="clickEnSiguienteUnidad()">
-            <p id="sociedadText">Sociedad</p>
-            <img id="imgClan" src="img/Todas/clan.png">
-            <p id="clanText">Clan</p>
-            <img id="boton_siguiente" src="img/Todas/siguiente.png" onclick="clickEnSiguienteUnidad()">
-        </section>
-        <section id="SecEnfoque" class="SecEnfoque ocultar">
-            <div id="infoUsuario">
-                <div id="headInfoUsuario">
-                    <img id="volverEnf" src="img/pantallas/pruebas/imagenes/volver.png" onclick="clickEnVolverSecUnidad()">
+            <div id="DesSalirInfoCheck" class="checklist ocultar">
+                <div class="desAccion" id="DesSalirHead">
+                    <img id="imgDesSalir" class="imgDes" src="img/pantallas/desafios/imagenes/salir.png">
+                    <p id="tituloDes">Salir</p>
+                    <p id="ModuloDes" class="descripDes">Módulo: Caracter y afectividad</p>
+                    <p id="FinDes" class="descripDes">Fin: Formación del caracter</p>
 
-                    <span id="textoNombreEnf">Sofia Álvarez</span>
-                    <img id="volverEnfPuntos" src="img/pantallas/pruebas/imagenes/menu.png" onclick="clickEnVolverSecUnidad()">
-                    <img id="opcionesPruebas" src="img/pantallas/pruebas/imagenes/opciones.png">
                 </div>
-                <div id="bodyInfoUsuario" class="bodyInfoUsuario">
-                    <img id="imgpersonajeSeleccionadoEnf" src="img/Todas/ella_azul.png">
-                    <p id="nivelPruebasEnf">Nivel 1</p>
-                    <img id="saludPruebas" src="img/pantallas/pruebas/imagenes/salud.png">
-                    <img id="barraSaludEnf" src="img/Todas/barra.png">
-                    <p id="pSaludPruebas">Salud</p>
-                    <p id="procSaludEnf">100%</p>
-                    <img id="experienciaPruebas" src="img/pantallas/pruebas/imagenes/experiencia.png">
-                    <img id="barraExpEnf" src="img/Todas/barra.png">
-                    <p id="pExpPruebas">Experiencia</p>
-                    <p id="procExpEnf">0%</p>
-                </div>
-            </div>
-
-            <p id="eligeTextEnfoque">Elije tu enfoque</p>
-            <img id="imgUniforme" src="img/Todas/uniforme.png" onclick="irSeccionPruebas()">
-            <p id="uniformeText">Uniforme</p>
-            <p id="porcenUniforme">0%</p>
-            <img id="imgPl" src="img/Todas/pl.png">
-            <p id="PLText">Pionero Lider</p>
-            <!-- <p id="porcenPL">0%</p> -->
-            <img id="imgPp" src="img/Todas/pp.png">
-            <p id="PPText">Pionero Promotor</p>
-            <!-- <p id="porcenPP">0%</p> -->
-            <img id="imgPs" src="img/Todas/ps.png">
-            <p id="PSText">Pionero Servicio</p>
-            <!-- <p id="porcenPS">0%</p> -->
-
-            <div id="footerEnfoque">
-                <img id="imgPruebasFooter" src="img/pantallas/desafios/imagenes/pruebas.png">
-                <p id="txtPruebasFoot">Pruebas</p>
-                <div id="footer2">
-                    <img id="imgDesFooter" src="img/pantallas/pruebas/imagenes/desafios.png">
-                    <p id="txtDesFoot">Desafios</p>
-                    <img id="imgEspFooter" src="img/pantallas/desafios/imagenes/especialidades.png">
-                    <p id="txtEspFoot">Especialidades</p>
-                </div>
-            </div>
-        </section>
-        <section id="SecPruebas" class="SecPruebas  animated fadeInRightBig ocultar">
-            <div id="infoUsuario">
-                <div id="headInfoUsuario">
-                    <img id="volverPruebas" src="img/pantallas/pruebas/imagenes/volver.png" onclick="clickvolverPruebas()">
-
-                    <span id="nombreTextPrueba">Sofia Álvarez</span>
-                    <img id="volverPruebasPuntos" src="img/pantallas/pruebas/imagenes/menu.png" onclick="clickvolverPruebas()">
-                    <img id="opcionesPruebas" src="img/pantallas/pruebas/imagenes/opciones.png">
-                </div>
-                <div id="bodyInfoUsuario" class="bodyInfoUsuario">
-                    <img id="usuarioPruebas" src="img/pantallas/pruebas/imagenes/ella_azul.png">
-                    <p id="nivelPruebas">Nivel 1</p>
-                    <img id="saludPruebas" src="img/pantallas/pruebas/imagenes/salud.png">
-                    <img id="barraSaludPruebas" src="img/Todas/barra.png">
-                    <p id="pSaludPruebas">Salud</p>
-                    <p id="procSaludPruebas">100%</p>
-                    <img id="experienciaPruebas" src="img/pantallas/pruebas/imagenes/experiencia.png">
-                    <img id="barraExpPruebas" src="img/Todas/barra.png">
-                    <p id="pExpPruebas">Experiencia</p>
-                    <p id="procExpPruebas">0%</p>
-                </div>
-            </div>
-            <div id="checkListPruebas" class="checklist animated fadeInLeftBig">
-                <p id="tituloPrueba">Pruebas de investidura</p>
-                <p id="avancePrueba">0%</p>
-                <ul id="Prueba" class="Prueba">
-                    <li id="1" class="pruebasItem"><span>Participa satisfactoriamene en por lo menos seis (6) reuniones
-                            de Equipo y Sociedad</span> </li>
-                    <li id="2" class="pruebasItem"><span>Aprende y explica la Ley y la promesa del pionero</span></li>
-                    <li id="3" class="pruebasItem"><span>Explica el significado del Lema del Pionero</span> </li>
-                    <li id="4" class="pruebasItem"><span>Practica y explica la Divisa del Pionero</span></li>
-                    <li id="5" class="pruebasItem"><span>Recita la Oración del Pionero y explica su significado</span>
+                <p id="tituloDesCheck">Pruebas del desafío</p>
+                <ul id="desSalir" class="desCheck">
+                    <li id="7" class="desSalirItem"><span>Disfruta en compañía de tu Equipo o tu Familia una
+                            película (o 1 libro) con contenido de valores para luego debatirla</span> </li>
+                    <li id="8" class="desSalirItem"><span>Aprende y explica la Ley y la promesa del pionero</span>
                     </li>
-                    <li id="6" class="pruebasItem"><span>Conoce y explica los Fines, Principios y Virtudes Movimiento
-                            Scout</span></li>
+                    <li id="9" class="desSalirItem"><span>Explica el significado del Lema del Pionero</span> </li>
+                    <li id="A" class="desSalirItem"><span>Practica y explica la Divisa del Pionero</span></li>
+
                 </ul>
             </div>
-            <div id="checkListDesafios" class="checklist ocultar">
-                <div id="DesMenu" class="animated fadeInRightBig">
-                    <p id="tituloMenDes">Elige un desafío de acción</p>
-                    <div class="desAccion" id="DesSalirInfo" onclick="ClickDesCheck(DesSalirInfo)">
-                        <img id="imgDesSalir" src="img/pantallas/desafios/imagenes/salir.png">
-                        <p id="tituloDes">Salir</p>
-                        <p id="ModuloDes" class="descripDes">Módulo: Caracter y afectividad</p>
-                        <p id="FinDes" class="descripDes">Fin: Formación del caracter</p>
-                        <p class="avanceDes" id="avancedesSalir">0%</p>
-                    </div>
-                    <div class="desAccion" id="DesVivirInfo" onclick="ClickDesCheck(DesVivirInfo)">
-                        <img id="imgDesVivir" src="img/pantallas/desafios/imagenes/vivir.png">
-                        <p id="tituloDes">Vivir</p>
-                        <p id="ModuloDes" class="descripDes">Módulo: Corporalidad</p>
-                        <p id="FinDes" class="descripDes">Fin: Desarrollo de cuerpo y mente sanos</p>
-                        <p class="avanceDes" id="avancedesVivir">0%</p>
-                    </div>
-                    <div class="desAccion" id="DesDarInfo" onclick="ClickDesCheck(DesDarInfo)">
-                        <img id="imgDesDar" src="img/pantallas/desafios/imagenes/dar.png">
-                        <p id="tituloDes">Dar</p>
-                        <p id="ModuloDes" class="descripDes">Módulo: Sociabilidad</p>
-                        <p id="FinDes" class="descripDes">Fin: Hacerse útil para servir a los demás</p>
-                        <p class="avanceDes" id="avancedesDar">0%</p>
-                    </div>
-                    <div class="desAccion" id="DesCrearInfo" onclick="ClickDesCheck(DesCrearInfo)">
-                        <img id="imgDesCrear" src="img/pantallas/desafios/imagenes/crear.png">
-                        <p id="tituloDes">Crear</p>
-                        <p id="ModuloDes" class="descripDes">Módulo: Creatividad</p>
-                        <p id="FinDes" class="descripDes">Fin: Preparación para una carrera u oficio</p>
-                        <p class="avanceDes" id="avancedesCrear">0%</p>
-                    </div>
-                    <div class="desAccion" id="DesBuscarInfo" onclick="ClickDesCheck(DesBuscarInfo)">
-                        <img id="imgDesBuscar" src="img/pantallas/desafios/imagenes/buscar.png">
-                        <p id="tituloDes">Buscar</p>
-                        <p id="ModuloDes" class="descripDes">Módulo: Esperitualidad</p>
-                        <p id="FinDes" class="descripDes">Fin: Acercarse más a Dios</p>
-                        <p class="avanceDes" id="avancedesBuscar">0%</p>
-                    </div>
+
+            <div id="DesVivirInfoCheck" class="checklist ocultar">
+                <div class="desAccion" id="DesVivirHead">
+                    <img id="imgDesVivir" class="imgDes" src="img/pantallas/desafios/imagenes/vivir.png">
+                    <p id="tituloDes">Vivir</p>
+                    <p id="ModuloDes" class="descripDes">Módulo: Corporalidad</p>
+                    <p id="FinDes" class="descripDes">Fin: Desarrollo de cuerpo y mente sanos</p>
+
                 </div>
+                <p id="tituloDesCheck">Pruebas del desafío</p>
+                <ul id="desVivir" class="desCheck">
+                    <li id="B" class="desVivirItem"><span>Toma un curso de alta técnica Scout entre los siguientes:
+                            -Orden de Pionero Técnico</span> </li>
+                    <li id="C" class="desVivirItem"><span>Cocina 1 almuerzo ó 1 cena para concurso en
+                            campamento</span></li>
+                    <li id="D" class="desVivirItem"><span>Elabora un fichero de juegos y canciones Scouts</span>
+                    </li>
 
-                <div id="DesSalirInfoCheck" class="checklist ocultar">
-                    <div class="desAccion" id="DesSalirHead">
-                        <img id="imgDesSalir" class="imgDes" src="img/pantallas/desafios/imagenes/salir.png">
-                        <p id="tituloDes">Salir</p>
-                        <p id="ModuloDes" class="descripDes">Módulo: Caracter y afectividad</p>
-                        <p id="FinDes" class="descripDes">Fin: Formación del caracter</p>
-
-                    </div>
-                    <p id="tituloDesCheck">Pruebas del desafío</p>
-                    <ul id="desSalir" class="desCheck">
-                        <li id="7" class="desSalirItem"><span>Disfruta en compañía de tu Equipo o tu Familia una
-                                película (o 1 libro) con contenido de valores para luego debatirla</span> </li>
-                        <li id="8" class="desSalirItem"><span>Aprende y explica la Ley y la promesa del pionero</span>
-                        </li>
-                        <li id="9" class="desSalirItem"><span>Explica el significado del Lema del Pionero</span> </li>
-                        <li id="A" class="desSalirItem"><span>Practica y explica la Divisa del Pionero</span></li>
-
-                    </ul>
-                </div>
-
-                <div id="DesVivirInfoCheck" class="checklist ocultar">
-                    <div class="desAccion" id="DesVivirHead">
-                        <img id="imgDesVivir" class="imgDes" src="img/pantallas/desafios/imagenes/vivir.png">
-                        <p id="tituloDes">Vivir</p>
-                        <p id="ModuloDes" class="descripDes">Módulo: Corporalidad</p>
-                        <p id="FinDes" class="descripDes">Fin: Desarrollo de cuerpo y mente sanos</p>
-
-                    </div>
-                    <p id="tituloDesCheck">Pruebas del desafío</p>
-                    <ul id="desVivir" class="desCheck">
-                        <li id="B" class="desVivirItem"><span>Toma un curso de alta técnica Scout entre los siguientes:
-                                -Orden de Pionero Técnico</span> </li>
-                        <li id="C" class="desVivirItem"><span>Cocina 1 almuerzo ó 1 cena para concurso en
-                                campamento</span></li>
-                        <li id="D" class="desVivirItem"><span>Elabora un fichero de juegos y canciones Scouts</span>
-                        </li>
-
-                    </ul>
-                </div>
-
-                <div id="DesDarInfoCheck" class="checklist ocultar">
-                    <div class="desAccion" id="DesDarHead">
-                        <img id="imgDesDar" class="imgDes" src="img/pantallas/desafios/imagenes/dar.png">
-                        <p id="tituloDes">Dar</p>
-                        <p id="ModuloDes" class="descripDes">Módulo: Sociabilidad</p>
-                        <p id="FinDes" class="descripDes">Fin: Hacerse útil para servir a los demás</p>
-
-                    </div>
-                    <p id="tituloDesCheck">Pruebas del desafío</p>
-                    <ul id="desDar" class="desCheck">
-                        <li id="E" class="desDarItem"><span>Manten correspondencia con Scouts colombianos y de otros
-                                países a través de correo</span> </li>
-                        <li id="F" class="desDarItem"><span>Participa y apoya una reunion de dos Unidades</span></li>
-                        <li id="G" class="desDarItem"><span>Visita los lugares más representativos de tu
-                                municipio</span> </li>
-                        <li id="H" class="desDarItem"><span>Divulga y resalta los aspectos más positivos de
-                                Colombia</span></li>
-                        <li id="I" class="desDarItem"><span>PROYECTO EXCURSIÓN: programa una excursión a un
-                                municipio</span></li>
-                    </ul>
-                </div>
-
-                <div id="DesCrearInfoCheck" class="checklist ocultar">
-                    <div class="desAccion" id="DesCrearHead">
-                        <img id="imgDesCrear" class="imgDes" src="img/pantallas/desafios/imagenes/crear.png">
-                        <p id="tituloDes">Crear</p>
-                        <p id="ModuloDes" class="descripDes">Módulo: Creatividad</p>
-                        <p id="FinDes" class="descripDes">Fin: Preparación para una carrera u oficio</p>
-
-                    </div>
-                    <p id="tituloDesCheck">Pruebas del desafío</p>
-                    <ul id="desCrear" class="desCheck">
-                        <li id="J" class="desCrearItem"><span>Demuestra que conoces las tecnologías del mundo moderno y
-                                aprovechalas para tu beneficio</span> </li>
-                        <li id="K" class="desCrearItem"><span>Visita y consulta en la biblioteca del municipio</span>
-                        </li>
-                        <li id="L" class="desCrearItem"><span>Diseña y participa en dos representaciones para
-                                fogata</span> </li>
-                        <li id="M" class="desCrearItem"><span>PROYECTO ARTÍSTICO - CIENTÍFICO - TECNOLÓGICO</span></li>
-                    </ul>
-                </div>
-
-                <div id="DesBuscarInfoCheck" class="checklist ocultar">
-                    <div class="desAccion" id="DesBuscarHead">
-                        <img id="imgDesBuscar" class="imgDes" src="img/pantallas/desafios/imagenes/buscar.png">
-                        <p id="tituloDes">Buscar</p>
-                        <p id="ModuloDes" class="descripDes">Módulo: Esperitualidad</p>
-                        <p id="FinDes" class="descripDes">Fin: Acercarse más a Dios</p>
-
-                    </div>
-                    <p id="tituloDesCheck">Pruebas del desafío</p>
-                    <ul id="desBuscar" class="desCheck">
-                        <li id="N" class="desBuscarItem"><span>PROYECTO ECOLÓGICO - DESARROLLA LA INSIGNIA DE LA
-                                CONSERVACIÓN MUNDIAL CSA</span> </li>
-                        <li id="O" class="desBuscarItem"><span>Visita un jardín botánico o reserva ecológica</span></li>
-                        <li id="P" class="desBuscarItem"><span>Participa en una actividad esperitual del Grupo
-                                Scout</span> </li>
-                        <li id="Q" class="desBuscarItem"><span>Conoce y relata a un aspirante la historia de San Ignacio
-                                de Loyola</span></li>
-                    </ul>
-                </div>
-
+                </ul>
             </div>
-            <div id="checkListEspecialidades" class="checklist ocultar">
-            </div>
-            <div id="footer">
-                <img id="pruebasFooter" src="img/pantallas/pruebas/imagenes/pruebas.png" onclick="abrirPruebas()">
-                <p id="txtPruebas">Pruebas</p>
-                <div id="footer2">
-                    <img id="desFooter" src="img/pantallas/pruebas/imagenes/desafios.png" onclick="abrirDesafios()">
-                    <p id="txtDes">Desafios</p>
-                    <img id="espFooter" src="img/pantallas/pruebas/imagenes/especialidades.png"
-                        onclick="abrirEspecialidades()">
-                    <p id="txtEsp">Especialidades</p>
+
+            <div id="DesDarInfoCheck" class="checklist ocultar">
+                <div class="desAccion" id="DesDarHead">
+                    <img id="imgDesDar" class="imgDes" src="img/pantallas/desafios/imagenes/dar.png">
+                    <p id="tituloDes">Dar</p>
+                    <p id="ModuloDes" class="descripDes">Módulo: Sociabilidad</p>
+                    <p id="FinDes" class="descripDes">Fin: Hacerse útil para servir a los demás</p>
+
                 </div>
+                <p id="tituloDesCheck">Pruebas del desafío</p>
+                <ul id="desDar" class="desCheck">
+                    <li id="E" class="desDarItem"><span>Manten correspondencia con Scouts colombianos y de otros
+                            países a través de correo</span> </li>
+                    <li id="F" class="desDarItem"><span>Participa y apoya una reunion de dos Unidades</span></li>
+                    <li id="G" class="desDarItem"><span>Visita los lugares más representativos de tu
+                            municipio</span> </li>
+                    <li id="H" class="desDarItem"><span>Divulga y resalta los aspectos más positivos de
+                            Colombia</span></li>
+                    <li id="I" class="desDarItem"><span>PROYECTO EXCURSIÓN: programa una excursión a un
+                            municipio</span></li>
+                </ul>
             </div>
-        </section>
+
+            <div id="DesCrearInfoCheck" class="checklist ocultar">
+                <div class="desAccion" id="DesCrearHead">
+                    <img id="imgDesCrear" class="imgDes" src="img/pantallas/desafios/imagenes/crear.png">
+                    <p id="tituloDes">Crear</p>
+                    <p id="ModuloDes" class="descripDes">Módulo: Creatividad</p>
+                    <p id="FinDes" class="descripDes">Fin: Preparación para una carrera u oficio</p>
+
+                </div>
+                <p id="tituloDesCheck">Pruebas del desafío</p>
+                <ul id="desCrear" class="desCheck">
+                    <li id="J" class="desCrearItem"><span>Demuestra que conoces las tecnologías del mundo moderno y
+                            aprovechalas para tu beneficio</span> </li>
+                    <li id="K" class="desCrearItem"><span>Visita y consulta en la biblioteca del municipio</span>
+                    </li>
+                    <li id="L" class="desCrearItem"><span>Diseña y participa en dos representaciones para
+                            fogata</span> </li>
+                    <li id="M" class="desCrearItem"><span>PROYECTO ARTÍSTICO - CIENTÍFICO - TECNOLÓGICO</span></li>
+                </ul>
+            </div>
+
+            <div id="DesBuscarInfoCheck" class="checklist ocultar">
+                <div class="desAccion" id="DesBuscarHead">
+                    <img id="imgDesBuscar" class="imgDes" src="img/pantallas/desafios/imagenes/buscar.png">
+                    <p id="tituloDes">Buscar</p>
+                    <p id="ModuloDes" class="descripDes">Módulo: Esperitualidad</p>
+                    <p id="FinDes" class="descripDes">Fin: Acercarse más a Dios</p>
+
+                </div>
+                <p id="tituloDesCheck">Pruebas del desafío</p>
+                <ul id="desBuscar" class="desCheck">
+                    <li id="N" class="desBuscarItem"><span>PROYECTO ECOLÓGICO - DESARROLLA LA INSIGNIA DE LA
+                            CONSERVACIÓN MUNDIAL CSA</span> </li>
+                    <li id="O" class="desBuscarItem"><span>Visita un jardín botánico o reserva ecológica</span></li>
+                    <li id="P" class="desBuscarItem"><span>Participa en una actividad esperitual del Grupo
+                            Scout</span> </li>
+                    <li id="Q" class="desBuscarItem"><span>Conoce y relata a un aspirante la historia de San Ignacio
+                            de Loyola</span></li>
+                </ul>
+            </div>
+
+        </div>
+        <div id="checkListEspecialidades" class="checklist ocultar">
+        </div>
+        <div id="footer">
+            <img id="pruebasFooter" src="img/pantallas/pruebas/imagenes/pruebas.png" onclick="abrirPruebas()">
+            <p id="txtPruebas">Pruebas</p>
+            <div id="footer2">
+                <img id="desFooter" src="img/pantallas/pruebas/imagenes/desafios.png" onclick="abrirDesafios()">
+                <p id="txtDes">Desafios</p>
+                <img id="espFooter" src="img/pantallas/pruebas/imagenes/especialidades.png"
+                    onclick="abrirEspecialidades()">
+                <p id="txtEsp">Especialidades</p>
+            </div>
+        </div>
+    </section>
 
 
 
 
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript" src="js/pantallasIniciales.js"></script>
-        <script type="text/javascript" src="js/desafiosAccion.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/pantallasIniciales.js"></script>
+    <script type="text/javascript" src="js/desafiosAccion.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 
-    </body>
+</body>
 
 </html>

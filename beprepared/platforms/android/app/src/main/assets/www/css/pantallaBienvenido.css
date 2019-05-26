@@ -29,10 +29,13 @@ body {
 }
 #posiNombreTexto{
   position: absolute;
-  top: 320px;
-  right: 120px;
+  top: 310px;
+  right: 90px;
   
-  
+}
+#icono_nombre_usuario
+{
+   margin-top:5px;
 }
 #nombreUsuario{
    font-family: "Roboto"; 
@@ -41,6 +44,7 @@ body {
     color:#0c5e65; 
     border: none;
     border-bottom: 2pt solid #b0b969;
+    left:40px;
    
 }
 ::placeholder {
@@ -49,6 +53,7 @@ body {
     font-style: thin; 
     color: #b0b969;
    opacity: 1; 
+   left:40px;
  }
 
  #boton_siguiente{
@@ -66,15 +71,16 @@ body {
    top: 380px;
    right: 65px;
    opacity: 0.6;
+   left:40px;
 }
 #el_opcion{
    position: absolute;
-   top: 250px;
+   top: 240px;
    left: 97px;
 }
 #ella_opcion{
    position: absolute;
-   top: 250px;
+   top: 240px;
    right: 97px;
 }
 #anaBox{

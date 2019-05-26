@@ -1,14 +1,14 @@
 var porcentajePrueba, volverPruebas, volverPruebasPuntos;
 var checkList = document.getElementsByClassName("pruebasItem");
 var i;
-var arrayBorrados = ["0"], borradosDesafios, borradosEspecialidades;
+var  borradosDesafios, borradosEspecialidades;
 
 var checkdesSalirLocal = ["0"];
 var checkdesVivirLocal = ["0"];
 var checkdesDarLocal = ["0"];
 var checkdesCrearLocal = ["0"];
 var checkdesBuscarLocal = ["0"];
-
+var Scout;
 var app = {
     // Application Constructor
     initialize: function () {
@@ -44,12 +44,30 @@ var app = {
 function iniciarPrograma() {
     if (localStorage.getItem("user") !== null) {
         Scout = JSON.parse(localStorage.getItem("user"));
-        document.getElementById("nombreUsuario").value=Scout.Nombre;
+        localStorage.setItem('nombreUsuario', JSON.stringify(Scout.Nombre));
+        document.getElementById("nombreUsuario").value = Scout.Nombre;
     }
+    else{
+        localStorage.setItem('nombreUsuario', null);
+    }
+    if (localStorage.getItem("user") !== null) {
+
+        var Scout = JSON.parse(localStorage.getItem("user"));
+    }
+
     setTimeout(function () {
-        document.getElementById("Seccarga").className = "Seccarga ocultar";
-        document.getElementById("Secbienvenidos").className = "Secbienvenidos animated fadeInUpBig";
-    }, 2000);
+        if (localStorage.getItem("nombreUsuario") !== "null")
+        {
+            document.getElementById("Seccarga").className = "Seccarga ocultar";
+            document.getElementById("Secbienvenidos").className = "Secbienvenidos animated fadeInUpBig";
+            document.getElementById("nombreUsuario").disabled = true;
+        }
+        else{
+            document.getElementById("Seccarga").className = "Seccarga ocultar";
+            document.getElementById("SecInstrucciones").className = "SecInstrucciones animated fadeIn";
+        }
+        
+    }, 5050);
     document.getElementById("barraSaludPruebas").src = "img/Todas/porcentaje4.png";
     document.getElementById("barraSaludUni").src = "img/Todas/porcentaje4.png";
     document.getElementById("barraSaludEnf").src = "img/Todas/porcentaje4.png";
@@ -194,4 +212,10 @@ function ImgPorcentaje(porcentaje) {
     }
 
 }
+function clicksgteBienvenidos()
+{
+    document.getElementById("SecInstrucciones").className = "SecInstrucciones ocultar";
+    document.getElementById("Secbienvenidos").className = "Secbienvenidos animated fadeInUpBig";
+}
+
 app.initialize();

@@ -50,15 +50,78 @@ section
     background-repeat: no-repeat;
     margin: 0px;
     padding:0px;
+    font-family: 'Roboto', sans-serif;
 }
 .ocultar
 {
     display:none;
 }
-.Seccarga
+#Seccarga
 {
-    background-color: white;
+    background-image:  url("../img/Todas/carga2.gif");
     
+}
+#SecInstrucciones
+{
+    background-image:  url("../img/pantallas/introduccion/Fondo_introducción.jpg");
+    padding: 20px;
+    color:#2d2e2d;
+}
+#tituloInstrucciones
+{
+    margin-top:52px;
+    margin-left:100px;
+    color:#0c5e65;
+    font-size:15pt;
+    font-weight: 400;
+}
+#logoInstrucciones
+{
+    margin-left:100px;
+}
+#esHora
+{
+    font-size:12pt;
+    margin-top:40px;
+    margin-left:10px;
+    font-weight: 400;
+}
+#txtProgresa
+{
+    margin-top:-130px;
+    font-size:11pt;
+    margin-left:80px;
+    font-weight: 400;
+}
+#desbloquea
+{
+    font-size:11pt;
+    font-weight: 400;
+}
+#divDesbloquea
+{
+    margin-left:35px;
+    margin-top:-80px;
+    background-color: white;
+    padding:2px;
+    border-radius: 20px;    
+    text-align: center;
+    width:250px;
+}
+#hojasIzquierdo
+{
+    margin-top:130px;
+}
+#hojasDerecho
+{
+    position: absolute;
+    margin-top:-105px;
+    margin-left:282px;
+}
+#sgteInstrucciones
+{
+    position: absolute;
+    margin-left:282px;
 }
  .Secbienvenidos
 {
@@ -67,21 +130,21 @@ section
     /* background-color: #b0b969;  */
     text-align: center;
 } 
-.loader {
+/* .loader {
     border: 9px solid #f3f3f3;
     border-radius: 50%;
     border-top: 9px solid #b0b969;
     width: 100px;
     height: 100px;
     -webkit-animation: spin 2s linear infinite; /* Safari */
-    animation: spin 2s linear infinite;    
+    /*animation: spin 2s linear infinite;    
     margin-top:40px;
     margin-left:130px;
   }
   #logoCarga{    
     padding-top:225px;
-    padding-left:100px;
-  }
+    padding-left:100px; 
+  }*/
   @-webkit-keyframes spin {
     0% { -webkit-transform: rotate(0deg); }
     100% { -webkit-transform: rotate(360deg); }
@@ -113,6 +176,7 @@ section
     background-color: #1166af;
     padding-left:20px;
     padding-right:20px;
+
 }
 #opcionesPruebas
 {
@@ -142,6 +206,13 @@ section
     float: left;
     padding-top:2px;
 }
+#volverDesafiosPuntos
+{
+    margin-left:5px;
+    float: left;
+    margin-top:10px;
+    
+}
 #menuPruebas
 {
     padding-left:5.6px; 
@@ -151,9 +222,7 @@ section
 #bodyInfoUsuario
 {
     float: left;
-    height: 94px;
-    padding-left:20px;
-    padding-right: 20px;     
+    height: 94px;   
     color:white;  
     width: 360px;
     background-color: #1166af;
@@ -262,6 +331,11 @@ section
     float: left; 
     margin-left:10px;
 }
+#desFooterCheck
+{
+    float: left; 
+    margin-left:10px;
+}
 #txtDes
 {    
     padding-top:32px;
@@ -360,7 +434,6 @@ ul li.checked::before {
     font-family: 'Roboto', sans-serif;
     font-weight: 600;
     padding-left:20px;
-    margin-top:100px; 
 }
 #divEliminar
 {
@@ -408,4 +481,16 @@ ul li.checked::before {
     color:#f6b419;
     margin-left: 148px;
     margin-top:-10px;
+}
+#deshacer
+{
+    position: absolute;
+    bottom:15px;
+    left:310px;
+   
+}
+
+.error
+{
+    border-color:red;
 }
