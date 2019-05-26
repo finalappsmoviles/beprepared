@@ -31,8 +31,9 @@ function deshacerEliminar() {
 
 function clickEnSiguiente() {
 
+
     StatusBar.hide();
-    
+
     contador=0;
 
     if (localStorage.getItem("user") !== null) {
@@ -109,8 +110,8 @@ function clickEnSiguienteUnidad() {
 
     if (Scout.mostrarAna == true) {
 
-        setTimeout(() => {
-            lightbox.className = "animated fadeInUpBig"
+        setTimeout(function(){
+            lightbox.className = "animated fadeInUpBig";
 
         }, 1000);
     }
@@ -184,9 +185,9 @@ function irSeccionPruebas() {
     if (Scout.mostrarAna == true) {
 
         
-        setTimeout(() => {
+        setTimeout(function(){
             
-            lightbox.className = "animated fadeInUpBig"
+            lightbox.className = "animated fadeInUpBig";
             document.getElementById('ventanaAna').className = "ocultar";
             document.getElementById('ventanaAnaPruebas').className = "animated fadeInUpBig";
         }, 1000);
