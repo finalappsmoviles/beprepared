@@ -1,0 +1,111 @@
+.SecCreditos{
+    background-color: white;
+}
+#encabezadoCreditos{
+    height: 49px;
+    background-color: #1660af;
+} 
+#creditosTexto{
+    font-family: "Roboto"; 
+    font-size: 18pt; 
+     font-style: Thin; 
+    color:white; 
+     position: absolute;
+     top: 13px;
+    left: 84px;
+    margin: auto;
+}
+.textFont{
+    font-family: "Roboto"; 
+    font-size: 9pt; 
+     font-style: Thin; 
+    color: #243e90;
+}
+#imgRegresarCred{
+    position: absolute;
+    margin: auto;
+    top: 17px;
+    left: 20px;
+}
+#imgMenuInicioCred{
+    position: absolute;
+    margin: auto;
+    top: 23px;
+    left: 45px;
+}
+#danielaImg{
+   
+    position: absolute;
+    margin: auto;
+    top: 120px;
+    left: 30px;
+}
+#danielaText{
+   
+    position: absolute;
+    margin: auto;
+    top: 206px;
+    left: 15px;
+}
+#nathaliaImg{
+    
+    position: absolute;
+    margin: auto;
+    top: 260px;
+    left: -36px;
+}
+#nathaliaText{
+    position: absolute;
+    margin: auto;
+    top: 440px;
+    left: 13px;
+}
+#isabelImg{
+    
+    position: absolute;
+    margin: auto;
+    top: 500px;
+    left: -36px;
+}
+#isabelText{
+    position: absolute;
+    margin: auto;
+    top: 680px;
+    left: 13px;
+}
+#desingText{
+    position: absolute;
+    margin: auto;
+    top: 152px;
+    left: 260px;
+}
+#conceptoText{
+    position: absolute;
+    margin: auto;
+    top: 190px;
+    left: 191px;
+}
+#ingSis1{
+    position: absolute;
+    margin: auto;
+    top: 388px;
+    left: 220px;
+}
+#ingSis2{
+    position: absolute;
+    margin: auto;
+    top: 628px;
+    left: 220px;
+}
+#progra1{
+    position: absolute;
+    margin: auto;
+    top: 425px;
+    left: 270px;
+}
+#progra2{
+    position: absolute;
+    margin: auto;
+    top: 663px;
+    left: 270px;
+}

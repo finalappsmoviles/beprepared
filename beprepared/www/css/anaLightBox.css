@@ -1,0 +1,150 @@
+/* ¡¡¡¡¡ANA SECCION DE ENFOQUE!!!! */
+
+#lightbox{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+    background: rgba(0,0,0,.5);
+	width: 360px;
+    height: 730px;
+	margin: 0;
+	padding: 0;
+	z-index: 2;
+}
+#ventanaAna{
+    position: absolute;
+ 
+	top: 497px;
+    left: 28px;
+	background-color: white;
+	width: 320px;
+    height: 95px;
+	margin: auto;
+    border-radius: 8px;
+}
+#nombreAna{
+    position: absolute;
+	top: -8px;
+    left: 28px;
+	margin: auto;
+   
+}
+#figuraAna{
+    position: absolute;
+	top: -72px;
+    left: 215px;
+	margin: auto;
+}
+#AnaText1{
+    font-size: 10pt; 
+     font-style: Thin; 
+     color: #2d2d2d;
+     position: absolute;
+     top: 18px;
+    left: 9px;
+    margin: auto; 
+    text-align: justify;
+}
+#flechaDialogo{
+    position: absolute;
+	top: 90px;
+    left: 140px;
+	margin: auto;
+}
+#AnaText2{
+    font-size: 10pt; 
+    font-style: Thin; 
+    color: #2d2d2d;
+    margin-left: 9px;
+    text-align: justify;
+}
+#meQuedaClaro{
+    font-size: 9pt; 
+     font-style: Thin; 
+     color: #1166af; 
+     position: absolute;
+    left: 215px;
+    border-bottom: 2px solid #1166af;
+    margin: auto; 
+}
+
+/* ¡¡¡¡¡ANA SECCION DE PRUEBAS!!!! */
+
+#ventanaAnaPruebas{
+    position: absolute;
+	top: 497px;
+    left: 28px;
+	background-color: white;
+	width: 320px;
+    height: 120px;
+	margin: auto;
+    border-radius: 8px;
+}
+#AnaTextPruebas1{
+    font-size: 10pt; 
+     font-style: Thin; 
+     color: #2d2d2d;
+     position: absolute;
+     top: 18px;
+    left: 15px;
+    margin: auto; 
+    text-align: justify;
+}
+#flechaDialogo1{
+    position: absolute;
+	top: 118px;
+    left: 140px;
+	margin: auto;
+}
+#AnaTextPruebas2{
+    font-size: 10pt; 
+     font-style: Thin; 
+     color: #2d2d2d;
+     position: absolute;
+     top: 18px;
+    left: 15px;
+    margin: auto; 
+    text-align: justify;
+}
+#flechaDialogo2{
+    position: absolute;
+	top: 110px;
+    left: 140px;
+	margin: auto;
+}
+#AnaTextPruebas3{
+    font-size: 10pt; 
+     font-style: Thin; 
+     color: #2d2d2d;
+     position: absolute;
+     top: 18px;
+    left: 15px;
+    margin: auto; 
+    text-align: justify;
+}
+#flechaDialogo3{
+    position: absolute;
+	top: 100px;
+    left: 140px;
+	margin: auto;
+}
+#AnaTextPruebas4{
+    font-size: 10pt; 
+     font-style: Thin; 
+     color: #2d2d2d;
+     position: absolute;
+     top: 18px;
+    left: 20px;
+    margin: auto; 
+    text-align: justify;
+}
+#meQuedaClaroPruebas{
+    font-size: 9pt; 
+     font-style: Thin; 
+     color: #1166af; 
+     position: absolute;
+     top: 85px;
+    left: 215px;
+    border-bottom: 2px solid #1166af;
+    margin: auto; 
+}
